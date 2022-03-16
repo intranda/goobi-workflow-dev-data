@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config_plugin>
+	<validation>
+    	<!-- file name must match against one of the patterns -->
+		<!-- 
+		<pattern>\w+_\d{4}</pattern>
+		<pattern>\d{8}</pattern>
+		 -->
+		<pattern>.+</pattern>
+	</validation>
+	<validateMasterFolder>true</validateMasterFolder>
+	<validateMediaFolder>false</validateMediaFolder>
+	<validateOrder>true</validateOrder>
+</config_plugin>

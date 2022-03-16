@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<config>
+
+	<endpoint path="/processes">    
+        <cors>    
+            <method>GET</method>    
+            <method>POST</method>    
+            <origin>*</origin>    
+        </cors>    
+        <method name="post">    
+            <allow />    
+        </method>    
+        <method name="get">    
+            <allow />    
+        </method>    
+    </endpoint>  
+    <endpoint path="/seterrorstep.*">
+        <method name="post">
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>
+        </method>
+    </endpoint>
+    <endpoint path="/addtoprocesslog.*">
+        <method name="post">
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>
+        </method>
+    </endpoint>
+    <endpoint path="/closestep.*">
+        <method name="post">
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>
+        </method>
+    </endpoint>
+    <endpoint path="/process/check.*">
+        <method name="get">
+            <allow netmask="127.0.0.0/8" token="test"/>
+        </method>
+    </endpoint>
+    <endpoint path="/processes/search">
+        <method name="get">
+            <allow netmask="127.0.0.0/8" token="test"/>
+        </method>
+        <method name="post">
+            <allow netmask="127.0.0.0/8" token="test"/>
+        </method>
+    </endpoint>
+    <endpoint path="/vocabulary.*">
+		<method name="get">
+			<allow />
+		</method>
+		<method name="post">
+			<allow />
+		</method>
+	</endpoint>
+</config>

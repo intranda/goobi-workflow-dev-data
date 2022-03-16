@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns="http://www.loc.gov/standards/alto/ns-v2#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto.xsd">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation />
+    <OCRProcessing ID="OCR_1">
+      <preProcessingStep>
+        <processingDateTime>2019-06-20T02:47:43</processingDateTime>
+        <processingAgency>intranda GmbH, www.intranda.com</processingAgency>
+        <processingSoftware>
+          <softwareCreator>intranda GmbH, Germany</softwareCreator>
+          <softwareName>intranda OCR Module for TaskManager</softwareName>
+          <softwareVersion>1.0r42</softwareVersion>
+        </processingSoftware>
+      </preProcessingStep>
+      <ocrProcessingStep>
+        <processingSoftware>
+          <softwareCreator>Tesseract contributors</softwareCreator>
+          <softwareName>Tesseract Open Source OCR Engine</softwareName>
+          <softwareVersion>4.0.0-beta.1-270-g5a56</softwareVersion>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Layout>
+    <Page ID="PAGE_1" HEIGHT="1608" WIDTH="1200" PHYSICAL_IMG_NR="1">
+      <PrintSpace ID="PrintSpace_1" HPOS="0" VPOS="0" HEIGHT="1608" WIDTH="1200">
+        <TextBlock ID="TextBlock_1" HPOS="84" VPOS="83" HEIGHT="49" WIDTH="833">
+          <TextLine ID="TextLine_1" HPOS="84" VPOS="83" HEIGHT="49" WIDTH="833">
+            <String ID="Textword_1" HPOS="84" VPOS="105" HEIGHT="27" WIDTH="33" CONTENT="80" WC="0,63" />
+            <String ID="Textword_2" HPOS="212" VPOS="88" HEIGHT="40" WIDTH="415" CONTENT="DISSERTATIO" WC="0,88" />
+            <String ID="Textword_3" HPOS="676" VPOS="83" HEIGHT="31" WIDTH="241" CONTENT="MEDICA" WC="0,91" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="TextBlock_2" HPOS="86" VPOS="137" HEIGHT="778" WIDTH="979">
+          <TextLine ID="TextLine_2" HPOS="86" VPOS="137" HEIGHT="54" WIDTH="958">
+            <String ID="Textword_4" HPOS="86" VPOS="163" HEIGHT="28" WIDTH="139" CONTENT="Schenkius." WC="0,89" />
+            <String ID="Textword_5" HPOS="248" VPOS="157" HEIGHT="28" WIDTH="150" CONTENT="Academieis" WC="0,54" />
+            <String ID="Textword_6" HPOS="416" VPOS="153" HEIGHT="27" WIDTH="105" CONTENT="Parifinis" WC="0,92" />
+            <String ID="Textword_7" HPOS="543" VPOS="150" HEIGHT="25" WIDTH="80" CONTENT="retulit" WC="0,89" />
+            <String ID="Textword_8" HPOS="641" VPOS="149" HEIGHT="24" WIDTH="55" CONTENT="olim" WC="0,90" />
+            <String ID="Textword_9" HPOS="711" VPOS="143" HEIGHT="32" WIDTH="155" CONTENT="Duvernejus" WC="0,87" />
+            <String ID="Textword_10" HPOS="879" VPOS="159" HEIGHT="13" WIDTH="8" CONTENT="," WC="0,82" />
+            <String ID="Textword_11" HPOS="910" VPOS="142" HEIGHT="24" WIDTH="24" CONTENT="in" WC="0,93" />
+            <String ID="Textword_12" HPOS="949" VPOS="137" HEIGHT="27" WIDTH="95" CONTENT="infantis" WC="0,92" />
+          </TextLine>
+          <TextLine ID="TextLine_3" HPOS="104" VPOS="170" HEIGHT="58" WIDTH="939">
+            <String ID="Textword_13" HPOS="104" VPOS="195" HEIGHT="33" WIDTH="150" CONTENT="uinquennis," WC="0,87" />
+            <String ID="Textword_14" HPOS="269" VPOS="194" HEIGHT="23" WIDTH="36" CONTENT="‘de" WC="0,72" />
+            <String ID="Textword_15" HPOS="322" VPOS="186" HEIGHT="29" WIDTH="208" CONTENT="vehementiflimis" WC="0,49" />
+            <String ID="Textword_16" HPOS="551" VPOS="184" HEIGHT="24" WIDTH="28" CONTENT="ad" WC="0,93" />
+            <String ID="Textword_17" HPOS="596" VPOS="182" HEIGHT="24" WIDTH="46" CONTENT="nafi" WC="0,78" />
+            <String ID="Textword_18" HPOS="664" VPOS="179" HEIGHT="24" WIDTH="103" CONTENT="radicem" WC="0,70" />
+            <String ID="Textword_19" HPOS="780" VPOS="176" HEIGHT="23" WIDTH="118" CONTENT="doloribus" WC="0,90" />
+            <String ID="Textword_20" HPOS="908" VPOS="170" HEIGHT="35" WIDTH="135" CONTENT="conquefli," WC="0,45" />
+          </TextLine>
+          <TextLine ID="TextLine_4" HPOS="131" VPOS="203" HEIGHT="58" WIDTH="914">
+            <String ID="Textword_21" HPOS="131" VPOS="229" HEIGHT="32" WIDTH="52" CONTENT="poft" WC="0,89" />
+            <String ID="Textword_22" HPOS="201" VPOS="225" HEIGHT="26" WIDTH="139" CONTENT="trimeftrem" WC="0,89" />
+            <String ID="Textword_23" HPOS="361" VPOS="222" HEIGHT="24" WIDTH="86" CONTENT="lentam" WC="0,82" />
+            <String ID="Textword_24" HPOS="463" VPOS="218" HEIGHT="25" WIDTH="87" CONTENT="febrim" WC="0,91" />
+            <String ID="Textword_25" HPOS="566" VPOS="216" HEIGHT="28" WIDTH="130" CONTENT="fübitasque" WC="0,80" />
+            <String ID="Textword_26" HPOS="717" VPOS="207" HEIGHT="27" WIDTH="164" CONTENT="convulfiones" WC="0,92" />
+            <String ID="Textword_27" HPOS="897" VPOS="206" HEIGHT="24" WIDTH="88" CONTENT="mortui" WC="0,90" />
+            <String ID="Textword_28" HPOS="996" VPOS="203" HEIGHT="25" WIDTH="49" CONTENT="finu" WC="0,92" />
+          </TextLine>
+          <TextLine ID="TextLine_5" HPOS="89" VPOS="237" HEIGHT="55" WIDTH="958">
+            <String ID="Textword_29" HPOS="89" VPOS="264" HEIGHT="24" WIDTH="90" CONTENT="falcato" WC="0,92" />
+            <String ID="Textword_30" HPOS="191" VPOS="265" HEIGHT="27" WIDTH="120" CONTENT="repertum" WC="0,91" />
+            <String ID="Textword_31" HPOS="331" VPOS="254" HEIGHT="26" WIDTH="66" CONTENT="fuifle" WC="0,46" />
+            <String ID="Textword_32" HPOS="408" VPOS="259" HEIGHT="19" WIDTH="106" CONTENT="vermem" WC="0,90" />
+            <String ID="Textword_33" HPOS="529" VPOS="247" HEIGHT="27" WIDTH="145" CONTENT="terreftribus" WC="0,75" />
+            <String ID="Textword_34" HPOS="690" VPOS="243" HEIGHT="25" WIDTH="97" CONTENT="fimilem" WC="0,79" />
+            <String ID="Textword_35" HPOS="797" VPOS="258" HEIGHT="11" WIDTH="5" CONTENT="," WC="0,79" />
+            <String ID="Textword_36" HPOS="821" VPOS="247" HEIGHT="22" WIDTH="15" CONTENT="4" WC="0,93" />
+            <String ID="Textword_37" HPOS="849" VPOS="237" HEIGHT="33" WIDTH="61" CONTENT="quafi" WC="0,92" />
+            <String ID="Textword_38" HPOS="920" VPOS="238" HEIGHT="30" WIDTH="127" CONTENT="pollicum," WC="0,82" />
+          </TextLine>
+          <TextLine ID="TextLine_6" HPOS="90" VPOS="270" HEIGHT="50" WIDTH="957">
+            <String ID="Textword_39" HPOS="90" VPOS="297" HEIGHT="23" WIDTH="84" CONTENT="yivum" WC="0,63" />
+            <String ID="Textword_40" HPOS="185" VPOS="293" HEIGHT="24" WIDTH="24" CONTENT="&amp;" WC="0,91" />
+            <String ID="Textword_41" HPOS="210" VPOS="299" HEIGHT="20" WIDTH="100" CONTENT="novem" WC="0,92" />
+            <String ID="Textword_42" HPOS="322" VPOS="289" HEIGHT="24" WIDTH="61" CONTENT="horis" WC="0,93" />
+            <String ID="Textword_43" HPOS="395" VPOS="284" HEIGHT="34" WIDTH="144" CONTENT="fuperftitem" WC="0,18" />
+            <String ID="Textword_44" HPOS="554" VPOS="280" HEIGHT="26" WIDTH="60" CONTENT="Hift." WC="0,91" />
+            <String ID="Textword_45" HPOS="631" VPOS="280" HEIGHT="24" WIDTH="30" CONTENT="de" WC="0,93" />
+            <String ID="Textword_46" HPOS="675" VPOS="278" HEIGHT="25" WIDTH="13" CONTENT="!’" WC="0,61" />
+            <String ID="Textword_47" HPOS="696" VPOS="276" HEIGHT="26" WIDTH="74" CONTENT="Acad:" WC="0,87" />
+            <String ID="Textword_48" HPOS="788" VPOS="279" HEIGHT="25" WIDTH="69" CONTENT="1700." WC="0,89" />
+            <String ID="Textword_49" HPOS="875" VPOS="278" HEIGHT="24" WIDTH="23" CONTENT="p." WC="0,93" />
+            <String ID="Textword_50" HPOS="915" VPOS="276" HEIGHT="24" WIDTH="38" CONTENT="39." WC="0,93" />
+            <String ID="Textword_51" HPOS="971" VPOS="270" HEIGHT="22" WIDTH="76" CONTENT="Mira-" WC="0,92" />
+          </TextLine>
+          <TextLine ID="TextLine_7" HPOS="92" VPOS="301" HEIGHT="57" WIDTH="956">
+            <String ID="Textword_52" HPOS="92" VPOS="330" HEIGHT="24" WIDTH="53" CONTENT="€ulo" WC="0,00" />
+            <String ID="Textword_53" HPOS="158" VPOS="326" HEIGHT="32" WIDTH="95" CONTENT="propius" WC="0,90" />
+            <String ID="Textword_54" HPOS="265" VPOS="323" HEIGHT="25" WIDTH="54" CONTENT="illud" WC="0,84" />
+            <String ID="Textword_55" HPOS="331" VPOS="321" HEIGHT="25" WIDTH="34" CONTENT="eft" WC="0,81" />
+            <String ID="Textword_56" HPOS="375" VPOS="319" HEIGHT="33" WIDTH="63" CONTENT="quod" WC="0,91" />
+            <String ID="Textword_57" HPOS="452" VPOS="317" HEIGHT="24" WIDTH="77" CONTENT="retulit" WC="0,49" />
+            <String ID="Textword_58" HPOS="540" VPOS="313" HEIGHT="25" WIDTH="100" CONTENT="Lifterus" WC="0,88" />
+            <String ID="Textword_59" HPOS="651" VPOS="312" HEIGHT="24" WIDTH="58" CONTENT="Phil." WC="0,93" />
+            <String ID="Textword_60" HPOS="723" VPOS="309" HEIGHT="24" WIDTH="68" CONTENT="tranf." WC="0,88" />
+            <String ID="Textword_61" HPOS="811" VPOS="314" HEIGHT="16" WIDTH="22" CONTENT="n." WC="0,90" />
+            <String ID="Textword_62" HPOS="846" VPOS="311" HEIGHT="24" WIDTH="39" CONTENT="95." WC="0,92" />
+            <String ID="Textword_63" HPOS="904" VPOS="311" HEIGHT="23" WIDTH="23" CONTENT="p-" WC="0,66" />
+            <String ID="Textword_64" HPOS="938" VPOS="303" HEIGHT="27" WIDTH="64" CONTENT="6064" WC="0,95" />
+            <String ID="Textword_65" HPOS="1018" VPOS="301" HEIGHT="23" WIDTH="30" CONTENT="ad" WC="0,96" />
+          </TextLine>
+          <TextLine ID="TextLine_8" HPOS="92" VPOS="332" HEIGHT="55" WIDTH="958">
+            <String ID="Textword_66" HPOS="92" VPOS="359" HEIGHT="27" WIDTH="136" CONTENT="malleolum" WC="0,38" />
+            <String ID="Textword_67" HPOS="245" VPOS="364" HEIGHT="23" WIDTH="87" CONTENT="nempe" WC="0,91" />
+            <String ID="Textword_68" HPOS="347" VPOS="353" HEIGHT="25" WIDTH="160" CONTENT="exulceratum" WC="0,92" />
+            <String ID="Textword_69" HPOS="525" VPOS="347" HEIGHT="33" WIDTH="89" CONTENT="puellae" WC="0,89" />
+            <String ID="Textword_70" HPOS="632" VPOS="344" HEIGHT="25" WIDTH="106" CONTENT="o&amp;tennis" WC="0,77" />
+            <String ID="Textword_71" HPOS="750" VPOS="347" HEIGHT="20" WIDTH="81" CONTENT="vermes" WC="0,92" />
+            <String ID="Textword_72" HPOS="834" VPOS="338" HEIGHT="25" WIDTH="116" CONTENT="circiter" WC="0,90" />
+            <String ID="Textword_73" HPOS="961" VPOS="332" HEIGHT="33" WIDTH="89" CONTENT="viginti" WC="0,90" />
+          </TextLine>
+          <TextLine ID="TextLine_9" HPOS="94" VPOS="369" HEIGHT="52" WIDTH="955">
+            <String ID="Textword_74" HPOS="94" VPOS="391" HEIGHT="27" WIDTH="118" CONTENT="extra&amp;tos" WC="0,14" />
+            <String ID="Textword_75" HPOS="221" VPOS="399" HEIGHT="21" WIDTH="13" CONTENT="‚" WC="0,00" />
+            <String ID="Textword_76" HPOS="247" VPOS="393" HEIGHT="28" WIDTH="75" CONTENT="3-4V*" WC="0,22" />
+            <String ID="Textword_77" HPOS="333" VPOS="386" HEIGHT="32" WIDTH="109" CONTENT="pollicum" WC="0,89" />
+            <String ID="Textword_78" HPOS="454" VPOS="401" HEIGHT="11" WIDTH="7" CONTENT="," WC="0,91" />
+            <String ID="Textword_79" HPOS="482" VPOS="380" HEIGHT="25" WIDTH="117" CONTENT="lumbrıeis" WC="0,86" />
+            <String ID="Textword_80" HPOS="613" VPOS="378" HEIGHT="24" WIDTH="112" CONTENT="teretibus" WC="0,90" />
+            <String ID="Textword_81" HPOS="741" VPOS="374" HEIGHT="26" WIDTH="142" CONTENT="fimillimos," WC="0,67" />
+            <String ID="Textword_82" HPOS="907" VPOS="369" HEIGHT="30" WIDTH="108" CONTENT="utrinque" WC="0,89" />
+            <String ID="Textword_83" HPOS="1027" VPOS="373" HEIGHT="16" WIDTH="22" CONTENT="a-" WC="0,90" />
+          </TextLine>
+          <TextLine ID="TextLine_10" HPOS="95" VPOS="400" HEIGHT="55" WIDTH="956">
+            <String ID="Textword_84" HPOS="95" VPOS="426" HEIGHT="29" WIDTH="82" CONTENT="&amp;utos," WC="0,22" />
+            <String ID="Textword_85" HPOS="195" VPOS="420" HEIGHT="35" WIDTH="178" CONTENT="rigidiusculos," WC="0,92" />
+            <String ID="Textword_86" HPOS="390" VPOS="417" HEIGHT="24" WIDTH="48" CONTENT="{ine" WC="0,91" />
+            <String ID="Textword_87" HPOS="450" VPOS="415" HEIGHT="25" WIDTH="84" CONTENT="annulo" WC="0,92" />
+            <String ID="Textword_88" HPOS="550" VPOS="411" HEIGHT="26" WIDTH="81" CONTENT="vifibili" WC="0,92" />
+            <String ID="Textword_89" HPOS="647" VPOS="429" HEIGHT="10" WIDTH="6" CONTENT="," WC="0,83" />
+            <String ID="Textword_90" HPOS="675" VPOS="408" HEIGHT="28" WIDTH="173" CONTENT="albidioresque" WC="0,60" />
+            <String ID="Textword_91" HPOS="857" VPOS="420" HEIGHT="12" WIDTH="7" CONTENT="," WC="0,60" />
+            <String ID="Textword_92" HPOS="881" VPOS="408" HEIGHT="26" WIDTH="97" CONTENT="quorum" WC="0,92" />
+            <String ID="Textword_93" HPOS="990" VPOS="400" HEIGHT="30" WIDTH="61" CONTENT="plus-" WC="0,91" />
+          </TextLine>
+          <TextLine ID="TextLine_11" HPOS="95" VPOS="432" HEIGHT="60" WIDTH="957">
+            <String ID="Textword_94" HPOS="95" VPOS="465" HEIGHT="27" WIDTH="69" CONTENT="quam" WC="0,90" />
+            <String ID="Textword_95" HPOS="172" VPOS="459" HEIGHT="22" WIDTH="41" CONTENT="60" WC="0,89" />
+            <String ID="Textword_96" HPOS="232" VPOS="455" HEIGHT="24" WIDTH="39" CONTENT="alii" WC="0,89" />
+            <String ID="Textword_97" HPOS="286" VPOS="452" HEIGHT="33" WIDTH="120" CONTENT="applicato" WC="0,91" />
+            <String ID="Textword_98" HPOS="422" VPOS="446" HEIGHT="34" WIDTH="162" CONTENT="cataplasmati" WC="0,91" />
+            <String ID="Textword_99" HPOS="603" VPOS="442" HEIGHT="25" WIDTH="141" CONTENT="adhaeferunt" WC="0,92" />
+            <String ID="Textword_100" HPOS="748" VPOS="445" HEIGHT="22" WIDTH="29" CONTENT="," WC="0,78" />
+            <String ID="Textword_101" HPOS="799" VPOS="438" HEIGHT="23" WIDTH="70" CONTENT="unico" WC="0,91" />
+            <String ID="Textword_102" HPOS="889" VPOS="439" HEIGHT="19" WIDTH="91" CONTENT="tantum" WC="0,92" />
+            <String ID="Textword_103" HPOS="991" VPOS="440" HEIGHT="15" WIDTH="14" CONTENT="a" WC="0,93" />
+            <String ID="Textword_104" HPOS="1019" VPOS="432" HEIGHT="24" WIDTH="33" CONTENT="fe-" WC="0,92" />
+          </TextLine>
+          <TextLine ID="TextLine_12" HPOS="97" VPOS="464" HEIGHT="57" WIDTH="956">
+            <String ID="Textword_105" HPOS="97" VPOS="491" HEIGHT="26" WIDTH="79" CONTENT="cunda" WC="0,45" />
+            <String ID="Textword_106" HPOS="196" VPOS="487" HEIGHT="34" WIDTH="162" CONTENT="applicatione" WC="0,92" />
+            <String ID="Textword_107" HPOS="377" VPOS="483" HEIGHT="33" WIDTH="141" CONTENT="prodeunte." WC="0,92" />
+            <String ID="Textword_108" HPOS="532" VPOS="480" HEIGHT="23" WIDTH="35" CONTENT="Ex" WC="0,93" />
+            <String ID="Textword_109" HPOS="579" VPOS="476" HEIGHT="26" WIDTH="88" CONTENT="cantho" WC="0,56" />
+            <String ID="Textword_110" HPOS="683" VPOS="471" HEIGHT="25" WIDTH="62" CONTENT="oculi" WC="0,91" />
+            <String ID="Textword_111" HPOS="763" VPOS="470" HEIGHT="24" WIDTH="140" CONTENT="lumbricum" WC="0,69" />
+            <String ID="Textword_112" HPOS="922" VPOS="464" HEIGHT="25" WIDTH="131" CONTENT="extra&amp;tum" WC="0,67" />
+          </TextLine>
+          <TextLine ID="TextLine_13" HPOS="96" VPOS="496" HEIGHT="56" WIDTH="957">
+            <String ID="Textword_113" HPOS="96" VPOS="523" HEIGHT="26" WIDTH="69" CONTENT="fuıffe" WC="0,22" />
+            <String ID="Textword_114" HPOS="186" VPOS="520" HEIGHT="32" WIDTH="185" CONTENT="femipalmarem" WC="0,90" />
+            <String ID="Textword_115" HPOS="383" VPOS="528" HEIGHT="16" WIDTH="14" CONTENT="s" WC="0,03" />
+            <String ID="Textword_116" HPOS="428" VPOS="515" HEIGHT="22" WIDTH="83" CONTENT="vivum" WC="0,81" />
+            <String ID="Textword_117" HPOS="533" VPOS="511" HEIGHT="26" WIDTH="124" CONTENT="albumque" WC="0,89" />
+            <String ID="Textword_118" HPOS="680" VPOS="504" HEIGHT="23" WIDTH="71" CONTENT="tradit" WC="0,91" />
+            <String ID="Textword_119" HPOS="773" VPOS="501" HEIGHT="24" WIDTH="80" CONTENT="Amati" WC="0,92" />
+            <String ID="Textword_120" HPOS="877" VPOS="497" HEIGHT="25" WIDTH="102" CONTENT="Lufitani" WC="0,83" />
+            <String ID="Textword_121" HPOS="1003" VPOS="496" HEIGHT="24" WIDTH="50" CONTENT="obf." WC="0,83" />
+          </TextLine>
+          <TextLine ID="TextLine_14" HPOS="99" VPOS="529" HEIGHT="54" WIDTH="923">
+            <String ID="Textword_122" HPOS="99" VPOS="558" HEIGHT="24" WIDTH="68" CONTENT="Cent." WC="0,00" />
+            <String ID="Textword_123" HPOS="170" VPOS="554" HEIGHT="24" WIDTH="58" CONTENT="VII." WC="0,00" />
+            <String ID="Textword_124" HPOS="239" VPOS="554" HEIGHT="29" WIDTH="39" CONTENT="63." WC="0,93" />
+            <String ID="Textword_125" HPOS="291" VPOS="556" HEIGHT="26" WIDTH="71" CONTENT="quem" WC="0,92" />
+            <String ID="Textword_126" HPOS="372" VPOS="554" HEIGHT="18" WIDTH="29" CONTENT="ex" WC="0,93" />
+            <String ID="Textword_127" HPOS="412" VPOS="542" HEIGHT="27" WIDTH="135" CONTENT="ventriculo" WC="0,89" />
+            <String ID="Textword_128" HPOS="558" VPOS="548" HEIGHT="16" WIDTH="29" CONTENT="eo" WC="0,94" />
+            <String ID="Textword_129" HPOS="599" VPOS="535" HEIGHT="28" WIDTH="126" CONTENT="efcendiffe" WC="0,87" />
+            <String ID="Textword_130" HPOS="734" VPOS="542" HEIGHT="17" WIDTH="53" CONTENT="cum" WC="0,93" />
+            <String ID="Textword_131" HPOS="800" VPOS="532" HEIGHT="24" WIDTH="93" CONTENT="Clerico" WC="0,91" />
+            <String ID="Textword_132" HPOS="910" VPOS="529" HEIGHT="31" WIDTH="112" CONTENT="conjieio." WC="0,86" />
+          </TextLine>
+          <TextLine ID="TextLine_15" HPOS="133" VPOS="563" HEIGHT="49" WIDTH="924">
+            <String ID="Textword_133" HPOS="133" VPOS="586" HEIGHT="26" WIDTH="77" CONTENT="Simili" WC="0,92" />
+            <String ID="Textword_134" HPOS="224" VPOS="585" HEIGHT="23" WIDTH="92" CONTENT="ratione" WC="0,91" />
+            <String ID="Textword_135" HPOS="330" VPOS="581" HEIGHT="24" WIDTH="24" CONTENT="in" WC="0,93" />
+            <String ID="Textword_136" HPOS="371" VPOS="578" HEIGHT="25" WIDTH="66" CONTENT="varia" WC="0,89" />
+            <String ID="Textword_137" HPOS="450" VPOS="575" HEIGHT="26" WIDTH="89" CONTENT="vifcera" WC="0,88" />
+            <String ID="Textword_138" HPOS="555" VPOS="577" HEIGHT="27" WIDTH="83" CONTENT="repunt" WC="0,92" />
+            <String ID="Textword_139" HPOS="652" VPOS="575" HEIGHT="18" WIDTH="39" CONTENT="aut" WC="0,96" />
+            <String ID="Textword_140" HPOS="705" VPOS="571" HEIGHT="27" WIDTH="132" CONTENT="penetrant." WC="0,91" />
+            <String ID="Textword_141" HPOS="873" VPOS="563" HEIGHT="24" WIDTH="38" CONTENT="Sic" WC="0,72" />
+            <String ID="Textword_142" HPOS="923" VPOS="568" HEIGHT="17" WIDTH="72" CONTENT="unum" WC="0,92" />
+            <String ID="Textword_143" HPOS="1009" VPOS="567" HEIGHT="17" WIDTH="48" CONTENT="tres" WC="0,91" />
+          </TextLine>
+          <TextLine ID="TextLine_16" HPOS="100" VPOS="593" HEIGHT="61" WIDTH="957">
+            <String ID="Textword_144" HPOS="100" VPOS="620" HEIGHT="34" WIDTH="101" CONTENT="pollices" WC="0,92" />
+            <String ID="Textword_145" HPOS="222" VPOS="621" HEIGHT="28" WIDTH="140" CONTENT="aequantem" WC="0,92" />
+            <String ID="Textword_146" HPOS="387" VPOS="610" HEIGHT="27" WIDTH="79" CONTENT="medio" WC="0,92" />
+            <String ID="Textword_147" HPOS="491" VPOS="605" HEIGHT="35" WIDTH="133" CONTENT="pancreatis" WC="0,91" />
+            <String ID="Textword_148" HPOS="649" VPOS="600" HEIGHT="29" WIDTH="123" CONTENT="emiflario," WC="0,43" />
+            <String ID="Textword_149" HPOS="786" VPOS="599" HEIGHT="24" WIDTH="153" CONTENT="incuneatum" WC="0,76" />
+            <String ID="Textword_150" HPOS="951" VPOS="613" HEIGHT="11" WIDTH="6" CONTENT="," WC="0,91" />
+            <String ID="Textword_151" HPOS="985" VPOS="593" HEIGHT="24" WIDTH="72" CONTENT="unico" WC="0,92" />
+          </TextLine>
+          <TextLine ID="TextLine_17" HPOS="101" VPOS="625" HEIGHT="62" WIDTH="956">
+            <String ID="Textword_152" HPOS="101" VPOS="659" HEIGHT="28" WIDTH="124" CONTENT="praeterea" WC="0,75" />
+            <String ID="Textword_153" HPOS="240" VPOS="652" HEIGHT="23" WIDTH="24" CONTENT="in" WC="0,92" />
+            <String ID="Textword_154" HPOS="284" VPOS="647" HEIGHT="26" WIDTH="111" CONTENT="inteftino" WC="0,82" />
+            <String ID="Textword_155" HPOS="414" VPOS="646" HEIGHT="24" WIDTH="99" CONTENT="invento" WC="0,91" />
+            <String ID="Textword_156" HPOS="528" VPOS="658" HEIGHT="13" WIDTH="7" CONTENT="," WC="0,72" />
+            <String ID="Textword_157" HPOS="561" VPOS="638" HEIGHT="33" WIDTH="96" CONTENT="proprio" WC="0,93" />
+            <String ID="Textword_158" HPOS="671" VPOS="634" HEIGHT="26" WIDTH="81" CONTENT="libello" WC="0,43" />
+            <String ID="Textword_159" HPOS="766" VPOS="631" HEIGHT="26" WIDTH="153" CONTENT="Mauchartus" WC="0,92" />
+            <String ID="Textword_160" HPOS="930" VPOS="625" HEIGHT="33" WIDTH="127" CONTENT="defcripfit." WC="0,68" />
+          </TextLine>
+          <TextLine ID="TextLine_18" HPOS="101" VPOS="660" HEIGHT="52" WIDTH="958">
+            <String ID="Textword_161" HPOS="101" VPOS="686" HEIGHT="26" WIDTH="111" CONTENT="Crebrius" WC="0,92" />
+            <String ID="Textword_162" HPOS="222" VPOS="684" HEIGHT="24" WIDTH="25" CONTENT="in" WC="0,92" />
+            <String ID="Textword_163" HPOS="258" VPOS="681" HEIGHT="29" WIDTH="108" CONTENT="dutibus" WC="0,46" />
+            <String ID="Textword_164" HPOS="385" VPOS="677" HEIGHT="25" WIDTH="87" CONTENT="bilariis" WC="0,81" />
+            <String ID="Textword_165" HPOS="491" VPOS="675" HEIGHT="24" WIDTH="158" CONTENT="obfervantur." WC="0,91" />
+            <String ID="Textword_166" HPOS="675" VPOS="668" HEIGHT="26" WIDTH="86" CONTENT="Galeni" WC="0,92" />
+            <String ID="Textword_167" HPOS="772" VPOS="665" HEIGHT="26" WIDTH="80" CONTENT="Wieri" WC="0,87" />
+            <String ID="Textword_168" HPOS="867" VPOS="664" HEIGHT="24" WIDTH="41" CONTENT="filii" WC="0,90" />
+            <String ID="Textword_169" HPOS="921" VPOS="660" HEIGHT="26" WIDTH="138" CONTENT="obfervatio" WC="0,92" />
+          </TextLine>
+          <TextLine ID="TextLine_19" HPOS="103" VPOS="694" HEIGHT="51" WIDTH="957">
+            <String ID="Textword_170" HPOS="103" VPOS="720" HEIGHT="25" WIDTH="133" CONTENT="celebratur" WC="0,91" />
+            <String ID="Textword_171" HPOS="250" VPOS="732" HEIGHT="12" WIDTH="8" CONTENT="," WC="0,86" />
+            <String ID="Textword_172" HPOS="282" VPOS="714" HEIGHT="30" WIDTH="40" CONTENT="qui" WC="0,96" />
+            <String ID="Textword_173" HPOS="337" VPOS="713" HEIGHT="24" WIDTH="24" CONTENT="in" WC="0,93" />
+            <String ID="Textword_174" HPOS="377" VPOS="710" HEIGHT="25" WIDTH="62" CONTENT="fe&amp;ta" WC="0,86" />
+            <String ID="Textword_175" HPOS="456" VPOS="707" HEIGHT="32" WIDTH="77" CONTENT="puella" WC="0,91" />
+            <String ID="Textword_176" HPOS="549" VPOS="704" HEIGHT="32" WIDTH="128" CONTENT="hydropica" WC="0,92" />
+            <String ID="Textword_177" HPOS="694" VPOS="702" HEIGHT="23" WIDTH="59" CONTENT="duos" WC="0,92" />
+            <String ID="Textword_178" HPOS="763" VPOS="699" HEIGHT="23" WIDTH="127" CONTENT="lumbricos" WC="0,72" />
+            <String ID="Textword_179" HPOS="903" VPOS="694" HEIGHT="32" WIDTH="157" CONTENT="fpithamaeos" WC="0,82" />
+          </TextLine>
+          <TextLine ID="TextLine_20" HPOS="104" VPOS="724" HEIGHT="52" WIDTH="956">
+            <String ID="Textword_180" HPOS="104" VPOS="758" HEIGHT="18" WIDTH="75" CONTENT="unum" WC="0,92" />
+            <String ID="Textword_181" HPOS="199" VPOS="748" HEIGHT="25" WIDTH="23" CONTENT="in" WC="0,92" />
+            <String ID="Textword_182" HPOS="240" VPOS="744" HEIGHT="28" WIDTH="149" CONTENT="choledocho" WC="0,92" />
+            <String ID="Textword_183" HPOS="405" VPOS="741" HEIGHT="25" WIDTH="75" CONTENT="canali" WC="0,93" />
+            <String ID="Textword_184" HPOS="495" VPOS="757" HEIGHT="10" WIDTH="7" CONTENT="," WC="0,65" />
+            <String ID="Textword_185" HPOS="528" VPOS="737" HEIGHT="25" WIDTH="98" CONTENT="alterum" WC="0,92" />
+            <String ID="Textword_186" HPOS="644" VPOS="735" HEIGHT="24" WIDTH="40" CONTENT="fub" WC="0,88" />
+            <String ID="Textword_187" HPOS="701" VPOS="732" HEIGHT="24" WIDTH="135" CONTENT="membrana" WC="0,92" />
+            <String ID="Textword_188" HPOS="846" VPOS="731" HEIGHT="21" WIDTH="23" CONTENT="in" WC="0,93" />
+            <String ID="Textword_189" HPOS="885" VPOS="727" HEIGHT="31" WIDTH="91" CONTENT="hepatis" WC="0,92" />
+            <String ID="Textword_190" HPOS="986" VPOS="724" HEIGHT="32" WIDTH="74" CONTENT="gibbo" WC="0,93" />
+          </TextLine>
+          <TextLine ID="TextLine_21" HPOS="106" VPOS="755" HEIGHT="60" WIDTH="956">
+            <String ID="Textword_191" HPOS="106" VPOS="783" HEIGHT="32" WIDTH="101" CONTENT="reperit," WC="0,92" />
+            <String ID="Textword_192" HPOS="224" VPOS="780" HEIGHT="24" WIDTH="77" CONTENT="Wier." WC="0,90" />
+            <String ID="Textword_193" HPOS="313" VPOS="777" HEIGHT="24" WIDTH="30" CONTENT="de" WC="0,96" />
+            <String ID="Textword_194" HPOS="353" VPOS="773" HEIGHT="26" WIDTH="78" CONTENT="malef." WC="0,83" />
+            <String ID="Textword_195" HPOS="446" VPOS="771" HEIGHT="26" WIDTH="101" CONTENT="affe&amp;tis," WC="0,32" />
+            <String ID="Textword_196" HPOS="555" VPOS="769" HEIGHT="30" WIDTH="72" CONTENT="Oper." WC="0,93" />
+            <String ID="Textword_197" HPOS="641" VPOS="773" HEIGHT="17" WIDTH="64" CONTENT="omn." WC="0,92" />
+            <String ID="Textword_198" HPOS="714" VPOS="762" HEIGHT="25" WIDTH="75" CONTENT="Amft." WC="0,80" />
+            <String ID="Textword_199" HPOS="805" VPOS="762" HEIGHT="28" WIDTH="68" CONTENT="1560." WC="0,93" />
+            <String ID="Textword_200" HPOS="893" VPOS="765" HEIGHT="24" WIDTH="86" CONTENT="p.310-" WC="0,80" />
+            <String ID="Textword_201" HPOS="993" VPOS="755" HEIGHT="33" WIDTH="21" CONTENT="$." WC="0,29" />
+            <String ID="Textword_202" HPOS="1025" VPOS="758" HEIGHT="24" WIDTH="37" CONTENT="18." WC="0,29" />
+          </TextLine>
+          <TextLine ID="TextLine_22" HPOS="106" VPOS="789" HEIGHT="54" WIDTH="957">
+            <String ID="Textword_203" HPOS="106" VPOS="817" HEIGHT="26" WIDTH="73" CONTENT="Binos" WC="0,92" />
+            <String ID="Textword_204" HPOS="197" VPOS="812" HEIGHT="26" WIDTH="82" CONTENT="itidem" WC="0,92" />
+            <String ID="Textword_205" HPOS="298" VPOS="810" HEIGHT="24" WIDTH="23" CONTENT="in" WC="0,90" />
+            <String ID="Textword_206" HPOS="341" VPOS="807" HEIGHT="30" WIDTH="111" CONTENT="hepatico" WC="0,92" />
+            <String ID="Textword_207" HPOS="468" VPOS="802" HEIGHT="25" WIDTH="26" CONTENT="&amp;" WC="0,92" />
+            <String ID="Textword_208" HPOS="510" VPOS="800" HEIGHT="33" WIDTH="86" CONTENT="cyftico" WC="0,56" />
+            <String ID="Textword_209" HPOS="613" VPOS="798" HEIGHT="24" WIDTH="71" CONTENT="du&amp;tu" WC="0,35" />
+            <String ID="Textword_210" HPOS="696" VPOS="814" HEIGHT="10" WIDTH="7" CONTENT="," WC="0,68" />
+            <String ID="Textword_211" HPOS="719" VPOS="793" HEIGHT="32" WIDTH="155" CONTENT="copiofösque" WC="0,48" />
+            <String ID="Textword_212" HPOS="884" VPOS="790" HEIGHT="24" WIDTH="65" CONTENT="fimul" WC="0,91" />
+            <String ID="Textword_213" HPOS="962" VPOS="790" HEIGHT="22" WIDTH="24" CONTENT="in" WC="0,93" />
+            <String ID="Textword_214" HPOS="1001" VPOS="789" HEIGHT="23" WIDTH="62" CONTENT="ınte-" WC="0,74" />
+          </TextLine>
+          <TextLine ID="TextLine_23" HPOS="106" VPOS="821" HEIGHT="54" WIDTH="958">
+            <String ID="Textword_215" HPOS="106" VPOS="849" HEIGHT="26" WIDTH="67" CONTENT="finis" WC="0,19" />
+            <String ID="Textword_216" HPOS="190" VPOS="848" HEIGHT="24" WIDTH="142" CONTENT="invenerunt" WC="0,92" />
+            <String ID="Textword_217" HPOS="348" VPOS="840" HEIGHT="26" WIDTH="107" CONTENT="Naturae" WC="0,91" />
+            <String ID="Textword_218" HPOS="473" VPOS="832" HEIGHT="29" WIDTH="83" CONTENT="curiofi" WC="0,85" />
+            <String ID="Textword_219" HPOS="576" VPOS="830" HEIGHT="27" WIDTH="51" CONTENT="A&amp;." WC="0,89" />
+            <String ID="Textword_220" HPOS="645" VPOS="829" HEIGHT="26" WIDTH="47" CONTENT="vol." WC="0,93" />
+            <String ID="Textword_221" HPOS="709" VPOS="828" HEIGHT="25" WIDTH="32" CONTENT="V." WC="0,87" />
+            <String ID="Textword_222" HPOS="768" VPOS="834" HEIGHT="24" WIDTH="22" CONTENT="p." WC="0,90" />
+            <String ID="Textword_223" HPOS="806" VPOS="832" HEIGHT="25" WIDTH="54" CONTENT="392." WC="0,83" />
+            <String ID="Textword_224" HPOS="884" VPOS="821" HEIGHT="27" WIDTH="26" CONTENT="&amp;" WC="0,90" />
+            <String ID="Textword_225" HPOS="930" VPOS="821" HEIGHT="26" WIDTH="49" CONTENT="vol." WC="0,90" />
+            <String ID="Textword_226" HPOS="994" VPOS="821" HEIGHT="24" WIDTH="70" CONTENT="VIIL" WC="0,50" />
+          </TextLine>
+          <TextLine ID="TextLine_24" HPOS="108" VPOS="855" HEIGHT="60" WIDTH="957">
+            <String ID="Textword_227" HPOS="108" VPOS="884" HEIGHT="31" WIDTH="25" CONTENT="p." WC="0,89" />
+            <String ID="Textword_228" HPOS="149" VPOS="880" HEIGHT="33" WIDTH="37" CONTENT="39." WC="0,93" />
+            <String ID="Textword_229" HPOS="204" VPOS="879" HEIGHT="25" WIDTH="93" CONTENT="Eodem" WC="0,92" />
+            <String ID="Textword_230" HPOS="307" VPOS="875" HEIGHT="25" WIDTH="73" CONTENT="modo" WC="0,91" />
+            <String ID="Textword_231" HPOS="396" VPOS="881" HEIGHT="24" WIDTH="41" CONTENT="per" WC="0,96" />
+            <String ID="Textword_232" HPOS="447" VPOS="868" HEIGHT="33" WIDTH="163" CONTENT="oefophagum" WC="0,75" />
+            <String ID="Textword_233" HPOS="623" VPOS="866" HEIGHT="23" WIDTH="24" CONTENT="in" WC="0,93" />
+            <String ID="Textword_234" HPOS="662" VPOS="863" HEIGHT="25" WIDTH="80" CONTENT="fauces" WC="0,93" />
+            <String ID="Textword_235" HPOS="754" VPOS="859" HEIGHT="28" WIDTH="142" CONTENT="afcendunt," WC="0,91" />
+            <String ID="Textword_236" HPOS="914" VPOS="855" HEIGHT="34" WIDTH="151" CONTENT="quemadmo-" WC="0,92" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="TextBlock_3" HPOS="110" VPOS="887" HEIGHT="651" WIDTH="979">
+          <TextLine ID="TextLine_25" HPOS="110" VPOS="887" HEIGHT="56" WIDTH="979">
+            <String ID="Textword_237" HPOS="110" VPOS="916" HEIGHT="23" WIDTH="56" CONTENT="dum" WC="0,93" />
+            <String ID="Textword_238" HPOS="179" VPOS="914" HEIGHT="23" WIDTH="24" CONTENT="in" WC="0,92" />
+            <String ID="Textword_239" HPOS="216" VPOS="910" HEIGHT="33" WIDTH="77" CONTENT="puella" WC="0,84" />
+            <String ID="Textword_240" HPOS="306" VPOS="907" HEIGHT="25" WIDTH="101" CONTENT="decenni" WC="0,86" />
+            <String ID="Textword_241" HPOS="421" VPOS="906" HEIGHT="24" WIDTH="57" CONTENT="alias" WC="0,92" />
+            <String ID="Textword_242" HPOS="495" VPOS="903" HEIGHT="23" WIDTH="54" CONTENT="fana" WC="0,92" />
+            <String ID="Textword_243" HPOS="560" VPOS="907" HEIGHT="17" WIDTH="80" CONTENT="eorum" WC="0,91" />
+            <String ID="Textword_244" HPOS="654" VPOS="897" HEIGHT="33" WIDTH="106" CONTENT="glomere" WC="0,92" />
+            <String ID="Textword_245" HPOS="776" VPOS="900" HEIGHT="16" WIDTH="26" CONTENT="os" WC="0,93" />
+            <String ID="Textword_246" HPOS="817" VPOS="898" HEIGHT="26" WIDTH="70" CONTENT="atque" WC="0,92" />
+            <String ID="Textword_247" HPOS="898" VPOS="889" HEIGHT="28" WIDTH="81" CONTENT="faucgs" WC="0,70" />
+            <String ID="Textword_248" HPOS="991" VPOS="887" HEIGHT="32" WIDTH="73" CONTENT="reple-" WC="0,83" />
+            <String ID="Textword_249" HPOS="1086" VPOS="905" HEIGHT="4" WIDTH="3" CONTENT="." WC="0,83" />
+          </TextLine>
+          <TextLine ID="TextLine_26" HPOS="112" VPOS="919" HEIGHT="57" WIDTH="954">
+            <String ID="Textword_250" HPOS="112" VPOS="954" HEIGHT="22" WIDTH="39" CONTENT="ta," WC="0,93" />
+            <String ID="Textword_251" HPOS="168" VPOS="945" HEIGHT="25" WIDTH="25" CONTENT="&amp;" WC="0,91" />
+            <String ID="Textword_252" HPOS="205" VPOS="944" HEIGHT="24" WIDTH="67" CONTENT="binos" WC="0,92" />
+            <String ID="Textword_253" HPOS="284" VPOS="943" HEIGHT="23" WIDTH="22" CONTENT="in" WC="0,93" />
+            <String ID="Textword_254" HPOS="324" VPOS="940" HEIGHT="25" WIDTH="96" CONTENT="trachea" WC="0,69" />
+            <String ID="Textword_255" HPOS="432" VPOS="938" HEIGHT="25" WIDTH="28" CONTENT="ad" WC="0,96" />
+            <String ID="Textword_256" HPOS="480" VPOS="934" HEIGHT="26" WIDTH="77" CONTENT="cordis" WC="0,91" />
+            <String ID="Textword_257" HPOS="574" VPOS="932" HEIGHT="25" WIDTH="77" CONTENT="fedem" WC="0,93" />
+            <String ID="Textword_258" HPOS="663" VPOS="929" HEIGHT="32" WIDTH="70" CONTENT="ingue" WC="0,84" />
+            <String ID="Textword_259" HPOS="749" VPOS="927" HEIGHT="25" WIDTH="68" CONTENT="initio" WC="0,59" />
+            <String ID="Textword_260" HPOS="834" VPOS="924" HEIGHT="32" WIDTH="118" CONTENT="pulmonis" WC="0,92" />
+            <String ID="Textword_261" HPOS="966" VPOS="919" HEIGHT="26" WIDTH="100" CONTENT="manıfe-" WC="0,69" />
+          </TextLine>
+          <TextLine ID="TextLine_27" HPOS="112" VPOS="953" HEIGHT="52" WIDTH="955">
+            <String ID="Textword_262" HPOS="112" VPOS="980" HEIGHT="25" WIDTH="47" CONTENT="ftos" WC="0,91" />
+            <String ID="Textword_263" HPOS="175" VPOS="975" HEIGHT="27" WIDTH="162" CONTENT="fuFfocationis" WC="0,10" />
+            <String ID="Textword_264" HPOS="360" VPOS="978" HEIGHT="19" WIDTH="93" CONTENT="autores" WC="0,90" />
+            <String ID="Textword_265" HPOS="465" VPOS="988" HEIGHT="12" WIDTH="7" CONTENT="," WC="0,68" />
+            <String ID="Textword_266" HPOS="488" VPOS="967" HEIGHT="25" WIDTH="92" CONTENT="detexit" WC="0,90" />
+            <String ID="Textword_267" HPOS="592" VPOS="962" HEIGHT="27" WIDTH="108" CONTENT="Muftriff." WC="0,56" />
+            <String ID="Textword_268" HPOS="718" VPOS="962" HEIGHT="24" WIDTH="56" CONTENT="Alb." WC="0,96" />
+            <String ID="Textword_269" HPOS="787" VPOS="960" HEIGHT="23" WIDTH="29" CONTENT="ab" WC="0,96" />
+            <String ID="Textword_270" HPOS="827" VPOS="957" HEIGHT="26" WIDTH="81" CONTENT="Haller" WC="0,91" />
+            <String ID="Textword_271" HPOS="920" VPOS="953" HEIGHT="33" WIDTH="85" CONTENT="Opufc." WC="0,88" />
+            <String ID="Textword_272" HPOS="1024" VPOS="953" HEIGHT="23" WIDTH="43" CONTENT="Pa-" WC="0,93" />
+          </TextLine>
+          <TextLine ID="TextLine_28" HPOS="114" VPOS="985" HEIGHT="58" WIDTH="954">
+            <String ID="Textword_273" HPOS="114" VPOS="1011" HEIGHT="26" WIDTH="59" CONTENT="thol." WC="0,92" />
+            <String ID="Textword_274" HPOS="192" VPOS="1018" HEIGHT="25" WIDTH="22" CONTENT="p." WC="0,92" />
+            <String ID="Textword_275" HPOS="228" VPOS="1016" HEIGHT="17" WIDTH="37" CONTENT="20." WC="0,92" />
+            <String ID="Textword_276" HPOS="285" VPOS="1006" HEIGHT="26" WIDTH="47" CONTENT="obf." WC="0,72" />
+            <String ID="Textword_277" HPOS="345" VPOS="1013" HEIGHT="25" WIDTH="23" CONTENT="9." WC="0,95" />
+            <String ID="Textword_278" HPOS="387" VPOS="1011" HEIGHT="26" WIDTH="45" CONTENT="qua" WC="0,95" />
+            <String ID="Textword_279" HPOS="443" VPOS="1003" HEIGHT="25" WIDTH="30" CONTENT="de" WC="0,95" />
+            <String ID="Textword_280" HPOS="486" VPOS="1000" HEIGHT="33" WIDTH="103" CONTENT="pernicie" WC="0,90" />
+            <String ID="Textword_281" HPOS="605" VPOS="995" HEIGHT="27" WIDTH="110" CONTENT="ceciniffe" WC="0,90" />
+            <String ID="Textword_282" HPOS="729" VPOS="993" HEIGHT="25" WIDTH="95" CONTENT="videtur" WC="0,89" />
+            <String ID="Textword_283" HPOS="838" VPOS="991" HEIGHT="31" WIDTH="45" CONTENT="Qu." WC="0,93" />
+            <String ID="Textword_284" HPOS="896" VPOS="989" HEIGHT="23" WIDTH="97" CONTENT="Serenus" WC="0,89" />
+            <String ID="Textword_285" HPOS="1004" VPOS="985" HEIGHT="23" WIDTH="64" CONTENT="Sam-" WC="0,79" />
+          </TextLine>
+          <TextLine ID="TextLine_29" HPOS="115" VPOS="1034" HEIGHT="36" WIDTH="460">
+            <String ID="Textword_286" HPOS="115" VPOS="1039" HEIGHT="31" WIDTH="167" CONTENT="monicus." WC="0,68" />
+            <String ID="Textword_287" HPOS="445" VPOS="1034" HEIGHT="26" WIDTH="130" CONTENT="Lumbricus" WC="0,60" />
+          </TextLine>
+          <TextLine ID="TextLine_30" HPOS="183" VPOS="1061" HEIGHT="43" WIDTH="553">
+            <String ID="Textword_288" HPOS="183" VPOS="1076" HEIGHT="28" WIDTH="68" CONTENT="Saepe" WC="0,90" />
+            <String ID="Textword_289" HPOS="262" VPOS="1074" HEIGHT="23" WIDTH="65" CONTENT="etiam" WC="0,66" />
+            <String ID="Textword_290" HPOS="332" VPOS="1070" HEIGHT="32" WIDTH="108" CONTENT="feandens" WC="0,59" />
+            <String ID="Textword_291" HPOS="451" VPOS="1067" HEIGHT="32" WIDTH="91" CONTENT="oppleris" WC="0,79" />
+            <String ID="Textword_292" HPOS="561" VPOS="1064" HEIGHT="23" WIDTH="87" CONTENT="faucibus" WC="0,27" />
+            <String ID="Textword_293" HPOS="661" VPOS="1061" HEIGHT="21" WIDTH="75" CONTENT="haeret" WC="0,88" />
+          </TextLine>
+          <TextLine ID="TextLine_31" HPOS="114" VPOS="1092" HEIGHT="45" WIDTH="817">
+            <String ID="Textword_294" HPOS="114" VPOS="1115" HEIGHT="5" WIDTH="9" CONTENT="-" WC="0,23" />
+            <String ID="Textword_295" HPOS="187" VPOS="1104" HEIGHT="33" WIDTH="140" CONTENT=" Obfellasque" WC="0,23" />
+            <String ID="Textword_296" HPOS="343" VPOS="1104" HEIGHT="22" WIDTH="49" CONTENT="vis" WC="0,19" />
+            <String ID="Textword_297" HPOS="407" VPOS="1102" HEIGHT="23" WIDTH="61" CONTENT="vitae" WC="0,82" />
+            <String ID="Textword_298" HPOS="477" VPOS="1096" HEIGHT="34" WIDTH="119" CONTENT="praecludit" WC="0,42" />
+            <String ID="Textword_299" HPOS="609" VPOS="1092" HEIGHT="24" WIDTH="95" CONTENT="anhelae." WC="0,73" />
+            <String ID="Textword_300" HPOS="928" VPOS="1110" HEIGHT="3" WIDTH="3" CONTENT="." WC="0,45" />
+          </TextLine>
+          <TextLine ID="TextLine_32" HPOS="116" VPOS="1115" HEIGHT="54" WIDTH="958">
+            <String ID="Textword_301" HPOS="116" VPOS="1147" HEIGHT="5" WIDTH="6" CONTENT="-" WC="0,71" />
+            <String ID="Textword_302" HPOS="152" VPOS="1136" HEIGHT="33" WIDTH="274" CONTENT="Saepetumnafooreve" WC="0,71" />
+            <String ID="Textword_303" HPOS="435" VPOS="1134" HEIGHT="29" WIDTH="151" CONTENT="aegrotorum" WC="0,82" />
+            <String ID="Textword_304" HPOS="594" VPOS="1128" HEIGHT="21" WIDTH="143" CONTENT="evomumeur" WC="0,36" />
+            <String ID="Textword_305" HPOS="746" VPOS="1117" HEIGHT="34" WIDTH="131" CONTENT="prodeuntge" WC="0,92" />
+            <String ID="Textword_306" HPOS="880" VPOS="1115" HEIGHT="26" WIDTH="194" CONTENT="autextrahun-" WC="0,47" />
+          </TextLine>
+          <TextLine ID="TextLine_33" HPOS="118" VPOS="1149" HEIGHT="53" WIDTH="956">
+            <String ID="Textword_307" HPOS="118" VPOS="1181" HEIGHT="21" WIDTH="57" CONTENT="tur," WC="0,95" />
+            <String ID="Textword_308" HPOS="192" VPOS="1171" HEIGHT="24" WIDTH="47" CONTENT="fine" WC="0,93" />
+            <String ID="Textword_309" HPOS="253" VPOS="1175" HEIGHT="17" WIDTH="61" CONTENT="noxa" WC="0,92" />
+            <String ID="Textword_310" HPOS="325" VPOS="1174" HEIGHT="16" WIDTH="77" CONTENT="tamen" WC="0,91" />
+            <String ID="Textword_311" HPOS="415" VPOS="1171" HEIGHT="17" WIDTH="39" CONTENT="aut" WC="0,96" />
+            <String ID="Textword_312" HPOS="466" VPOS="1165" HEIGHT="29" WIDTH="125" CONTENT="portento," WC="0,91" />
+            <String ID="Textword_313" HPOS="609" VPOS="1157" HEIGHT="24" WIDTH="71" CONTENT="etiam" WC="0,92" />
+            <String ID="Textword_314" HPOS="693" VPOS="1156" HEIGHT="23" WIDTH="23" CONTENT="in" WC="0,93" />
+            <String ID="Textword_315" HPOS="734" VPOS="1153" HEIGHT="27" WIDTH="118" CONTENT="febribus," WC="0,92" />
+            <String ID="Textword_316" HPOS="870" VPOS="1150" HEIGHT="25" WIDTH="39" CONTENT="vel" WC="0,93" />
+            <String ID="Textword_317" HPOS="922" VPOS="1150" HEIGHT="24" WIDTH="49" CONTENT="vivi" WC="0,90" />
+            <String ID="Textword_318" HPOS="983" VPOS="1149" HEIGHT="24" WIDTH="40" CONTENT="ubi" WC="0,90" />
+            <String ID="Textword_319" HPOS="1033" VPOS="1154" HEIGHT="18" WIDTH="41" CONTENT="eos" WC="0,93" />
+          </TextLine>
+          <TextLine ID="TextLine_34" HPOS="119" VPOS="1180" HEIGHT="57" WIDTH="956">
+            <String ID="Textword_320" HPOS="119" VPOS="1205" HEIGHT="32" WIDTH="177" CONTENT="malignitatem" WC="0,49" />
+            <String ID="Textword_321" HPOS="310" VPOS="1199" HEIGHT="24" WIDTH="119" CONTENT="inimicam" WC="0,91" />
+            <String ID="Textword_322" HPOS="451" VPOS="1195" HEIGHT="31" WIDTH="118" CONTENT="fugientes" WC="0,51" />
+            <String ID="Textword_323" HPOS="588" VPOS="1189" HEIGHT="33" WIDTH="81" CONTENT="egredi" WC="0,92" />
+            <String ID="Textword_324" HPOS="683" VPOS="1195" HEIGHT="17" WIDTH="46" CONTENT="non" WC="0,96" />
+            <String ID="Textword_325" HPOS="744" VPOS="1187" HEIGHT="24" WIDTH="33" CONTENT="ita" WC="0,90" />
+            <String ID="Textword_326" HPOS="797" VPOS="1184" HEIGHT="25" WIDTH="61" CONTENT="male" WC="0,92" />
+            <String ID="Textword_327" HPOS="868" VPOS="1184" HEIGHT="24" WIDTH="88" CONTENT="docent" WC="0,92" />
+            <String ID="Textword_328" HPOS="969" VPOS="1180" HEIGHT="27" WIDTH="106" CONTENT="Medici," WC="0,96" />
+          </TextLine>
+          <TextLine ID="TextLine_35" HPOS="119" VPOS="1211" HEIGHT="55" WIDTH="958">
+            <String ID="Textword_329" HPOS="119" VPOS="1240" HEIGHT="25" WIDTH="44" CONTENT="vel" WC="0,86" />
+            <String ID="Textword_330" HPOS="177" VPOS="1235" HEIGHT="28" WIDTH="88" CONTENT="mortui" WC="0,92" />
+            <String ID="Textword_331" HPOS="286" VPOS="1231" HEIGHT="35" WIDTH="61" CONTENT="quod" WC="0,92" />
+            <String ID="Textword_332" HPOS="366" VPOS="1231" HEIGHT="24" WIDTH="25" CONTENT="in" WC="0,93" />
+            <String ID="Textword_333" HPOS="410" VPOS="1228" HEIGHT="24" WIDTH="74" CONTENT="acutis" WC="0,89" />
+            <String ID="Textword_334" HPOS="502" VPOS="1224" HEIGHT="27" WIDTH="119" CONTENT="febribus," WC="0,25" />
+            <String ID="Textword_335" HPOS="645" VPOS="1222" HEIGHT="24" WIDTH="48" CONTENT="fine" WC="0,93" />
+            <String ID="Textword_336" HPOS="709" VPOS="1220" HEIGHT="25" WIDTH="72" CONTENT="noxio" WC="0,92" />
+            <String ID="Textword_337" HPOS="799" VPOS="1216" HEIGHT="28" WIDTH="101" CONTENT="fucceflu" WC="0,44" />
+            <String ID="Textword_338" HPOS="914" VPOS="1214" HEIGHT="24" WIDTH="87" CONTENT="fa&amp;tum" WC="0,28" />
+            <String ID="Textword_339" HPOS="1015" VPOS="1211" HEIGHT="24" WIDTH="62" CONTENT="vidit" WC="0,92" />
+          </TextLine>
+          <TextLine ID="TextLine_36" HPOS="123" VPOS="1242" HEIGHT="62" WIDTH="955">
+            <String ID="Textword_340" HPOS="123" VPOS="1271" HEIGHT="33" WIDTH="119" CONTENT="Vogelius" WC="0,73" />
+            <String ID="Textword_341" HPOS="253" VPOS="1275" HEIGHT="18" WIDTH="61" CONTENT="neue" WC="0,96" />
+            <String ID="Textword_342" HPOS="326" VPOS="1264" HEIGHT="25" WIDTH="61" CONTENT="med." WC="0,96" />
+            <String ID="Textword_343" HPOS="407" VPOS="1259" HEIGHT="27" WIDTH="109" CONTENT="Biblioth." WC="0,78" />
+            <String ID="Textword_344" HPOS="533" VPOS="1257" HEIGHT="24" WIDTH="33" CONTENT="III" WC="0,57" />
+            <String ID="Textword_345" HPOS="584" VPOS="1256" HEIGHT="24" WIDTH="24" CONTENT="B." WC="0,74" />
+            <String ID="Textword_346" HPOS="625" VPOS="1256" HEIGHT="23" WIDTH="8" CONTENT="1" WC="0,90" />
+            <String ID="Textword_347" HPOS="651" VPOS="1256" HEIGHT="23" WIDTH="33" CONTENT="St." WC="0,82" />
+            <String ID="Textword_348" HPOS="702" VPOS="1259" HEIGHT="27" WIDTH="23" CONTENT="p." WC="0,59" />
+            <String ID="Textword_349" HPOS="739" VPOS="1261" HEIGHT="23" WIDTH="37" CONTENT="29." WC="0,46" />
+            <String ID="Textword_350" HPOS="803" VPOS="1252" HEIGHT="23" WIDTH="95" CONTENT="Certum" WC="0,88" />
+            <String ID="Textword_351" HPOS="914" VPOS="1252" HEIGHT="17" WIDTH="59" CONTENT="vero" WC="0,91" />
+            <String ID="Textword_352" HPOS="992" VPOS="1242" HEIGHT="25" WIDTH="33" CONTENT="eft" WC="0,80" />
+            <String ID="Textword_353" HPOS="1036" VPOS="1251" HEIGHT="17" WIDTH="42" CONTENT="eos" WC="0,95" />
+          </TextLine>
+          <TextLine ID="TextLine_37" HPOS="125" VPOS="1276" HEIGHT="57" WIDTH="955">
+            <String ID="Textword_354" HPOS="125" VPOS="1312" HEIGHT="17" WIDTH="57" CONTENT="tunc" WC="0,89" />
+            <String ID="Textword_355" HPOS="198" VPOS="1309" HEIGHT="24" WIDTH="73" CONTENT="pravo" WC="0,92" />
+            <String ID="Textword_356" HPOS="287" VPOS="1304" HEIGHT="28" WIDTH="118" CONTENT="parcoque" WC="0,91" />
+            <String ID="Textword_357" HPOS="415" VPOS="1294" HEIGHT="25" WIDTH="113" CONTENT="alımento" WC="0,92" />
+            <String ID="Textword_358" HPOS="539" VPOS="1290" HEIGHT="31" WIDTH="108" CONTENT="praebito" WC="0,87" />
+            <String ID="Textword_359" HPOS="659" VPOS="1306" HEIGHT="12" WIDTH="7" CONTENT="," WC="0,84" />
+            <String ID="Textword_360" HPOS="689" VPOS="1285" HEIGHT="27" WIDTH="92" CONTENT="convelli" WC="0,89" />
+            <String ID="Textword_361" HPOS="784" VPOS="1286" HEIGHT="26" WIDTH="23" CONTENT="," WC="0,89" />
+            <String ID="Textword_362" HPOS="830" VPOS="1283" HEIGHT="22" WIDTH="49" CONTENT="imo" WC="0,93" />
+            <String ID="Textword_363" HPOS="894" VPOS="1276" HEIGHT="30" WIDTH="107" CONTENT="enecarj," WC="0,91" />
+            <String ID="Textword_364" HPOS="1024" VPOS="1276" HEIGHT="25" WIDTH="56" CONTENT="hine" WC="0,83" />
+          </TextLine>
+          <TextLine ID="TextLine_38" HPOS="126" VPOS="1309" HEIGHT="52" WIDTH="954">
+            <String ID="Textword_365" HPOS="126" VPOS="1339" HEIGHT="22" WIDTH="30" CONTENT="ab" WC="0,93" />
+            <String ID="Textword_366" HPOS="170" VPOS="1335" HEIGHT="24" WIDTH="131" CONTENT="irritatione" WC="0,87" />
+            <String ID="Textword_367" HPOS="311" VPOS="1331" HEIGHT="25" WIDTH="25" CONTENT="&amp;" WC="0,92" />
+            <String ID="Textword_368" HPOS="348" VPOS="1330" HEIGHT="25" WIDTH="103" CONTENT="fordibus" WC="0,73" />
+            <String ID="Textword_369" HPOS="471" VPOS="1326" HEIGHT="25" WIDTH="91" CONTENT="illorum" WC="0,75" />
+            <String ID="Textword_370" HPOS="575" VPOS="1322" HEIGHT="23" WIDTH="75" CONTENT="morbi" WC="0,93" />
+            <String ID="Textword_371" HPOS="664" VPOS="1320" HEIGHT="30" WIDTH="171" CONTENT="malignitatem" WC="0,66" />
+            <String ID="Textword_372" HPOS="854" VPOS="1311" HEIGHT="32" WIDTH="96" CONTENT="augeri," WC="0,91" />
+            <String ID="Textword_373" HPOS="969" VPOS="1309" HEIGHT="26" WIDTH="25" CONTENT="&amp;" WC="0,92" />
+            <String ID="Textword_374" HPOS="1010" VPOS="1310" HEIGHT="31" WIDTH="70" CONTENT="faepe" WC="0,92" />
+          </TextLine>
+          <TextLine ID="TextLine_39" HPOS="122" VPOS="1343" HEIGHT="57" WIDTH="958">
+            <String ID="Textword_375" HPOS="122" VPOS="1367" HEIGHT="33" WIDTH="165" CONTENT="'epidemicam" WC="0,11" />
+            <String ID="Textword_376" HPOS="303" VPOS="1364" HEIGHT="28" WIDTH="84" CONTENT="reddi," WC="0,89" />
+            <String ID="Textword_377" HPOS="413" VPOS="1360" HEIGHT="25" WIDTH="64" CONTENT="unde" WC="0,92" />
+            <String ID="Textword_378" HPOS="499" VPOS="1355" HEIGHT="35" WIDTH="139" CONTENT="quandoque" WC="0,79" />
+            <String ID="Textword_379" HPOS="659" VPOS="1349" HEIGHT="28" WIDTH="126" CONTENT="verminofi" WC="0,90" />
+            <String ID="Textword_380" HPOS="811" VPOS="1343" HEIGHT="27" WIDTH="98" CONTENT="affeftus" WC="0,00" />
+            <String ID="Textword_381" HPOS="930" VPOS="1351" HEIGHT="23" WIDTH="42" CONTENT="pro" WC="0,87" />
+            <String ID="Textword_382" HPOS="995" VPOS="1343" HEIGHT="25" WIDTH="85" CONTENT="talibus" WC="0,87" />
+          </TextLine>
+          <TextLine ID="TextLine_40" HPOS="129" VPOS="1378" HEIGHT="49" WIDTH="951">
+            <String ID="Textword_383" HPOS="129" VPOS="1400" HEIGHT="26" WIDTH="77" CONTENT="habiti" WC="0,91" />
+            <String ID="Textword_384" HPOS="224" VPOS="1398" HEIGHT="24" WIDTH="94" CONTENT="fuerunt" WC="0,79" />
+            <String ID="Textword_385" HPOS="330" VPOS="1413" HEIGHT="13" WIDTH="8" CONTENT="," WC="0,88" />
+            <String ID="Textword_386" HPOS="361" VPOS="1403" HEIGHT="24" WIDTH="69" CONTENT="quum" WC="0,90" />
+            <String ID="Textword_387" HPOS="447" VPOS="1389" HEIGHT="28" WIDTH="108" CONTENT="lumbrici" WC="0,91" />
+            <String ID="Textword_388" HPOS="572" VPOS="1387" HEIGHT="32" WIDTH="37" CONTENT="qui" WC="0,91" />
+            <String ID="Textword_389" HPOS="629" VPOS="1394" HEIGHT="24" WIDTH="72" CONTENT="usque" WC="0,90" />
+            <String ID="Textword_390" HPOS="719" VPOS="1391" HEIGHT="23" WIDTH="49" CONTENT="zum" WC="0,17" />
+            <String ID="Textword_391" HPOS="782" VPOS="1381" HEIGHT="24" WIDTH="117" CONTENT="latuerant" WC="0,34" />
+            <String ID="Textword_392" HPOS="916" VPOS="1385" HEIGHT="15" WIDTH="13" CONTENT="a" WC="0,95" />
+            <String ID="Textword_393" HPOS="941" VPOS="1378" HEIGHT="23" WIDTH="84" CONTENT="morbo" WC="0,91" />
+            <String ID="Textword_394" HPOS="1039" VPOS="1382" HEIGHT="18" WIDTH="41" CONTENT="ex-" WC="0,92" />
+          </TextLine>
+          <TextLine ID="TextLine_41" HPOS="123" VPOS="1418" HEIGHT="44" WIDTH="628">
+            <String ID="Textword_395" HPOS="123" VPOS="1433" HEIGHT="28" WIDTH="76" CONTENT="&quot;eitati" WC="0,40" />
+            <String ID="Textword_396" HPOS="210" VPOS="1431" HEIGHT="24" WIDTH="24" CONTENT="in" WC="0,91" />
+            <String ID="Textword_397" HPOS="249" VPOS="1430" HEIGHT="32" WIDTH="116" CONTENT="plerisque" WC="0,86" />
+            <String ID="Textword_398" HPOS="375" VPOS="1427" HEIGHT="32" WIDTH="76" CONTENT="aegris" WC="0,53" />
+            <String ID="Textword_399" HPOS="466" VPOS="1426" HEIGHT="23" WIDTH="23" CONTENT="fe" WC="0,96" />
+            <String ID="Textword_400" HPOS="499" VPOS="1419" HEIGHT="28" WIDTH="182" CONTENT="manifeftarent." WC="0,49" />
+            <String ID="Textword_401" HPOS="745" VPOS="1418" HEIGHT="12" WIDTH="6" CONTENT="'" WC="0,19" />
+          </TextLine>
+          <TextLine ID="TextLine_42" HPOS="164" VPOS="1440" HEIGHT="52" WIDTH="920">
+            <String ID="Textword_402" HPOS="164" VPOS="1463" HEIGHT="29" WIDTH="136" CONTENT="Nocentius" WC="0,90" />
+            <String ID="Textword_403" HPOS="323" VPOS="1460" HEIGHT="25" WIDTH="73" CONTENT="multo" WC="0,88" />
+            <String ID="Textword_404" HPOS="414" VPOS="1465" HEIGHT="25" WIDTH="70" CONTENT="atque" WC="0,76" />
+            <String ID="Textword_405" HPOS="501" VPOS="1455" HEIGHT="25" WIDTH="73" CONTENT="dirius" WC="0,76" />
+            <String ID="Textword_406" HPOS="591" VPOS="1451" HEIGHT="25" WIDTH="33" CONTENT="eft" WC="0,88" />
+            <String ID="Textword_407" HPOS="640" VPOS="1459" HEIGHT="17" WIDTH="53" CONTENT="cum" WC="0,96" />
+            <String ID="Textword_408" HPOS="710" VPOS="1446" HEIGHT="28" WIDTH="85" CONTENT="infefta" WC="0,90" />
+            <String ID="Textword_409" HPOS="809" VPOS="1446" HEIGHT="23" WIDTH="59" CONTENT="haec" WC="0,88" />
+            <String ID="Textword_410" HPOS="884" VPOS="1442" HEIGHT="26" WIDTH="103" CONTENT="humano" WC="0,91" />
+            <String ID="Textword_411" HPOS="1000" VPOS="1440" HEIGHT="34" WIDTH="84" CONTENT="generi" WC="0,92" />
+          </TextLine>
+          <TextLine ID="TextLine_43" HPOS="131" VPOS="1473" HEIGHT="55" WIDTH="955">
+            <String ID="Textword_412" HPOS="131" VPOS="1498" HEIGHT="30" WIDTH="114" CONTENT="colluvies" WC="0,57" />
+            <String ID="Textword_413" HPOS="256" VPOS="1514" HEIGHT="13" WIDTH="8" CONTENT="," WC="0,57" />
+            <String ID="Textword_414" HPOS="280" VPOS="1494" HEIGHT="33" WIDTH="87" CONTENT="primas" WC="0,92" />
+            <String ID="Textword_415" HPOS="384" VPOS="1493" HEIGHT="25" WIDTH="49" CONTENT="vias" WC="0,92" />
+            <String ID="Textword_416" HPOS="455" VPOS="1490" HEIGHT="33" WIDTH="85" CONTENT="quibus" WC="0,92" />
+            <String ID="Textword_417" HPOS="564" VPOS="1485" HEIGHT="27" WIDTH="146" CONTENT="conchaditur" WC="0,00" />
+            <String ID="Textword_418" HPOS="721" VPOS="1500" HEIGHT="13" WIDTH="8" CONTENT="," WC="0,81" />
+            <String ID="Textword_419" HPOS="747" VPOS="1486" HEIGHT="26" WIDTH="103" CONTENT="utcungue" WC="0,74" />
+            <String ID="Textword_420" HPOS="852" VPOS="1477" HEIGHT="26" WIDTH="152" CONTENT="irtitata-in" WC="0,17" />
+            <String ID="Textword_421" HPOS="1011" VPOS="1473" HEIGHT="31" WIDTH="75" CONTENT="furo-" WC="0,17" />
+          </TextLine>
+          <TextLine ID="TextLine_44" HPOS="576" VPOS="1512" HEIGHT="26" WIDTH="508">
+            <String ID="Textword_422" HPOS="576" VPOS="1535" HEIGHT="3" WIDTH="3" CONTENT=":" WC="0,28" />
+            <String ID="Textword_423" HPOS="785" VPOS="1521" HEIGHT="6" WIDTH="9" CONTENT="-" WC="0,11" />
+            <String ID="Textword_424" HPOS="1023" VPOS="1512" HEIGHT="18" WIDTH="61" CONTENT="rem-" WC="0,46" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="TextBlock_4" HPOS="858" VPOS="1547" HEIGHT="7" WIDTH="14">
+          <TextLine ID="TextLine_45" HPOS="858" VPOS="1547" HEIGHT="7" WIDTH="14">
+            <String ID="Textword_425" HPOS="858" VPOS="1547" HEIGHT="7" WIDTH="14" CONTENT="&gt;" WC="0,28" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

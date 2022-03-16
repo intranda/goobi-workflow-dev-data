@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config_webapi>
+
+	<credentials ip="0:0:0:0:0:0:0:1" password="test">
+		<command name="help" />
+		<command name="addStepToProject" />
+		<command name="addToProcessLog" />
+		<command name="archiveProcess" />
+		<command name="closeStep" />
+		<command name="closeStepByProcessId" />
+		<command name="deleteProcess" />
+		<command name="exportDms" />
+		<command name="importRecordCommand" />
+		<command name="processFilter" />
+		<command name="reportProblem" />
+		<command name="runScriptAndClose" />
+		<command name="runScript" />
+		<command name="stepFilter" />
+		<command name="ucc" />
+		<command name="ucc_upload" />
+		<command name="/image" />
+		<command name="/seterrorstep" />
+		<command name="/addtoprocesslog" />
+		<command name="/closestep" />
+	</credentials>
+
+	<credentials ip="127.0.0.1" password="test">
+		<command name="help" />
+		<command name="AddProperty" />
+		<command name="addStepToProject" />
+		<command name="addToProcessLog" />
+		<command name="archiveProcess" />
+		<command name="closeStep" />
+		<command name="closeStepByProcessId" />
+		<command name="deleteProcess" />
+		<command name="exportDms" />
+		<command name="importRecordCommand" />
+		<command name="processFilter" />
+		<command name="reportProblem" />
+		<command name="runScriptAndClose" />
+		<command name="runScript" />
+		<command name="stepFilter" />
+		<command name="ucc" />
+		<command name="ucc_upload" />
+		<command name="/image" />
+		<command name="/seterrorstep" />
+		<command name="/addtoprocesslog" />
+		<command name="/closestep" />
+	</credentials>
+</config_webapi>

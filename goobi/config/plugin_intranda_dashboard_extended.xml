@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config_plugin>
+        <!-- intranda TaskManager -->
+        <itm-show>false</itm-show>
+        <itm-cache-time>180000</itm-cache-time>
+        <itm-url>http://localhost:8080/itm/</itm-url>
+
+        <!-- Nagios Monitoring -->
+        <nagios-show>false</nagios-show>
+        <nagios-cache-time>180000</nagios-cache-time>
+        <nagios-host>host.example.org</nagios-host>
+        <nagios-login>user</nagios-login>
+        <nagios-password>pass</nagios-password>
+
+        <!-- RSS-Feed e.g. of last imports -->
+        <rss-show>true</rss-show>
+        <rss-cache-time>900000</rss-cache-time>
+        <rss-url>http://www.intranda.com/en/feed/</rss-url>
+        <rss-title>News by intranda GmbH</rss-title>
+
+        <!-- Search -->
+        <search-show>true</search-show>
+
+        <!-- Tasks -->
+        <tasks-show>true</tasks-show>
+        <tasks-latestChanges>true</tasks-latestChanges>
+
+        <!-- show recent history  -->
+        <tasks-history>false</tasks-history>
+
+        <!-- show history for configured tasks -->
+        <tasks-history-title>Scanning</tasks-history-title>
+        <tasks-history-title>Quality control</tasks-history-title>
+        <tasks-history-title>Image processing</tasks-history-title>
+        <tasks-history-title>Fileupload</tasks-history-title>
+        <!-- include status changes for the last X days -->
+        <tasks-history-period>7</tasks-history-period>
+
+        <!-- Statistics -->
+        <statistics-show>true</statistics-show>
+
+        <!-- Batches -->
+        <batches-show>true</batches-show>
+        <!-- define time range as months before and after the today date -->
+        <batches-timerange-start>2</batches-timerange-start>
+        <batches-timerange-end>4</batches-timerange-end>
+
+        <!-- Process creation -->
+        <processTemplates-show>true</processTemplates-show>
+        <processTemplates-show-statusColumn>true</processTemplates-show-statusColumn>
+        <processTemplates-show-projectColumn>true</processTemplates-show-projectColumn>
+        <processTemplates-show-massImportButton>true</processTemplates-show-massImportButton>
+
+        <!-- Message queue -->
+        <queue-show>false</queue-show>
+        <!-- switch between 'activemq' or 'sqs' implementation -->
+        <queue-type>activemq</queue-type>
+
+        <!-- HTML box -->
+        <html-box-show>true</html-box-show>
+        <html-box-title>Goobi to go - Sample accounts</html-box-title>
+        <html-box-content><![CDATA[
+                This is the Goobi workflow instance inside of your Goobi-to-go environment. It contains some demonstration material as well as sample user accounts. In the following table you can see the list of all user accounts>
+                <table class="table table-hover table-nomargin dataTable table-bordered responsive">
+                        <thead>
+                                <tr>
+                                        <th>Login</th>
+                                        <th>Password</th>
+                                        <th>User description</th>
+                                </tr>
+                        </thead>
+                        <tr>
+                                <td>testscanning</td>
+                                <td>test</td>
+                                <td>User account for uploading content</td>
+                        </tr>
+                        <tr>
+                                <td>testqc</td>
+                                <td>test</td>
+                                <td>User account for manual Image QA</td>
+                        </tr>
+                        <tr>
+                                <td>testmetadata</td>
+                                <td>test</td>
+                                <td>Account for metadata enrichment work</td>
+                        </tr>
+                        <tr>
+                                <td>testimaging</td>
+                                <td>test</td>
+                                <td>User account for manual image optimisation</td>
+                        </tr>
+                        <tr>
+                                <td>testprojectmanagement</td>
+                                <td>test</td>
+                                <td>Project manager account</td>
+                        </tr>
+                        <tr>
+                                <td>testadmin</td>
+                                <td>test</td>
+                                <td>Administrator account</td>
+                        </tr>
+                        <tr>
+                                <td>goobi</td>
+                                <td>goobi</td>
+                                <td>Administrator account</td>
+                        </tr>
+                </table>
+        ]]></html-box-content>
+
+</config_plugin>

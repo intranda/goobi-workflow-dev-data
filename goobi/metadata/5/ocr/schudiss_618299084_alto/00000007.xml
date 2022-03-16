@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns="http://www.loc.gov/standards/alto/ns-v2#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto.xsd">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation />
+    <OCRProcessing ID="OCR_1">
+      <preProcessingStep>
+        <processingDateTime>2019-06-20T02:46:30</processingDateTime>
+        <processingAgency>intranda GmbH, www.intranda.com</processingAgency>
+        <processingSoftware>
+          <softwareCreator>intranda GmbH, Germany</softwareCreator>
+          <softwareName>intranda OCR Module for TaskManager</softwareName>
+          <softwareVersion>1.0r42</softwareVersion>
+        </processingSoftware>
+      </preProcessingStep>
+      <ocrProcessingStep>
+        <processingSoftware>
+          <softwareCreator>Tesseract contributors</softwareCreator>
+          <softwareName>Tesseract Open Source OCR Engine</softwareName>
+          <softwareVersion>4.0.0-beta.1-270-g5a56</softwareVersion>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Layout>
+    <Page ID="PAGE_1" HEIGHT="1608" WIDTH="1192" PHYSICAL_IMG_NR="1">
+      <PrintSpace ID="PrintSpace_1" HPOS="0" VPOS="0" HEIGHT="1608" WIDTH="1192">
+        <TextBlock ID="TextBlock_1" HPOS="23" VPOS="152" HEIGHT="145" WIDTH="7">
+          <TextLine ID="TextLine_1" HPOS="23" VPOS="152" HEIGHT="145" WIDTH="7">
+            <String ID="Textword_1" HPOS="24" VPOS="262" HEIGHT="35" WIDTH="6" CONTENT="—" WC="0,74" />
+            <String ID="Textword_2" HPOS="23" VPOS="152" HEIGHT="101" WIDTH="7" CONTENT="mann" WC="0,17" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="TextBlock_2" HPOS="707" VPOS="7" HEIGHT="15" WIDTH="454">
+          <TextLine ID="TextLine_2" HPOS="707" VPOS="7" HEIGHT="15" WIDTH="454">
+            <SP ID="Textword_1" HPOS="707" VPOS="7" />
+            <String ID="Textword_3" HPOS="707" VPOS="7" HEIGHT="15" WIDTH="454" CONTENT=" " WC="0,95" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="TextBlock_3" HPOS="713" VPOS="14" HEIGHT="8" WIDTH="448">
+          <TextLine ID="TextLine_3" HPOS="713" VPOS="14" HEIGHT="8" WIDTH="448">
+            <SP ID="Textword_2" HPOS="713" VPOS="14" />
+            <String ID="Textword_4" HPOS="713" VPOS="14" HEIGHT="8" WIDTH="448" CONTENT=" " WC="0,95" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="TextBlock_4" HPOS="483" VPOS="74" HEIGHT="43" WIDTH="270">
+          <TextLine ID="TextLine_4" HPOS="483" VPOS="74" HEIGHT="43" WIDTH="270">
+            <String ID="Textword_5" HPOS="483" VPOS="74" HEIGHT="43" WIDTH="270" CONTENT="vıRro" WC="0,20" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="TextBlock_5" HPOS="165" VPOS="162" HEIGHT="183" WIDTH="910">
+          <TextLine ID="TextLine_5" HPOS="528" VPOS="162" HEIGHT="21" WIDTH="15">
+            <String ID="Textword_6" HPOS="528" VPOS="162" HEIGHT="21" WIDTH="15" CONTENT="4" WC="0,30" />
+          </TextLine>
+          <TextLine ID="TextLine_6" HPOS="165" VPOS="188" HEIGHT="45" WIDTH="910">
+            <String ID="Textword_7" HPOS="165" VPOS="198" HEIGHT="35" WIDTH="211" CONTENT="NOMINIS" WC="0,91" />
+            <String ID="Textword_8" HPOS="401" VPOS="192" HEIGHT="35" WIDTH="360" CONTENT="CELEBRITATE," WC="0,91" />
+            <String ID="Textword_9" HPOS="789" VPOS="188" HEIGHT="33" WIDTH="286" CONTENT="GRAVITATE" WC="0,62" />
+          </TextLine>
+          <TextLine ID="TextLine_7" HPOS="196" VPOS="247" HEIGHT="42" WIDTH="855">
+            <String ID="Textword_10" HPOS="196" VPOS="255" HEIGHT="34" WIDTH="266" CONTENT="MUNERUM," WC="0,91" />
+            <String ID="Textword_11" HPOS="494" VPOS="250" HEIGHT="31" WIDTH="200" CONTENT="INGENII" WC="0,91" />
+            <String ID="Textword_12" HPOS="725" VPOS="247" HEIGHT="31" WIDTH="326" CONTENT="ERUDITIONIS" WC="0,91" />
+          </TextLine>
+          <TextLine ID="TextLine_8" HPOS="231" VPOS="306" HEIGHT="39" WIDTH="783">
+            <String ID="Textword_13" HPOS="231" VPOS="312" HEIGHT="33" WIDTH="374" CONTENT="EXPERIENTIAE" WC="0,90" />
+            <String ID="Textword_14" HPOS="624" VPOS="308" HEIGHT="30" WIDTH="189" CONTENT="DECORE" WC="0,91" />
+            <String ID="Textword_15" HPOS="832" VPOS="306" HEIGHT="29" WIDTH="182" CONTENT="EXIMIO" WC="0,92" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="TextBlock_6" HPOS="145" VPOS="400" HEIGHT="200" WIDTH="1031">
+          <TextLine ID="TextLine_9" HPOS="145" VPOS="400" HEIGHT="84" WIDTH="960">
+            <String ID="Textword_16" HPOS="145" VPOS="407" HEIGHT="77" WIDTH="504" CONTENT="CHRISTIANO" WC="0,91" />
+            <String ID="Textword_17" HPOS="715" VPOS="400" HEIGHT="73" WIDTH="390" CONTENT="ANDREAE" WC="0,91" />
+          </TextLine>
+          <TextLine ID="TextLine_10" HPOS="340" VPOS="498" HEIGHT="102" WIDTH="836">
+            <String ID="Textword_18" HPOS="340" VPOS="498" HEIGHT="72" WIDTH="570" CONTENT="COTHENIO:" WC="0,77" />
+            <String ID="Textword_19" HPOS="1158" VPOS="510" HEIGHT="90" WIDTH="18" CONTENT="|" WC="0,51" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="TextBlock_7" HPOS="148" VPOS="618" HEIGHT="496" WIDTH="1025">
+          <TextLine ID="TextLine_11" HPOS="148" VPOS="618" HEIGHT="67" WIDTH="1025">
+            <String ID="Textword_20" HPOS="148" VPOS="653" HEIGHT="32" WIDTH="221" CONTENT="MEDICINAE" WC="0,91" />
+            <String ID="Textword_21" HPOS="383" VPOS="651" HEIGHT="24" WIDTH="180" CONTENT="DOCTORI," WC="0,91" />
+            <String ID="Textword_22" HPOS="579" VPOS="649" HEIGHT="21" WIDTH="133" CONTENT="SUMMO" WC="0,91" />
+            <String ID="Textword_23" HPOS="728" VPOS="644" HEIGHT="25" WIDTH="350" CONTENT="REGIFRIDERICOIL." WC="0,05" />
+            <String ID="Textword_24" HPOS="1092" VPOS="646" HEIGHT="22" WIDTH="20" CONTENT="A" WC="0,92" />
+            <String ID="Textword_25" HPOS="1164" VPOS="618" HEIGHT="53" WIDTH="9" CONTENT="!" WC="0,23" />
+          </TextLine>
+          <TextLine ID="TextLine_12" HPOS="162" VPOS="672" HEIGHT="55" WIDTH="1003">
+            <String ID="Textword_26" HPOS="162" VPOS="692" HEIGHT="35" WIDTH="366" CONTENT="CONSILJISINTIMIS," WC="0,40" />
+            <String ID="Textword_27" HPOS="549" VPOS="685" HEIGHT="38" WIDTH="167" CONTENT="EJUSDEM" WC="0,91" />
+            <String ID="Textword_28" HPOS="730" VPOS="685" HEIGHT="28" WIDTH="221" CONTENT="ARCHIATRO" WC="0,91" />
+            <String ID="Textword_29" HPOS="966" VPOS="685" HEIGHT="25" WIDTH="131" CONTENT="PRIMA." WC="0,92" />
+            <String ID="Textword_30" HPOS="1164" VPOS="672" HEIGHT="10" WIDTH="1" CONTENT="|" WC="0,51" />
+          </TextLine>
+          <TextLine ID="TextLine_13" HPOS="176" VPOS="727" HEIGHT="47" WIDTH="996">
+            <String ID="Textword_31" HPOS="176" VPOS="747" HEIGHT="27" WIDTH="65" CONTENT="RIO" WC="0,96" />
+            <String ID="Textword_32" HPOS="258" VPOS="737" HEIGHT="31" WIDTH="48" CONTENT="ET" WC="0,86" />
+            <String ID="Textword_33" HPOS="321" VPOS="735" HEIGHT="32" WIDTH="279" CONTENT="EXCERCITUUM" WC="0,86" />
+            <String ID="Textword_34" HPOS="620" VPOS="727" HEIGHT="39" WIDTH="285" CONTENT="PRÄETORIIQUE" WC="0,89" />
+            <String ID="Textword_35" HPOS="930" VPOS="731" HEIGHT="25" WIDTH="155" CONTENT="MEDICO" WC="0,88" />
+            <String ID="Textword_36" HPOS="1164" VPOS="733" HEIGHT="25" WIDTH="8" CONTENT="|." WC="0,76" />
+          </TextLine>
+          <TextLine ID="TextLine_14" HPOS="190" VPOS="777" HEIGHT="40" WIDTH="880">
+            <String ID="Textword_37" HPOS="190" VPOS="787" HEIGHT="30" WIDTH="198" CONTENT="SUPREMO," WC="0,92" />
+            <String ID="Textword_38" HPOS="411" VPOS="786" HEIGHT="23" WIDTH="39" CONTENT="IN" WC="0,92" />
+            <String ID="Textword_39" HPOS="477" VPOS="784" HEIGHT="24" WIDTH="198" CONTENT="ACADEMIA" WC="0,92" />
+            <String ID="Textword_40" HPOS="697" VPOS="781" HEIGHT="24" WIDTH="115" CONTENT="REGIA" WC="0,90" />
+            <String ID="Textword_41" HPOS="840" VPOS="779" HEIGHT="30" WIDTH="102" CONTENT="QUAE" WC="0,91" />
+            <String ID="Textword_42" HPOS="964" VPOS="777" HEIGHT="23" WIDTH="106" CONTENT="BERO-" WC="0,91" />
+          </TextLine>
+          <TextLine ID="TextLine_15" HPOS="205" VPOS="809" HEIGHT="49" WIDTH="960">
+            <String ID="Textword_43" HPOS="205" VPOS="833" HEIGHT="25" WIDTH="80" CONTENT="LINI" WC="0,91" />
+            <String ID="Textword_44" HPOS="315" VPOS="827" HEIGHT="26" WIDTH="148" CONTENT="FLORET" WC="0,92" />
+            <String ID="Textword_45" HPOS="490" VPOS="824" HEIGHT="27" WIDTH="184" CONTENT="PHYSICAE" WC="0,91" />
+            <String ID="Textword_46" HPOS="703" VPOS="823" HEIGHT="24" WIDTH="142" CONTENT="CLASSIS" WC="0,89" />
+            <String ID="Textword_47" HPOS="873" VPOS="820" HEIGHT="24" WIDTH="74" CONTENT="NEC" WC="0,91" />
+            <String ID="Textword_48" HPOS="975" VPOS="818" HEIGHT="24" WIDTH="84" CONTENT="NON" WC="0,91" />
+          </TextLine>
+          <TextLine ID="TextLine_16" HPOS="222" VPOS="865" HEIGHT="36" WIDTH="821">
+            <String ID="Textword_49" HPOS="222" VPOS="873" HEIGHT="28" WIDTH="179" CONTENT="COLLEGII" WC="0,90" />
+            <String ID="Textword_50" HPOS="426" VPOS="870" HEIGHT="25" WIDTH="149" CONTENT="MEDICO" WC="0,91" />
+            <String ID="Textword_51" HPOS="592" VPOS="867" HEIGHT="27" WIDTH="230" CONTENT="CHIRURGICI" WC="0,91" />
+            <String ID="Textword_52" HPOS="841" VPOS="866" HEIGHT="24" WIDTH="49" CONTENT="ET" WC="0,93" />
+            <String ID="Textword_53" HPOS="911" VPOS="865" HEIGHT="23" WIDTH="132" CONTENT="POLYA-" WC="0,90" />
+            <String ID="Textword_54" HPOS="1164" VPOS="861" HEIGHT="35" WIDTH="8" CONTENT="j" WC="0,00" />
+          </TextLine>
+          <TextLine ID="TextLine_17" HPOS="234" VPOS="905" HEIGHT="38" WIDTH="931">
+            <String ID="Textword_55" HPOS="234" VPOS="915" HEIGHT="28" WIDTH="162" CONTENT="TRORUM" WC="0,84" />
+            <String ID="Textword_56" HPOS="414" VPOS="913" HEIGHT="30" WIDTH="365" CONTENT="CHIRURGORUMQUE" WC="0,92" />
+            <String ID="Textword_57" HPOS="798" VPOS="911" HEIGHT="24" WIDTH="67" CONTENT="PER" WC="0,91" />
+            <String ID="Textword_58" HPOS="881" VPOS="909" HEIGHT="24" WIDTH="153" CONTENT="UNIVER-" WC="0,17" />
+          </TextLine>
+          <TextLine ID="TextLine_18" HPOS="251" VPOS="955" HEIGHT="33" WIDTH="768">
+            <String ID="Textword_59" HPOS="251" VPOS="962" HEIGHT="26" WIDTH="76" CONTENT="SUM" WC="0,92" />
+            <String ID="Textword_60" HPOS="348" VPOS="957" HEIGHT="25" WIDTH="162" CONTENT="REGNUM" WC="0,91" />
+            <String ID="Textword_61" HPOS="535" VPOS="957" HEIGHT="24" WIDTH="173" CONTENT="PRAESIDI" WC="0,83" />
+            <String ID="Textword_62" HPOS="733" VPOS="957" HEIGHT="31" WIDTH="131" CONTENT="ATQUE" WC="0,89" />
+            <String ID="Textword_63" HPOS="892" VPOS="955" HEIGHT="25" WIDTH="127" CONTENT="DIREC-" WC="0,89" />
+          </TextLine>
+          <TextLine ID="TextLine_19" HPOS="271" VPOS="999" HEIGHT="32" WIDTH="727">
+            <String ID="Textword_64" HPOS="271" VPOS="1002" HEIGHT="29" WIDTH="108" CONTENT="TORI," WC="0,54" />
+            <String ID="Textword_65" HPOS="406" VPOS="1000" HEIGHT="25" WIDTH="120" CONTENT="SUMMI" WC="0,90" />
+            <String ID="Textword_66" HPOS="557" VPOS="999" HEIGHT="23" WIDTH="238" CONTENT="MEDICORUM" WC="0,90" />
+            <String ID="Textword_67" HPOS="826" VPOS="999" HEIGHT="23" WIDTH="172" CONTENT="CONSILII" WC="0,91" />
+          </TextLine>
+          <TextLine ID="TextLine_20" HPOS="207" VPOS="1041" HEIGHT="56" WIDTH="964">
+            <String ID="Textword_68" HPOS="207" VPOS="1069" HEIGHT="28" WIDTH="8" CONTENT=";" WC="0,00" />
+            <String ID="Textword_69" HPOS="296" VPOS="1043" HEIGHT="33" WIDTH="262" CONTENT="COLLEGIIQUE" WC="0,86" />
+            <String ID="Textword_70" HPOS="588" VPOS="1041" HEIGHT="32" WIDTH="106" CONTENT="QUOD" WC="0,86" />
+            <String ID="Textword_71" HPOS="718" VPOS="1041" HEIGHT="22" WIDTH="176" CONTENT="SANITATI" WC="0,91" />
+            <String ID="Textword_72" HPOS="925" VPOS="1041" HEIGHT="24" WIDTH="55" CONTENT="PU-" WC="0,92" />
+            <String ID="Textword_73" HPOS="1096" VPOS="1044" HEIGHT="10" WIDTH="75" CONTENT="“4" WC="0,49" />
+          </TextLine>
+          <TextLine ID="TextLine_21" HPOS="361" VPOS="1084" HEIGHT="30" WIDTH="560">
+            <String ID="Textword_74" HPOS="361" VPOS="1089" HEIGHT="25" WIDTH="136" CONTENT="BLICAE" WC="0,90" />
+            <String ID="Textword_75" HPOS="521" VPOS="1084" HEIGHT="28" WIDTH="208" CONTENT="INVIGILAT" WC="0,91" />
+            <String ID="Textword_76" HPOS="755" VPOS="1085" HEIGHT="25" WIDTH="166" CONTENT="DECANO," WC="0,88" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="TextBlock_8" HPOS="159" VPOS="1180" HEIGHT="234" WIDTH="962">
+          <TextLine ID="TextLine_22" HPOS="159" VPOS="1180" HEIGHT="36" WIDTH="962">
+            <String ID="Textword_77" HPOS="159" VPOS="1183" HEIGHT="33" WIDTH="237" CONTENT="STUDIORUM" WC="0,91" />
+            <String ID="Textword_78" HPOS="416" VPOS="1182" HEIGHT="25" WIDTH="167" CONTENT="SUORUM" WC="0,90" />
+            <String ID="Textword_79" HPOS="595" VPOS="1180" HEIGHT="27" WIDTH="171" CONTENT="FAUTORI" WC="0,91" />
+            <String ID="Textword_80" HPOS="780" VPOS="1181" HEIGHT="33" WIDTH="134" CONTENT="ATQUE" WC="0,91" />
+            <String ID="Textword_81" HPOS="931" VPOS="1180" HEIGHT="26" WIDTH="190" CONTENT="PRAESULI" WC="0,92" />
+          </TextLine>
+          <TextLine ID="TextLine_23" HPOS="272" VPOS="1231" HEIGHT="31" WIDTH="713">
+            <String ID="Textword_82" HPOS="272" VPOS="1233" HEIGHT="29" WIDTH="140" CONTENT="SUMMO" WC="0,92" />
+            <String ID="Textword_83" HPOS="456" VPOS="1232" HEIGHT="26" WIDTH="174" CONTENT="HONORIS" WC="0,83" />
+            <String ID="Textword_84" HPOS="677" VPOS="1231" HEIGHT="27" WIDTH="308" CONTENT="OBSERVANTIAE" WC="0,88" />
+          </TextLine>
+          <TextLine ID="TextLine_24" HPOS="357" VPOS="1274" HEIGHT="37" WIDTH="560">
+            <String ID="Textword_85" HPOS="357" VPOS="1274" HEIGHT="37" WIDTH="57" CONTENT="&quot;4AC" WC="0,61" />
+            <String ID="Textword_86" HPOS="444" VPOS="1280" HEIGHT="26" WIDTH="302" CONTENT="VENERATIONIS" WC="0,89" />
+            <String ID="Textword_87" HPOS="783" VPOS="1280" HEIGHT="24" WIDTH="134" CONTENT="CULTU" WC="0,89" />
+          </TextLine>
+          <TextLine ID="TextLine_25" HPOS="461" VPOS="1328" HEIGHT="28" WIDTH="372">
+            <String ID="Textword_88" HPOS="461" VPOS="1329" HEIGHT="27" WIDTH="266" CONTENT="SUSPICIENDO" WC="0,89" />
+            <String ID="Textword_89" HPOS="748" VPOS="1328" HEIGHT="26" WIDTH="85" CONTENT="PRO-" WC="0,72" />
+          </TextLine>
+          <TextLine ID="TextLine_26" HPOS="528" VPOS="1377" HEIGHT="37" WIDTH="223">
+            <String ID="Textword_90" HPOS="528" VPOS="1377" HEIGHT="37" WIDTH="223" CONTENT="SEQUENDO." WC="0,90" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="TextBlock_9" HPOS="528" VPOS="1469" HEIGHT="32" WIDTH="231">
+          <TextLine ID="TextLine_27" HPOS="528" VPOS="1469" HEIGHT="32" WIDTH="231">
+            <String ID="Textword_91" HPOS="528" VPOS="1471" HEIGHT="30" WIDTH="92" CONTENT="NEC" WC="0,92" />
+            <String ID="Textword_92" HPOS="657" VPOS="1469" HEIGHT="31" WIDTH="102" CONTENT="NON" WC="0,91" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

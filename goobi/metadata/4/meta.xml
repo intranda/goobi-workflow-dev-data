@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets OBJID="" xsi:schemaLocation="http://www.loc.gov/standards/premis/ http://www.loc.gov/standards/premis/v2/premis-v2-0.xsd http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-7.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.loc.gov/standards/mix/ http://www.loc.gov/standards/mix/mix.xsd" xmlns:mets="http://www.loc.gov/METS/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:goobi="http://meta.goobi.org/v1.5.1/" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <mets:metsHdr CREATEDATE="2020-10-11T10:33:45Z">
+      <mets:agent OTHERTYPE="SOFTWARE" ROLE="CREATOR" TYPE="OTHER">
+         <mets:name>Goobi - 3647a - 2020-08-07T13:19:10Z</mets:name>
+         <mets:note>Goobi</mets:note>
+      </mets:agent>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DMDLOG_0000">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="PublicationYear">1789</goobi:metadata>
+                     <goobi:metadata name="_placeOfElectronicOrigin">Göttingen</goobi:metadata>
+                     <goobi:metadata name="CreatorsAllOrigin">Thunberg, Carl Peter; Ahl, Jonas Nicolaus</goobi:metadata>
+                     <goobi:metadata name="TSL_ATS">thunspec</goobi:metadata>
+                     <goobi:metadata name="PlaceOfPublication">Upsaliæ</goobi:metadata>
+                     <goobi:metadata name="CatalogIDSource">577843346</goobi:metadata>
+                     <goobi:metadata name="PublisherName">Edman</goobi:metadata>
+                     <goobi:metadata name="_digitalOrigin">reformatted digital</goobi:metadata>
+                     <goobi:metadata name="_electronicPublisher">Goobi</goobi:metadata>
+                     <goobi:metadata name="_dateDigitization">2017</goobi:metadata>
+                     <goobi:metadata name="TitleDocMainShort">Specimen ichthyologicum De muraena et ophichtho</goobi:metadata>
+                     <goobi:metadata name="_electronicEdition">[Electronic ed.]</goobi:metadata>
+                     <goobi:metadata name="singleDigCollection">General</goobi:metadata>
+                     <goobi:metadata name="singleDigCollection">Biology</goobi:metadata>
+                     <goobi:metadata name="DocLanguage">lat</goobi:metadata>
+                     <goobi:metadata name="CatalogIDDigital">577843346</goobi:metadata>
+                     <goobi:metadata name="TitleDocMain">Specimen ichthyologicum De muraena et ophichtho</goobi:metadata>
+                     <goobi:metadata name="Classification">Blue;</goobi:metadata>
+                     <goobi:metadata name="SizeSourcePrint">14 S</goobi:metadata>
+                     <goobi:metadata name="_directionRTL">false</goobi:metadata>
+                     <goobi:metadata name="Author" type="person">
+                        <goobi:lastName>Thunberg</goobi:lastName>
+                        <goobi:firstName>Carl Peter</goobi:firstName>
+                        <goobi:authorityID>gnd</goobi:authorityID>
+                        <goobi:authorityURI>http://d-nb.info/gnd/</goobi:authorityURI>
+                        <goobi:authorityValue>119036495</goobi:authorityValue>
+                        <goobi:displayName>Thunberg, Carl Peter</goobi:displayName>
+                     </goobi:metadata>
+                     <goobi:metadata name="Author" type="person">
+                        <goobi:lastName>Ahl</goobi:lastName>
+                        <goobi:firstName>Jonas Nicolaus</goobi:firstName>
+                        <goobi:authorityID>gnd</goobi:authorityID>
+                        <goobi:authorityURI>http://d-nb.info/gnd/</goobi:authorityURI>
+                        <goobi:authorityValue>1055362274</goobi:authorityValue>
+                        <goobi:displayName>Ahl, Jonas Nicolaus</goobi:displayName>
+                     </goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDLOG_0003">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="TitleDocMain">1. MURAENA.
+2.OPHICHTHUS.</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDLOG_0004">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="TitleDocMain">MURAENA.</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDLOG_0005">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="TitleDocMain">MURAENA.</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDPHYS_0000">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="shelfmarksource">8 ZOOL VIII, 8545</goobi:metadata>
+                     <goobi:metadata name="pathimagefiles">file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec>
+      <mets:fileGrp USE="LOCAL">
+         <mets:file ID="FILE_0001" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000001.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0002" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000002.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0003" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000003.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0004" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000004.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0005" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000005.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0006" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000006.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0007" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000007.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0008" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000008.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0009" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000009.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0010" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000010.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0011" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000011.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0012" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000012.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0013" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000013.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0014" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000014.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0015" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000015.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0016" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000016.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0017" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000017.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0018" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000018.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0019" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000019.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0020" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000020.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0021" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000021.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0022" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000022.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0023" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000023.jpg"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap TYPE="LOGICAL">
+      <mets:div DMDID="DMDLOG_0000" ID="LOG_0000" TYPE="Monograph">
+         <mets:div ID="LOG_0001" TYPE="Cover"/>
+         <mets:div ID="LOG_0002" TYPE="TitlePage"/>
+         <mets:div ID="LOG_0003" TYPE="Introduction"/>
+         <mets:div DMDID="DMDLOG_0003" ID="LOG_0004" TYPE="Chapter"/>
+         <mets:div DMDID="DMDLOG_0004" ID="LOG_0005" TYPE="Figure"/>
+         <mets:div DMDID="DMDLOG_0005" ID="LOG_0006" TYPE="Figure"/>
+      </mets:div>
+   </mets:structMap>
+   <mets:structMap TYPE="PHYSICAL">
+      <mets:div DMDID="DMDPHYS_0000" ID="PHYS_0000" TYPE="BoundBook">
+         <mets:div ID="PHYS_0001" ORDER="1" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0001"/>
+         </mets:div>
+         <mets:div ID="PHYS_0002" ORDER="2" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0002"/>
+         </mets:div>
+         <mets:div ID="PHYS_0003" ORDER="3" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0003"/>
+         </mets:div>
+         <mets:div ID="PHYS_0004" ORDER="4" ORDERLABEL="1" TYPE="page">
+            <mets:fptr FILEID="FILE_0004"/>
+         </mets:div>
+         <mets:div ID="PHYS_0005" ORDER="5" ORDERLABEL="2" TYPE="page">
+            <mets:fptr FILEID="FILE_0005"/>
+         </mets:div>
+         <mets:div ID="PHYS_0006" ORDER="6" ORDERLABEL="3" TYPE="page">
+            <mets:fptr FILEID="FILE_0006"/>
+         </mets:div>
+         <mets:div ID="PHYS_0007" ORDER="7" ORDERLABEL="4" TYPE="page">
+            <mets:fptr FILEID="FILE_0007"/>
+         </mets:div>
+         <mets:div ID="PHYS_0008" ORDER="8" ORDERLABEL="5" TYPE="page">
+            <mets:fptr FILEID="FILE_0008"/>
+         </mets:div>
+         <mets:div ID="PHYS_0009" ORDER="9" ORDERLABEL="6" TYPE="page">
+            <mets:fptr FILEID="FILE_0009"/>
+         </mets:div>
+         <mets:div ID="PHYS_0010" ORDER="10" ORDERLABEL="7" TYPE="page">
+            <mets:fptr FILEID="FILE_0010"/>
+         </mets:div>
+         <mets:div ID="PHYS_0011" ORDER="11" ORDERLABEL="8" TYPE="page">
+            <mets:fptr FILEID="FILE_0011"/>
+         </mets:div>
+         <mets:div ID="PHYS_0012" ORDER="12" ORDERLABEL="9" TYPE="page">
+            <mets:fptr FILEID="FILE_0012"/>
+         </mets:div>
+         <mets:div ID="PHYS_0013" ORDER="13" ORDERLABEL="10" TYPE="page">
+            <mets:fptr FILEID="FILE_0013"/>
+         </mets:div>
+         <mets:div ID="PHYS_0014" ORDER="14" ORDERLABEL="11" TYPE="page">
+            <mets:fptr FILEID="FILE_0014"/>
+         </mets:div>
+         <mets:div ID="PHYS_0015" ORDER="15" ORDERLABEL="12" TYPE="page">
+            <mets:fptr FILEID="FILE_0015"/>
+         </mets:div>
+         <mets:div ID="PHYS_0016" ORDER="16" ORDERLABEL="13" TYPE="page">
+            <mets:fptr FILEID="FILE_0016"/>
+         </mets:div>
+         <mets:div ID="PHYS_0017" ORDER="17" ORDERLABEL="14" TYPE="page">
+            <mets:fptr FILEID="FILE_0017"/>
+         </mets:div>
+         <mets:div ID="PHYS_0018" ORDER="18" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0018"/>
+         </mets:div>
+         <mets:div ID="PHYS_0019" ORDER="19" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0019"/>
+         </mets:div>
+         <mets:div ID="PHYS_0020" ORDER="20" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0020"/>
+         </mets:div>
+         <mets:div ID="PHYS_0021" ORDER="21" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0021"/>
+         </mets:div>
+         <mets:div ID="PHYS_0022" ORDER="22" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0022"/>
+         </mets:div>
+         <mets:div ID="PHYS_0023" ORDER="23" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0023"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+   <mets:structLink>
+      <mets:smLink xlink:to="PHYS_0001" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0002" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0003" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0004" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0005" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0006" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0007" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0008" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0009" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0010" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0011" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0012" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0013" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0014" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0015" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0016" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0017" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0018" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0019" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0020" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0021" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0022" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0023" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0001" xlink:from="LOG_0001"/>
+      <mets:smLink xlink:to="PHYS_0002" xlink:from="LOG_0001"/>
+      <mets:smLink xlink:to="PHYS_0003" xlink:from="LOG_0001"/>
+      <mets:smLink xlink:to="PHYS_0004" xlink:from="LOG_0002"/>
+      <mets:smLink xlink:to="PHYS_0005" xlink:from="LOG_0002"/>
+      <mets:smLink xlink:to="PHYS_0006" xlink:from="LOG_0003"/>
+      <mets:smLink xlink:to="PHYS_0007" xlink:from="LOG_0003"/>
+      <mets:smLink xlink:to="PHYS_0008" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0009" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0010" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0011" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0012" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0013" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0014" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0015" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0016" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0017" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0018" xlink:from="LOG_0005"/>
+      <mets:smLink xlink:to="PHYS_0019" xlink:from="LOG_0005"/>
+      <mets:smLink xlink:to="PHYS_0020" xlink:from="LOG_0006"/>
+      <mets:smLink xlink:to="PHYS_0021" xlink:from="LOG_0006"/>
+      <mets:smLink xlink:to="PHYS_0022" xlink:from="LOG_0006"/>
+      <mets:smLink xlink:to="PHYS_0023" xlink:from="LOG_0006"/>
+   </mets:structLink>
+</mets:mets>

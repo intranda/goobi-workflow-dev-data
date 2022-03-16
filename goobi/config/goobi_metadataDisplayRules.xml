@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<displayRules>
+	<ruleSet>
+		<context projectName="*">
+
+			<!-- text field -->
+			<textarea ref="TitleDocMain">
+				<label></label>
+			</textarea>
+			<input ref="CatalogIDSource">
+				<label></label>
+			</input>
+
+			<!-- text area -->
+			<textarea ref="TitleDocMainShort">
+				<label></label>
+			</textarea>
+			<textarea ref="Description">
+				<label></label>
+			</textarea>
+
+			<!-- default value -->
+			<input ref="PlaceOfPublication">
+				<label>Göttingen</label>
+			</input>
+
+			<!-- read only -->
+			<readonly ref="CatalogIDDigital">
+				<label></label>
+			</readonly>
+
+			<!-- Multi select -->
+			<select ref="Classification">
+				<item selected="true">
+					<label>Blue</label>
+					<value>Blue</value>
+				</item>
+
+				<item selected="false">
+					<label>Red</label>
+					<value>Red</value>
+				</item>
+
+				<item selected="false">
+					<label>Green</label>
+					<value>Green 2</value>
+				</item>
+
+				<item selected="false">
+					<label>Yellow</label>
+					<value>Yellow</value>
+				</item>
+			</select>
+
+			<vocabularyList ref="singleDigCollection">
+				<source>Digital collections</source>
+			</vocabularyList>
+
+			<vocabularySearch ref="DocLanguage">
+				<source>Languages</source>
+				<field>Name; Full Name; Description</field>
+			</vocabularySearch>
+
+		</context>
+	</ruleSet>
+</displayRules>

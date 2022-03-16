@@ -1,0 +1,24 @@
+<config_plugin>
+
+	<config>
+		<!-- which projects to use for (can be more than one, otherwise use *) -->
+		<project>*</project>
+		<step>*</step>
+		<!-- which file types to allow -->
+		<regex>/(\.|\/)(gif|jpe?g|png|tiff?|jp2|pdf)$/</regex>
+		<!-- which folder to use (master or media) -->
+		<folder>master</folder>
+	</config>
+
+	<config>
+		<!-- which projects to use for (can be more than one, otherwise use *) -->
+		<project>My special project</project>
+		<project>Archive_Project</project>
+		<step>Upload derivatives</step>
+		<!-- which file types to allow -->
+		<regex>/(\.|\/)(gif|jpe?g|png|tiff?|jp2|pdf)$/</regex>
+		<!-- which folder to use (master or media) -->
+		<folder>media</folder>
+	</config>
+
+</config_plugin>

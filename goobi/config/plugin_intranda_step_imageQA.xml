@@ -1,0 +1,138 @@
+<!-- 
+ * This file is part of a plugin for Goobi - a Workflow tool for the support of mass digitization.
+ * 
+ * Visit the websites for more information. 
+ *          - https://goobi.io
+ *          - https://www.intranda.com
+ *          - https://github.com/intranda/goobi
+ * 
+ * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free
+ * Software Foundation; either version 2 of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59
+ * Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ * 
+ -->
+<config_plugin>
+    <!--
+        order of configuration is:
+          1.) project name and step name matches
+          2.) step name matches and project is *
+          3.) project name matches and step name is *
+          4.) project name and step name are *
+-->
+    <config>
+        <!-- define plugin type in which screen the plugin is displayed, allowed values are 'part', 'full' (default) or 'both' -->
+        <guiType>full</guiType> 
+        <!-- which projects to use for (can be more then one, otherwise use *) -->
+        <project>*</project>
+        <step>*</step>
+        <!-- which images to use , possible values are master|main|jpeg|source|... -->
+        <foldername>master</foldername>
+        <!-- how to display the thumbnails -->
+        <numberOfImagesPerPage>12</numberOfImagesPerPage>
+        <thumbnailsize>200</thumbnailsize>
+        <!-- number of thumbnails in preview area, default value is 8 -->
+        <numberOfImagesInPartGUI>4</numberOfImagesInPartGUI>
+        <!-- which image sizes to use for the big image -->
+        <thumbnailFormat>jpg</thumbnailFormat>
+        <mainImageFormat>jpg</mainImageFormat>
+		<!-- use the high speed JavaScript fullscreen view -->
+        <useJSFullscreen>true</useJSFullscreen>
+        
+        <imagesize>800</imagesize>
+        <imagesize>1800</imagesize>
+        <imagesize>3000</imagesize>
+        <tileSize>256</tileSize>
+        <scaleFactors>1</scaleFactors>
+        <scaleFactors>32</scaleFactors>
+        <useTiles>true</useTiles>
+        <useTilesFullscreen>true</useTilesFullscreen>
+
+        <!-- allow deletion of images -->
+        <allowDeletion>false</allowDeletion>
+        <deletionCommand>/opt/digiverso/goobi/scripts/deleteImage.sh IMAGE_FOLDER IMAGE_FILE</deletionCommand>
+        <!-- allow rotation of images -->
+        <allowRotation>false</allowRotation>
+        <rotationCommands>
+            <left command="/usr/local/bin/mogrify|-rotate|-90|IMAGE_FILE" />
+            <right command="/usr/local/bin/mogrify|-rotate|90|IMAGE_FILE" />
+        </rotationCommands>
+        <!-- allow renaming of images -->
+        <allowRenaming>false</allowRenaming>
+        <!-- allow selection of images -->
+        <allowSelection>false</allowSelection>
+        <allowSelectionAll>false</allowSelectionAll>
+        <allowDownload>false</allowDownload>
+        <allowDownloadAsPdf>false</allowDownloadAsPdf>
+        <!-- allow the user to finish the task directly out of the plugin -->
+        <allowTaskFinishButtons>true</allowTaskFinishButtons>
+        <!-- configure button to display ocr -->
+        <displayocr>true</displayocr>
+    </config>
+
+    <config>
+        <!-- which projects to use for (can be more then one, otherwise use *) -->
+        <project>My special project</project>
+        <project>Archive_Project</project>
+        <step>MasterQA</step>
+        <step>DerivateQA</step>
+        <!-- which images to use , possible values are master|main|jpeg|source|... -->
+        <foldername>master</foldername>
+        <!-- how to display the thumbnails -->
+        <numberOfImagesPerPage>12</numberOfImagesPerPage>
+        <thumbnailsize>200</thumbnailsize>
+        <!-- use the high speed JavaScript fullscreen view -->
+        <useJSFullscreen>true</useJSFullscreen>
+        <!-- which image sizes to use for the big image -->
+        <imagesize>800</imagesize>
+        <imagesize>3000</imagesize>
+        <!-- allow deletion of images -->
+        <allowDeletion>false</allowDeletion>
+        <deletionCommand>/opt/digiverso/goobi/scripts/deleteImage.sh IMAGE_FOLDER IMAGE_FILE</deletionCommand>
+        <!-- allow rotation of images -->
+        <allowRotation>false</allowRotation>
+        <rotationCommands>
+            <left command="/usr/local/bin/mogrify|-rotate|-90|IMAGE_FILE" />
+            <right command="/usr/local/bin/mogrify|-rotate|90|IMAGE_FILE" />
+        </rotationCommands>
+        <!-- allow renaming of images -->
+        <allowRenaming>false</allowRenaming>
+        <!-- allow selection of images -->
+        <allowSelection>false</allowSelection>
+        <allowDownload>false</allowDownload>
+        <allowDownloadAsPdf>false</allowDownloadAsPdf>
+        <!-- allow the user to finish the task directly out of the plugin -->
+        <allowTaskFinishButtons>false</allowTaskFinishButtons>
+        <displayocr>true</displayocr>
+    </config>
+
+    <config>
+        <project>*</project>
+        <step>ImageQA</step>
+        <!-- which images to use , possible values are master|main|jpeg|source|... -->
+        <foldername>master</foldername>
+        <!-- use the high speed JavaScript fullscreen view -->
+        <useJSFullscreen>true</useJSFullscreen>
+        <!-- how to display the thumbnails -->
+        <numberOfImagesPerPage>12</numberOfImagesPerPage>
+        <thumbnailsize>200</thumbnailsize>
+        <!-- which image sizes to use for the big image -->
+        <imagesize>800</imagesize>
+        <imagesize>3000</imagesize>
+
+        <!-- allow renaming of images -->
+        <allowRenaming>false</allowRenaming>
+        <renamingPattern>
+            <field defaultValue="${process:Archive}"></field>
+            <field defaultValue="${process:Object}"></field>
+            <field defaultValue="1" number="true" format="0000"></field>
+        </renamingPattern>
+        <displayocr>true</displayocr>
+
+    </config>
+
+</config_plugin>

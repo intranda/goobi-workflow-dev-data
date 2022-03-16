@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets OBJID="" xsi:schemaLocation="http://www.loc.gov/standards/premis/ http://www.loc.gov/standards/premis/v2/premis-v2-0.xsd http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-7.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.loc.gov/standards/mix/ http://www.loc.gov/standards/mix/mix.xsd" xmlns:mets="http://www.loc.gov/METS/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:goobi="http://meta.goobi.org/v1.5.1/" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <mets:metsHdr CREATEDATE="2020-10-11T10:33:37Z">
+      <mets:agent OTHERTYPE="SOFTWARE" ROLE="CREATOR" TYPE="OTHER">
+         <mets:name>Goobi - 3647a - 2020-08-07T13:19:10Z</mets:name>
+         <mets:note>Goobi</mets:note>
+      </mets:agent>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DMDLOG_0000">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="PublicationYear">1760</goobi:metadata>
+                     <goobi:metadata name="_placeOfElectronicOrigin">Göttingen</goobi:metadata>
+                     <goobi:metadata name="CreatorsAllOrigin">Schultens, Johann Jacob; Pallas, Peter Simon</goobi:metadata>
+                     <goobi:metadata name="TSL_ATS">schudiss</goobi:metadata>
+                     <goobi:metadata name="PlaceOfPublication">Lugduni Batavorum</goobi:metadata>
+                     <goobi:metadata name="CatalogIDSource">618299084</goobi:metadata>
+                     <goobi:metadata name="PublisherName">Haak</goobi:metadata>
+                     <goobi:metadata name="_digitalOrigin">reformatted digital</goobi:metadata>
+                     <goobi:metadata name="_electronicPublisher">Goobi</goobi:metadata>
+                     <goobi:metadata name="_dateDigitization">2017</goobi:metadata>
+                     <goobi:metadata name="TitleDocMainShort">Dissertatio medica inauguralis de infestis viventibus intra viventia</goobi:metadata>
+                     <goobi:metadata name="_electronicEdition">[Electronic ed.]</goobi:metadata>
+                     <goobi:metadata name="singleDigCollection">Physics</goobi:metadata>
+                     <goobi:metadata name="DocLanguage">lat</goobi:metadata>
+                     <goobi:metadata name="CatalogIDDigital">618299084</goobi:metadata>
+                     <goobi:metadata name="TitleDocMain">Dissertatio medica inauguralis de infestis viventibus intra viventia</goobi:metadata>
+                     <goobi:metadata name="Classification">Blue;</goobi:metadata>
+                     <goobi:metadata name="SizeSourcePrint">62 S</goobi:metadata>
+                     <goobi:metadata name="_directionRTL">false</goobi:metadata>
+                     <goobi:metadata name="Author" type="person">
+                        <goobi:lastName>Schultens</goobi:lastName>
+                        <goobi:firstName>Johann Jacob</goobi:firstName>
+                        <goobi:authorityID>gnd</goobi:authorityID>
+                        <goobi:authorityURI>http://d-nb.info/gnd/</goobi:authorityURI>
+                        <goobi:authorityValue>100557554</goobi:authorityValue>
+                        <goobi:displayName>Schultens, Johann Jacob</goobi:displayName>
+                     </goobi:metadata>
+                     <goobi:metadata name="Author" type="person">
+                        <goobi:lastName>Pallas</goobi:lastName>
+                        <goobi:firstName>Peter Simon</goobi:firstName>
+                        <goobi:authorityID>gnd</goobi:authorityID>
+                        <goobi:authorityURI>http://d-nb.info/gnd/</goobi:authorityURI>
+                        <goobi:authorityValue>118591371</goobi:authorityValue>
+                        <goobi:displayName>Pallas, Peter Simon</goobi:displayName>
+                     </goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDLOG_0002">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="TitleDocMain">DISSERTATIO MEDICA INAUGURALIS DE INFESTIS VIVENTIBUS INTRA VIVENTIA.</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDLOG_0003">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="TitleDocMain">I. FURIA.</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDLOG_0004">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="TitleDocMain">II. GORDIUS. Linn</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDLOG_0005">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="TitleDocMain">III. ASCARIS Linn. &amp; Graecorum.</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDLOG_0006">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="TitleDocMain">IV. Lumbricus, intestinalis.</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDLOG_0007">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="TitleDocMain">V. FASCIOLA. Linn. Hirudo Limax Reaum.</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDLOG_0008">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="TitleDocMain">VI. TAENIA.</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDLOG_0009">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="TitleDocMain">DE HAERUCULA. seu Taeniola osculis obscuris.</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDLOG_0010">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="TitleDocMain">DE ORIGINE VERMIUM. praesertim Taeniae atque Lumbrici in intestinis.</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="DMDPHYS_0000">
+      <mets:mdWrap MDTYPE="MODS">
+         <mets:xmlData>
+            <mods:mods>
+               <mods:extension>
+                  <goobi:goobi>
+                     <goobi:metadata name="shelfmarksource">HG-FB 8 ZOOL V, 4215</goobi:metadata>
+                     <goobi:metadata name="FormatSourcePrint">8º</goobi:metadata>
+                     <goobi:metadata name="pathimagefiles">file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media</goobi:metadata>
+                  </goobi:goobi>
+               </mods:extension>
+            </mods:mods>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec>
+      <mets:fileGrp USE="LOCAL">
+         <mets:file ID="FILE_0001" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000001.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0002" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000002.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0003" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000003.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0004" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000004.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0005" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000005.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0006" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000006.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0007" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000007.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0008" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000008.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0009" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000009.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0010" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000010.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0011" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000011.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0012" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000012.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0013" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000013.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0014" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000014.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0015" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000015.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0016" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000016.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0017" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000017.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0018" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000018.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0019" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000019.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0020" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000020.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0021" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000021.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0022" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000022.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0023" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000023.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0024" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000024.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0025" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000025.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0026" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000026.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0027" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000027.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0028" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000028.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0029" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000029.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0030" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000030.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0031" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000031.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0032" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000032.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0033" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000033.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0034" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000034.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0035" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000035.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0036" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000036.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0037" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000037.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0038" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000038.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0039" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000039.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0040" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000040.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0041" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000041.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0042" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000042.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0043" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000043.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0044" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000044.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0045" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000045.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0046" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000046.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0047" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000047.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0048" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000048.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0049" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000049.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0050" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000050.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0051" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000051.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0052" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000052.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0053" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000053.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0054" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000054.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0055" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000055.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0056" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000056.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0057" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000057.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0058" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000058.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0059" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000059.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0060" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000060.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0061" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000061.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0062" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000062.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0063" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000063.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0064" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000064.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0065" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000065.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0066" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000066.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0067" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000067.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0068" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000068.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0069" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000069.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0070" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000070.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0071" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000071.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0072" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000072.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0073" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000073.jpg"/>
+         </mets:file>
+         <mets:file ID="FILE_0074" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/5/images/schudiss_618299084_media/00000074.jpg"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap TYPE="LOGICAL">
+      <mets:div DMDID="DMDLOG_0000" ID="LOG_0000" TYPE="Monograph">
+         <mets:div ID="LOG_0001" TYPE="Cover"/>
+         <mets:div ID="LOG_0002" TYPE="TitlePage"/>
+         <mets:div ID="LOG_0003" TYPE="Prepage"/>
+         <mets:div DMDID="DMDLOG_0002" ID="LOG_0004" TYPE="Chapter"/>
+         <mets:div DMDID="DMDLOG_0003" ID="LOG_0005" TYPE="Chapter"/>
+         <mets:div DMDID="DMDLOG_0004" ID="LOG_0006" TYPE="Chapter"/>
+         <mets:div DMDID="DMDLOG_0005" ID="LOG_0007" TYPE="Chapter"/>
+         <mets:div DMDID="DMDLOG_0006" ID="LOG_0008" TYPE="Chapter"/>
+         <mets:div DMDID="DMDLOG_0007" ID="LOG_0009" TYPE="Chapter"/>
+         <mets:div DMDID="DMDLOG_0008" ID="LOG_0010" TYPE="Chapter"/>
+         <mets:div DMDID="DMDLOG_0009" ID="LOG_0011" TYPE="Chapter"/>
+         <mets:div DMDID="DMDLOG_0010" ID="LOG_0012" TYPE="Chapter"/>
+         <mets:div ID="LOG_0013" TYPE="Cover"/>
+      </mets:div>
+   </mets:structMap>
+   <mets:structMap TYPE="PHYSICAL">
+      <mets:div DMDID="DMDPHYS_0000" ID="PHYS_0000" TYPE="BoundBook">
+         <mets:div ID="PHYS_0001" ORDER="1" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0001"/>
+         </mets:div>
+         <mets:div ID="PHYS_0002" ORDER="2" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0002"/>
+         </mets:div>
+         <mets:div ID="PHYS_0003" ORDER="3" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0003"/>
+         </mets:div>
+         <mets:div ID="PHYS_0004" ORDER="4" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0004"/>
+         </mets:div>
+         <mets:div ID="PHYS_0005" ORDER="5" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0005"/>
+         </mets:div>
+         <mets:div ID="PHYS_0006" ORDER="6" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0006"/>
+         </mets:div>
+         <mets:div ID="PHYS_0007" ORDER="7" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0007"/>
+         </mets:div>
+         <mets:div ID="PHYS_0008" ORDER="8" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0008"/>
+         </mets:div>
+         <mets:div ID="PHYS_0009" ORDER="9" ORDERLABEL="1" TYPE="page">
+            <mets:fptr FILEID="FILE_0009"/>
+         </mets:div>
+         <mets:div ID="PHYS_0010" ORDER="10" ORDERLABEL="2" TYPE="page">
+            <mets:fptr FILEID="FILE_0010"/>
+         </mets:div>
+         <mets:div ID="PHYS_0011" ORDER="11" ORDERLABEL="3" TYPE="page">
+            <mets:fptr FILEID="FILE_0011"/>
+         </mets:div>
+         <mets:div ID="PHYS_0012" ORDER="12" ORDERLABEL="4" TYPE="page">
+            <mets:fptr FILEID="FILE_0012"/>
+         </mets:div>
+         <mets:div ID="PHYS_0013" ORDER="13" ORDERLABEL="5" TYPE="page">
+            <mets:fptr FILEID="FILE_0013"/>
+         </mets:div>
+         <mets:div ID="PHYS_0014" ORDER="14" ORDERLABEL="6" TYPE="page">
+            <mets:fptr FILEID="FILE_0014"/>
+         </mets:div>
+         <mets:div ID="PHYS_0015" ORDER="15" ORDERLABEL="7" TYPE="page">
+            <mets:fptr FILEID="FILE_0015"/>
+         </mets:div>
+         <mets:div ID="PHYS_0016" ORDER="16" ORDERLABEL="8" TYPE="page">
+            <mets:fptr FILEID="FILE_0016"/>
+         </mets:div>
+         <mets:div ID="PHYS_0017" ORDER="17" ORDERLABEL="9" TYPE="page">
+            <mets:fptr FILEID="FILE_0017"/>
+         </mets:div>
+         <mets:div ID="PHYS_0018" ORDER="18" ORDERLABEL="10" TYPE="page">
+            <mets:fptr FILEID="FILE_0018"/>
+         </mets:div>
+         <mets:div ID="PHYS_0019" ORDER="19" ORDERLABEL="11" TYPE="page">
+            <mets:fptr FILEID="FILE_0019"/>
+         </mets:div>
+         <mets:div ID="PHYS_0020" ORDER="20" ORDERLABEL="12" TYPE="page">
+            <mets:fptr FILEID="FILE_0020"/>
+         </mets:div>
+         <mets:div ID="PHYS_0021" ORDER="21" ORDERLABEL="13" TYPE="page">
+            <mets:fptr FILEID="FILE_0021"/>
+         </mets:div>
+         <mets:div ID="PHYS_0022" ORDER="22" ORDERLABEL="14" TYPE="page">
+            <mets:fptr FILEID="FILE_0022"/>
+         </mets:div>
+         <mets:div ID="PHYS_0023" ORDER="23" ORDERLABEL="15" TYPE="page">
+            <mets:fptr FILEID="FILE_0023"/>
+         </mets:div>
+         <mets:div ID="PHYS_0024" ORDER="24" ORDERLABEL="16" TYPE="page">
+            <mets:fptr FILEID="FILE_0024"/>
+         </mets:div>
+         <mets:div ID="PHYS_0025" ORDER="25" ORDERLABEL="17" TYPE="page">
+            <mets:fptr FILEID="FILE_0025"/>
+         </mets:div>
+         <mets:div ID="PHYS_0026" ORDER="26" ORDERLABEL="18" TYPE="page">
+            <mets:fptr FILEID="FILE_0026"/>
+         </mets:div>
+         <mets:div ID="PHYS_0027" ORDER="27" ORDERLABEL="19" TYPE="page">
+            <mets:fptr FILEID="FILE_0027"/>
+         </mets:div>
+         <mets:div ID="PHYS_0028" ORDER="28" ORDERLABEL="20" TYPE="page">
+            <mets:fptr FILEID="FILE_0028"/>
+         </mets:div>
+         <mets:div ID="PHYS_0029" ORDER="29" ORDERLABEL="21" TYPE="page">
+            <mets:fptr FILEID="FILE_0029"/>
+         </mets:div>
+         <mets:div ID="PHYS_0030" ORDER="30" ORDERLABEL="22" TYPE="page">
+            <mets:fptr FILEID="FILE_0030"/>
+         </mets:div>
+         <mets:div ID="PHYS_0031" ORDER="31" ORDERLABEL="23" TYPE="page">
+            <mets:fptr FILEID="FILE_0031"/>
+         </mets:div>
+         <mets:div ID="PHYS_0032" ORDER="32" ORDERLABEL="24" TYPE="page">
+            <mets:fptr FILEID="FILE_0032"/>
+         </mets:div>
+         <mets:div ID="PHYS_0033" ORDER="33" ORDERLABEL="25" TYPE="page">
+            <mets:fptr FILEID="FILE_0033"/>
+         </mets:div>
+         <mets:div ID="PHYS_0034" ORDER="34" ORDERLABEL="26" TYPE="page">
+            <mets:fptr FILEID="FILE_0034"/>
+         </mets:div>
+         <mets:div ID="PHYS_0035" ORDER="35" ORDERLABEL="27" TYPE="page">
+            <mets:fptr FILEID="FILE_0035"/>
+         </mets:div>
+         <mets:div ID="PHYS_0036" ORDER="36" ORDERLABEL="28" TYPE="page">
+            <mets:fptr FILEID="FILE_0036"/>
+         </mets:div>
+         <mets:div ID="PHYS_0037" ORDER="37" ORDERLABEL="29" TYPE="page">
+            <mets:fptr FILEID="FILE_0037"/>
+         </mets:div>
+         <mets:div ID="PHYS_0038" ORDER="38" ORDERLABEL="30" TYPE="page">
+            <mets:fptr FILEID="FILE_0038"/>
+         </mets:div>
+         <mets:div ID="PHYS_0039" ORDER="39" ORDERLABEL="31" TYPE="page">
+            <mets:fptr FILEID="FILE_0039"/>
+         </mets:div>
+         <mets:div ID="PHYS_0040" ORDER="40" ORDERLABEL="32" TYPE="page">
+            <mets:fptr FILEID="FILE_0040"/>
+         </mets:div>
+         <mets:div ID="PHYS_0041" ORDER="41" ORDERLABEL="33" TYPE="page">
+            <mets:fptr FILEID="FILE_0041"/>
+         </mets:div>
+         <mets:div ID="PHYS_0042" ORDER="42" ORDERLABEL="34" TYPE="page">
+            <mets:fptr FILEID="FILE_0042"/>
+         </mets:div>
+         <mets:div ID="PHYS_0043" ORDER="43" ORDERLABEL="35" TYPE="page">
+            <mets:fptr FILEID="FILE_0043"/>
+         </mets:div>
+         <mets:div ID="PHYS_0044" ORDER="44" ORDERLABEL="36" TYPE="page">
+            <mets:fptr FILEID="FILE_0044"/>
+         </mets:div>
+         <mets:div ID="PHYS_0045" ORDER="45" ORDERLABEL="37" TYPE="page">
+            <mets:fptr FILEID="FILE_0045"/>
+         </mets:div>
+         <mets:div ID="PHYS_0046" ORDER="46" ORDERLABEL="38" TYPE="page">
+            <mets:fptr FILEID="FILE_0046"/>
+         </mets:div>
+         <mets:div ID="PHYS_0047" ORDER="47" ORDERLABEL="39" TYPE="page">
+            <mets:fptr FILEID="FILE_0047"/>
+         </mets:div>
+         <mets:div ID="PHYS_0048" ORDER="48" ORDERLABEL="40" TYPE="page">
+            <mets:fptr FILEID="FILE_0048"/>
+         </mets:div>
+         <mets:div ID="PHYS_0049" ORDER="49" ORDERLABEL="41" TYPE="page">
+            <mets:fptr FILEID="FILE_0049"/>
+         </mets:div>
+         <mets:div ID="PHYS_0050" ORDER="50" ORDERLABEL="42" TYPE="page">
+            <mets:fptr FILEID="FILE_0050"/>
+         </mets:div>
+         <mets:div ID="PHYS_0051" ORDER="51" ORDERLABEL="43" TYPE="page">
+            <mets:fptr FILEID="FILE_0051"/>
+         </mets:div>
+         <mets:div ID="PHYS_0052" ORDER="52" ORDERLABEL="44" TYPE="page">
+            <mets:fptr FILEID="FILE_0052"/>
+         </mets:div>
+         <mets:div ID="PHYS_0053" ORDER="53" ORDERLABEL="45" TYPE="page">
+            <mets:fptr FILEID="FILE_0053"/>
+         </mets:div>
+         <mets:div ID="PHYS_0054" ORDER="54" ORDERLABEL="46" TYPE="page">
+            <mets:fptr FILEID="FILE_0054"/>
+         </mets:div>
+         <mets:div ID="PHYS_0055" ORDER="55" ORDERLABEL="47" TYPE="page">
+            <mets:fptr FILEID="FILE_0055"/>
+         </mets:div>
+         <mets:div ID="PHYS_0056" ORDER="56" ORDERLABEL="48" TYPE="page">
+            <mets:fptr FILEID="FILE_0056"/>
+         </mets:div>
+         <mets:div ID="PHYS_0057" ORDER="57" ORDERLABEL="49" TYPE="page">
+            <mets:fptr FILEID="FILE_0057"/>
+         </mets:div>
+         <mets:div ID="PHYS_0058" ORDER="58" ORDERLABEL="50" TYPE="page">
+            <mets:fptr FILEID="FILE_0058"/>
+         </mets:div>
+         <mets:div ID="PHYS_0059" ORDER="59" ORDERLABEL="51" TYPE="page">
+            <mets:fptr FILEID="FILE_0059"/>
+         </mets:div>
+         <mets:div ID="PHYS_0060" ORDER="60" ORDERLABEL="52" TYPE="page">
+            <mets:fptr FILEID="FILE_0060"/>
+         </mets:div>
+         <mets:div ID="PHYS_0061" ORDER="61" ORDERLABEL="53" TYPE="page">
+            <mets:fptr FILEID="FILE_0061"/>
+         </mets:div>
+         <mets:div ID="PHYS_0062" ORDER="62" ORDERLABEL="54" TYPE="page">
+            <mets:fptr FILEID="FILE_0062"/>
+         </mets:div>
+         <mets:div ID="PHYS_0063" ORDER="63" ORDERLABEL="55" TYPE="page">
+            <mets:fptr FILEID="FILE_0063"/>
+         </mets:div>
+         <mets:div ID="PHYS_0064" ORDER="64" ORDERLABEL="56" TYPE="page">
+            <mets:fptr FILEID="FILE_0064"/>
+         </mets:div>
+         <mets:div ID="PHYS_0065" ORDER="65" ORDERLABEL="57" TYPE="page">
+            <mets:fptr FILEID="FILE_0065"/>
+         </mets:div>
+         <mets:div ID="PHYS_0066" ORDER="66" ORDERLABEL="58" TYPE="page">
+            <mets:fptr FILEID="FILE_0066"/>
+         </mets:div>
+         <mets:div ID="PHYS_0067" ORDER="67" ORDERLABEL="59" TYPE="page">
+            <mets:fptr FILEID="FILE_0067"/>
+         </mets:div>
+         <mets:div ID="PHYS_0068" ORDER="68" ORDERLABEL="60" TYPE="page">
+            <mets:fptr FILEID="FILE_0068"/>
+         </mets:div>
+         <mets:div ID="PHYS_0069" ORDER="69" ORDERLABEL="61" TYPE="page">
+            <mets:fptr FILEID="FILE_0069"/>
+         </mets:div>
+         <mets:div ID="PHYS_0070" ORDER="70" ORDERLABEL="62" TYPE="page">
+            <mets:fptr FILEID="FILE_0070"/>
+         </mets:div>
+         <mets:div ID="PHYS_0071" ORDER="71" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0071"/>
+         </mets:div>
+         <mets:div ID="PHYS_0072" ORDER="72" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0072"/>
+         </mets:div>
+         <mets:div ID="PHYS_0073" ORDER="73" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0073"/>
+         </mets:div>
+         <mets:div ID="PHYS_0074" ORDER="74" ORDERLABEL="uncounted" TYPE="page">
+            <mets:fptr FILEID="FILE_0074"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+   <mets:structLink>
+      <mets:smLink xlink:to="PHYS_0001" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0002" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0003" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0004" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0005" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0006" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0007" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0008" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0009" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0010" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0011" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0012" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0013" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0014" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0015" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0016" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0017" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0018" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0019" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0020" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0021" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0022" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0023" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0024" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0025" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0026" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0027" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0028" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0029" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0030" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0031" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0032" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0033" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0034" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0035" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0036" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0037" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0038" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0039" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0040" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0041" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0042" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0043" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0044" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0045" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0046" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0047" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0048" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0049" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0050" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0051" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0052" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0053" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0054" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0055" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0056" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0057" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0058" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0059" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0060" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0061" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0062" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0063" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0064" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0065" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0066" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0067" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0068" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0069" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0070" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0071" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0072" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0073" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0074" xlink:from="LOG_0000"/>
+      <mets:smLink xlink:to="PHYS_0001" xlink:from="LOG_0001"/>
+      <mets:smLink xlink:to="PHYS_0002" xlink:from="LOG_0001"/>
+      <mets:smLink xlink:to="PHYS_0003" xlink:from="LOG_0001"/>
+      <mets:smLink xlink:to="PHYS_0004" xlink:from="LOG_0001"/>
+      <mets:smLink xlink:to="PHYS_0005" xlink:from="LOG_0002"/>
+      <mets:smLink xlink:to="PHYS_0006" xlink:from="LOG_0002"/>
+      <mets:smLink xlink:to="PHYS_0007" xlink:from="LOG_0003"/>
+      <mets:smLink xlink:to="PHYS_0008" xlink:from="LOG_0003"/>
+      <mets:smLink xlink:to="PHYS_0009" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0010" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0011" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0012" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0013" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0014" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0015" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0016" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0017" xlink:from="LOG_0004"/>
+      <mets:smLink xlink:to="PHYS_0018" xlink:from="LOG_0005"/>
+      <mets:smLink xlink:to="PHYS_0018" xlink:from="LOG_0006"/>
+      <mets:smLink xlink:to="PHYS_0019" xlink:from="LOG_0006"/>
+      <mets:smLink xlink:to="PHYS_0020" xlink:from="LOG_0006"/>
+      <mets:smLink xlink:to="PHYS_0020" xlink:from="LOG_0007"/>
+      <mets:smLink xlink:to="PHYS_0021" xlink:from="LOG_0007"/>
+      <mets:smLink xlink:to="PHYS_0021" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0022" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0023" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0024" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0025" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0026" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0027" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0028" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0029" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0030" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0031" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0032" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0033" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0034" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0035" xlink:from="LOG_0008"/>
+      <mets:smLink xlink:to="PHYS_0035" xlink:from="LOG_0009"/>
+      <mets:smLink xlink:to="PHYS_0036" xlink:from="LOG_0009"/>
+      <mets:smLink xlink:to="PHYS_0037" xlink:from="LOG_0009"/>
+      <mets:smLink xlink:to="PHYS_0038" xlink:from="LOG_0009"/>
+      <mets:smLink xlink:to="PHYS_0038" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0039" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0040" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0041" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0042" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0043" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0044" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0045" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0046" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0047" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0048" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0049" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0050" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0051" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0052" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0053" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0054" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0055" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0056" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0057" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0058" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0059" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0060" xlink:from="LOG_0010"/>
+      <mets:smLink xlink:to="PHYS_0060" xlink:from="LOG_0011"/>
+      <mets:smLink xlink:to="PHYS_0061" xlink:from="LOG_0011"/>
+      <mets:smLink xlink:to="PHYS_0061" xlink:from="LOG_0012"/>
+      <mets:smLink xlink:to="PHYS_0062" xlink:from="LOG_0012"/>
+      <mets:smLink xlink:to="PHYS_0063" xlink:from="LOG_0012"/>
+      <mets:smLink xlink:to="PHYS_0064" xlink:from="LOG_0012"/>
+      <mets:smLink xlink:to="PHYS_0065" xlink:from="LOG_0012"/>
+      <mets:smLink xlink:to="PHYS_0066" xlink:from="LOG_0012"/>
+      <mets:smLink xlink:to="PHYS_0067" xlink:from="LOG_0012"/>
+      <mets:smLink xlink:to="PHYS_0068" xlink:from="LOG_0012"/>
+      <mets:smLink xlink:to="PHYS_0069" xlink:from="LOG_0012"/>
+      <mets:smLink xlink:to="PHYS_0070" xlink:from="LOG_0012"/>
+      <mets:smLink xlink:to="PHYS_0071" xlink:from="LOG_0013"/>
+      <mets:smLink xlink:to="PHYS_0072" xlink:from="LOG_0013"/>
+      <mets:smLink xlink:to="PHYS_0073" xlink:from="LOG_0013"/>
+      <mets:smLink xlink:to="PHYS_0074" xlink:from="LOG_0013"/>
+   </mets:structLink>
+</mets:mets>

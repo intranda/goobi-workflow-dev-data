@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config_processProperties>
+    
+    <property name="Linking to external source" container="1">
+        <project>*</project>
+        <showStep name="Get manuscript from book depot" access="write"/>
+         <showProcessGroup access="write"/>
+        <type>Link</type>
+        <defaultvalue>http://goobi.intranda.com</defaultvalue>
+    </property>
+    
+    <property name="Comment for depot status" container="1">
+        <project>*</project>
+        <showStep name="Get manuscript from book depot" access="write"/>
+        <showStep name="Bring manuscript back to book depot" access="write" />
+        <type>Text</type>
+        <defaultvalue></defaultvalue>
+    </property>
+    
+    <property name="Placeholder card stored in depot" container="1">
+        <project>*</project>
+        <showStep name="Get manuscript from book depot" access="write"/>
+        <showProcessGroup access="write"/>
+        <type>Boolean</type>
+    </property>
+    
+    <property name="Placeholder card removed from depot" container="1">
+        <project>*</project>
+        <showStep name="Bring manuscript back to book depot" access="write"/>
+        <showProcessGroup access="write"/>
+        <type>Boolean</type>
+    </property>
+    
+    <property name="Opening angle" container="1">
+        <project>*</project>
+        <showStep name="Scanning" access="writeRequired"/>
+        <showStep name="Quality control" access="read"/>
+        <type>List</type>
+        <!--<defaultvalue>180 degrees</defaultvalue>-->
+        <value>90 degrees</value>
+        <value>180 degrees</value>
+    </property>
+    
+    <property name="Reading direction is RTL" container="1">
+        <project>*</project>
+        <showStep name="Scanning" access="write"/>
+        <showStep name="Quality control" access="read"/>
+        <showProcessGroup access="write"/>
+        <type>Boolean</type>
+    </property>
+   
+</config_processProperties>

@@ -1,16 +1,21 @@
-name: Zip Files
-
+name: MasterDeployCI
 on:
   push:
     branches:
-    - main
-
+      - master
 jobs:
-  zip-files:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: papeloto/action-zip@v1
-        with:
-          files: dist/ manifest.json
-          dest: goobi.zip
+    - uses: actions/checkout@v1
+    - name: Create Release Folder
+      run: rsync -arv --exclude='.git/' --exclude='.github/' --exclude='.gitignore' . ./release
+    - name: Switch to Release Folder
+      run: |
+        cd release
+        ls -la
+    - name: Bump version and push tag
+      uses: anothrNick/github-tag-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REPO_OWNER: intranda

@@ -28,9 +28,11 @@
                      <goobi:metadata name="DocLanguage">ger</goobi:metadata>
                      <goobi:metadata name="CatalogIDDigital">625017145</goobi:metadata>
                      <goobi:metadata name="TitleDocMain">Sphingvm Evropaearvm larvae qvotqvot adhvc innotvervnt ad Linnaeorvm Fabriciorvm et Viennensivm imprimis catalogos systematicos recensitae ; cvm tabvlis aeneis qvatvordecim ; oder die evropaeischen Schwaermerravpen nach den systematischen Verzeichnissen eines Linne, Fabricius vnd vorzuiglich der Wienerischen Natvrforscher ; lateinisch vnd tevtsch in vierzehen erlevchteten vnd vnerlevchteten Kvpfern</goobi:metadata>
-                     <goobi:metadata name="Classification">Blue;</goobi:metadata>
-                     <goobi:metadata name="SizeSourcePrint">12 S., 14 Bl</goobi:metadata>
                      <goobi:metadata name="_directionRTL">false</goobi:metadata>
+                     <goobi:metadata name="physicalDescriptionExtent">12 S., 14 Bl</goobi:metadata>
+                     <goobi:metadata name="PhysicalDescriptionOther">Blue;</goobi:metadata>
+                     <goobi:metadata name="shelfmarksource">HG-FB 8 ZOOL VI, 5214</goobi:metadata>
+                     <goobi:metadata name="FormatSourcePrint">4&amp;quot;</goobi:metadata>
                      <goobi:metadata name="Author" type="person">
                         <goobi:lastName>Bergstraesser</goobi:lastName>
                         <goobi:firstName>Heinrich Wilhelm</goobi:firstName>
@@ -77,9 +79,7 @@
             <mods:mods>
                <mods:extension>
                   <goobi:goobi>
-                     <goobi:metadata name="shelfmarksource">HG-FB 8 ZOOL VI, 5214</goobi:metadata>
-                     <goobi:metadata name="FormatSourcePrint">4&amp;quot;</goobi:metadata>
-                     <goobi:metadata name="pathimagefiles">file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media</goobi:metadata>
+                     <goobi:metadata name="pathimagefiles">file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media</goobi:metadata>
                   </goobi:goobi>
                </mods:extension>
             </mods:mods>
@@ -89,172 +89,172 @@
    <mets:fileSec>
       <mets:fileGrp USE="LOCAL">
          <mets:file ID="FILE_0001" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000001.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000001.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0002" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000002.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000002.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0003" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000003.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000003.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0004" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000004.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000004.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0005" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000005.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000005.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0006" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000006.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000006.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0007" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000007.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000007.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0008" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000008.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000008.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0009" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000009.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000009.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0010" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000010.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000010.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0011" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000011.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000011.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0012" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000012.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000012.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0013" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000013.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000013.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0014" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000014.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000014.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0015" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000015.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000015.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0016" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000016.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000016.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0017" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000017.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000017.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0018" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000018.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000018.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0019" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000019.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000019.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0020" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000020.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000020.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0021" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000021.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000021.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0022" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000022.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000022.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0023" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000023.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000023.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0024" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000024.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000024.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0025" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000025.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000025.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0026" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000026.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000026.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0027" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000027.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000027.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0028" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000028.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000028.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0029" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000029.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000029.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0030" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000030.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000030.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0031" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000031.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000031.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0032" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000032.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000032.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0033" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000033.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000033.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0034" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000034.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000034.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0035" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000035.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000035.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0036" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000036.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000036.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0037" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000037.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000037.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0038" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000038.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000038.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0039" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000039.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000039.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0040" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000040.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000040.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0041" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000041.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000041.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0042" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000042.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000042.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0043" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000043.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000043.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0044" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000044.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000044.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0045" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000045.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000045.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0046" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000046.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000046.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0047" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000047.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000047.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0048" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000048.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000048.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0049" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000049.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000049.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0050" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000050.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000050.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0051" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000051.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000051.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0052" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000052.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000052.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0053" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000053.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000053.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0054" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000054.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000054.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0055" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000055.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000055.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0056" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/3/images/bergsphi_625017145_media/00000056.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/3/images/bergsphi_625017145_media/00000056.jpg"/>
          </mets:file>
       </mets:fileGrp>
    </mets:fileSec>

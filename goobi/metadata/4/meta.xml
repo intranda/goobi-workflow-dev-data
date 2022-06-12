@@ -29,9 +29,10 @@
                      <goobi:metadata name="DocLanguage">lat</goobi:metadata>
                      <goobi:metadata name="CatalogIDDigital">577843346</goobi:metadata>
                      <goobi:metadata name="TitleDocMain">Specimen ichthyologicum De muraena et ophichtho</goobi:metadata>
-                     <goobi:metadata name="Classification">Blue;</goobi:metadata>
-                     <goobi:metadata name="SizeSourcePrint">14 S</goobi:metadata>
+                     <goobi:metadata name="PhysicalDescriptionOther">Blue;</goobi:metadata>
+                     <goobi:metadata name="physicalDescriptionExtent">14 S</goobi:metadata>
                      <goobi:metadata name="_directionRTL">false</goobi:metadata>
+                     <goobi:metadata name="shelfmarksource">8 ZOOL VIII, 8545</goobi:metadata>
                      <goobi:metadata name="Author" type="person">
                         <goobi:lastName>Thunberg</goobi:lastName>
                         <goobi:firstName>Carl Peter</goobi:firstName>
@@ -100,8 +101,7 @@
             <mods:mods>
                <mods:extension>
                   <goobi:goobi>
-                     <goobi:metadata name="shelfmarksource">8 ZOOL VIII, 8545</goobi:metadata>
-                     <goobi:metadata name="pathimagefiles">file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media</goobi:metadata>
+                     <goobi:metadata name="pathimagefiles">file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media</goobi:metadata>
                   </goobi:goobi>
                </mods:extension>
             </mods:mods>
@@ -111,73 +111,73 @@
    <mets:fileSec>
       <mets:fileGrp USE="LOCAL">
          <mets:file ID="FILE_0001" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000001.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000001.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0002" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000002.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000002.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0003" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000003.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000003.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0004" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000004.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000004.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0005" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000005.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000005.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0006" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000006.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000006.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0007" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000007.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000007.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0008" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000008.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000008.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0009" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000009.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000009.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0010" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000010.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000010.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0011" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000011.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000011.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0012" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000012.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000012.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0013" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000013.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000013.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0014" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000014.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000014.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0015" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000015.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000015.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0016" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000016.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000016.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0017" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000017.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000017.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0018" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000018.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000018.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0019" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000019.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000019.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0020" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000020.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000020.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0021" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000021.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000021.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0022" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000022.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000022.jpg"/>
          </mets:file>
          <mets:file ID="FILE_0023" MIMETYPE="image/tiff">
-            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/goobi/metadata/4/images/thunspec_577843346_media/00000023.jpg"/>
+            <mets:FLocat LOCTYPE="URL" xlink:href="file:///opt/digiverso/g2g/workspace/workflow/metadata/4/images/thunspec_577843346_media/00000023.jpg"/>
          </mets:file>
       </mets:fileGrp>
    </mets:fileSec>

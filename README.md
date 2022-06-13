@@ -53,7 +53,7 @@ wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/r
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/releases/latest/download/plugin_intranda_step_imageQA.jar -O ${GDIR}goobi/plugins/step/plugin_intranda_step_imageQA.jar
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageconverter/releases/latest/download/plugin_intranda_step_imageconverter.jar -O ${GDIR}goobi/plugins/step/plugin_intranda_step_imageconverter.jar
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-validation-imagename/releases/latest/download/plugin_intranda_validation_imagename.jar -O ${GDIR}goobi/plugins/validation/plugin_intranda_validation_imagename.jar
-echo 'STEP 5: Development data downloaded and installed. Reset finished." 
+echo 'STEP 5: Development data downloaded and installed. Reset finished.'
 ```
 
 ## More information

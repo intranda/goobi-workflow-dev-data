@@ -18,6 +18,12 @@ sudo mv goobi-*.sh /usr/local/bin/
 sudo goobi-install.sh 
 ```
 
+Right after the complete installation your Goobi workflow is available under the following URL:
+
+```
+http://YOUR_IP_ADDRESS:8080/goobi
+```
+
 ## Update your installation
 To update your current installation simply call the following command:
 

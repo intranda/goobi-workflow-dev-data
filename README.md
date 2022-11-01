@@ -1,16 +1,3 @@
-# Demo content for Goobi workflow development purposes
-
-This repository hold demo data for developers of Goobi workflow. It contains three books with images and a METS files each. 
-And the database dump contains sample workflows using these images.
-
-## Attention: Database will be overwritten
-Please notice that this database dump will overwrite the data of the existing goobi database to reset the data. 
-It expects a running MariaDB or MySQL database on localhost with the name `goobi`, the login `goobi` and the password `goobi`.
-
-## How to use this data
-To use this dump simply run the following commands:
-
-```bash
 echo 'STEP 1: Download demo content if not available already'
 GDIR=/opt/digiverso/
 rm -rf ${GDIR}goobi
@@ -18,9 +5,17 @@ rm -rf ${GDIR}goobi
 
 echo 'STEP 2: Unzip demo content and insert data into the database'
 unzip -q ${GDIR}goobi.zip -d ${GDIR}goobi
+
+echo 'STEP 3: Drop all tables from the database and insert the dump'
+TEMP_FILE_PATH='./drop_all_tables.sql'
+echo "SET FOREIGN_KEY_CHECKS = 0;" > $TEMP_FILE_PATH
+( mysqldump --add-drop-table --no-data -u goobi -pgoobi goobi | grep 'DROP TABLE' ) >> $TEMP_FILE_PATH
+echo "SET FOREIGN_KEY_CHECKS = 1;" >> $TEMP_FILE_PATH
+mysql -u goobi -pgoobi goobi < $TEMP_FILE_PATH
+rm -f $TEMP_FILE_PATH
 mysql -u goobi -pgoobi goobi -e "SOURCE ${GDIR}goobi/db/start.sql"
 
-echo 'STEP 3: Download of ruleset, scripts and docket files from install folder of Goobi workflow'
+echo 'STEP 4: Download of ruleset, scripts and docket files from install folder of Goobi workflow'
 GHDIR=https://raw.githubusercontent.com/intranda/goobi-workflow/master/Goobi/install/
 wget  -q --show-progress ${GHDIR}rulesets/ruleset.xml -O ${GDIR}goobi/rulesets/ruleset.xml
 wget  -q --show-progress ${GHDIR}scripts/script_createDirMeta.sh -O ${GDIR}goobi/scripts/script_createDirMeta.sh
@@ -39,7 +34,7 @@ wget  -q --show-progress ${GHDIR}xslt/font_OpenSans-Semibold.ttf -O ${GDIR}goobi
 wget  -q --show-progress ${GHDIR}xslt/font_OpenSansHebrew-Bold.ttf -O ${GDIR}goobi/xslt/font_OpenSansHebrew-Bold.ttf
 wget  -q --show-progress ${GHDIR}xslt/font_OpenSansHebrew-Regular.ttf -O ${GDIR}goobi/xslt/font_OpenSansHebrew-Regular.ttf
 
-echo 'STEP 4: Download of current plugins from GitHub releases'
+echo 'STEP 5: Download of current plugins from GitHub releases'
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin_intranda_dashboard_extended-GUI.jar -O ${GDIR}goobi/plugins/GUI/plugin_intranda_dashboard_extended-GUI.jar
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin_intranda_dashboard_extended.jar -O ${GDIR}goobi/plugins/dashboard/plugin_intranda_dashboard_extended.jar
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-opac-pica/releases/latest/download/plugin_intranda_opac_pica.jar -O ${GDIR}goobi/plugins/opac/plugin_intranda_opac_pica.jar
@@ -53,9 +48,4 @@ wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/r
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/releases/latest/download/plugin_intranda_step_imageQA.jar -O ${GDIR}goobi/plugins/step/plugin_intranda_step_imageQA.jar
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageconverter/releases/latest/download/plugin_intranda_step_imageconverter.jar -O ${GDIR}goobi/plugins/step/plugin_intranda_step_imageconverter.jar
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-validation-imagename/releases/latest/download/plugin_intranda_validation_imagename.jar -O ${GDIR}goobi/plugins/validation/plugin_intranda_validation_imagename.jar
-echo 'STEP 5: Development data downloaded and installed. Reset finished.'
-```
-
-## More information
-More information about how this is used can be found in the Goobi workflow documentation in the chapter for the developers here:
-https://docs.goobi.io/goobi-workflow-en/dev/1
+echo 'STEP 6: Development data downloaded and installed. Reset finished.'

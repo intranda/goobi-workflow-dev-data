@@ -1,3 +1,16 @@
+# Demo content for Goobi workflow development purposes
+
+This repository hold demo data for developers of Goobi workflow. It contains three books with images and a METS files each. 
+And the database dump contains sample workflows using these images.
+
+## Attention: Database will be overwritten
+Please notice that this database dump will overwrite the data of the existing goobi database to reset the data. 
+It expects a running MariaDB or MySQL database on localhost with the name `goobi`, the login `goobi` and the password `goobi`.
+
+## How to use this data
+To use this dump simply run the following commands:
+
+```bash
 echo 'STEP 1: Download demo content if not available already'
 GDIR=/opt/digiverso/
 rm -rf ${GDIR}goobi
@@ -49,3 +62,8 @@ wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/r
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageconverter/releases/latest/download/plugin_intranda_step_imageconverter.jar -O ${GDIR}goobi/plugins/step/plugin_intranda_step_imageconverter.jar
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-validation-imagename/releases/latest/download/plugin_intranda_validation_imagename.jar -O ${GDIR}goobi/plugins/validation/plugin_intranda_validation_imagename.jar
 echo 'STEP 6: Development data downloaded and installed. Reset finished.'
+```
+
+## More information
+More information about how this is used can be found in the Goobi workflow documentation in the chapter for the developers here:
+https://docs.goobi.io/goobi-workflow-en/dev/1

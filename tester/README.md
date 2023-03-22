@@ -1,4 +1,4 @@
-# Installation of Goobi workflow to execcute tests with demo content
+# Installation of Goobi workflow to execute tests with demo content
 
 ## General Notes
 The scripts provided here are tested on Ubuntu 20.04 only. Feel free to adapt these and give feedback in case you have issues using these.

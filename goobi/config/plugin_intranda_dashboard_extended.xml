@@ -60,51 +60,53 @@
         <html-box-show>true</html-box-show>
         <html-box-title>Goobi to go - Sample accounts</html-box-title>
         <html-box-content><![CDATA[
-                This is the Goobi workflow instance inside of your Goobi-to-go environment. It contains some demonstration material as well as sample user accounts. In the following table you can see the list of all user accounts>
-                <table class="table table-hover table-nomargin dataTable table-bordered responsive">
-                        <thead>
+                This is the Goobi workflow instance inside of your Goobi-to-go environment. It contains some demonstration material as well as sample user accounts. In the following table you can see the list of all user accounts<br/><br/>
+                <div class="gw-table ">
+                        <table class="table table-hover table-nomargin dataTable table-bordered responsive">
+                                <thead>
+                                        <tr>
+                                                <th>Login</th>
+                                                <th>Password</th>
+                                                <th>User description</th>
+                                        </tr>
+                                </thead>
                                 <tr>
-                                        <th>Login</th>
-                                        <th>Password</th>
-                                        <th>User description</th>
+                                        <td>testscanning</td>
+                                        <td>test</td>
+                                        <td>User account for uploading content</td>
                                 </tr>
-                        </thead>
-                        <tr>
-                                <td>testscanning</td>
-                                <td>test</td>
-                                <td>User account for uploading content</td>
-                        </tr>
-                        <tr>
-                                <td>testqc</td>
-                                <td>test</td>
-                                <td>User account for manual Image QA</td>
-                        </tr>
-                        <tr>
-                                <td>testmetadata</td>
-                                <td>test</td>
-                                <td>Account for metadata enrichment work</td>
-                        </tr>
-                        <tr>
-                                <td>testimaging</td>
-                                <td>test</td>
-                                <td>User account for manual image optimisation</td>
-                        </tr>
-                        <tr>
-                                <td>testprojectmanagement</td>
-                                <td>test</td>
-                                <td>Project manager account</td>
-                        </tr>
-                        <tr>
-                                <td>testadmin</td>
-                                <td>test</td>
-                                <td>Administrator account</td>
-                        </tr>
-                        <tr>
-                                <td>goobi</td>
-                                <td>goobi</td>
-                                <td>Administrator account</td>
-                        </tr>
-                </table>
+                                <tr>
+                                        <td>testqc</td>
+                                        <td>test</td>
+                                        <td>User account for manual Image QA</td>
+                                </tr>
+                                <tr>
+                                        <td>testmetadata</td>
+                                        <td>test</td>
+                                        <td>Account for metadata enrichment work</td>
+                                </tr>
+                                <tr>
+                                        <td>testimaging</td>
+                                        <td>test</td>
+                                        <td>User account for manual image optimisation</td>
+                                </tr>
+                                <tr>
+                                        <td>testprojectmanagement</td>
+                                        <td>test</td>
+                                        <td>Project manager account</td>
+                                </tr>
+                                <tr>
+                                        <td>testadmin</td>
+                                        <td>test</td>
+                                        <td>Administrator account</td>
+                                </tr>
+                                <tr>
+                                        <td>goobi</td>
+                                        <td>goobi</td>
+                                        <td>Administrator account</td>
+                                </tr>
+                        </table>
+                </div>
         ]]></html-box-content>
 
 </config_plugin>

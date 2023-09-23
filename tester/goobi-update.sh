@@ -76,6 +76,7 @@ echo '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 service tomcat9 stop
 cd /opt/digiverso/git/
 if cd goobi-workflow; then
+  git config --global --add safe.directory /opt/digiverso/git/goobi-workflow
   git pull;
   cd ..;
 else

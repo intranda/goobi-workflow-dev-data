@@ -101,6 +101,8 @@ sed -e "s/PW_SQL_GOOBI/goobi/" << "EOF" | sudo tee /etc/tomcat9/Catalina/localho
 
 </Context>
 EOF
+sudo chown -R root:tomcat /etc/tomcat9/Catalina
+sudo chmod -R g-w /etc/tomcat9/Catalina
 # Java 17 for Tomcat9
 sed -re 's|^#?(JAVA_HOME=).*|\1/usr/lib/jvm/java-17-openjdk-amd64|' /etc/default/tomcat9 -i
 mkdir /var/lib/tomcat

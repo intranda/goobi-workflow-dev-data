@@ -9,9 +9,9 @@ echo '  STEP 5: Read reset either from parameter or request user for it'
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 if [ $# -eq 0 ];
 then
-  read -p "Reset content in metadata folder and database [false]: " reset
+  read -r -p "Reset content in metadata folder and database [false]: " reset
   reset=${reset:-false}
-  read -p "Which branch to use (e.g. master, develop) [develop]: " branch
+  read -r -p "Which branch to use (e.g. master, develop) [develop]: " branch
   branch=${branch:-develop}
 else
   reset=$1;
@@ -34,7 +34,7 @@ fi
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 echo '  STEP 7: Download of ruleset, scripts and docket files from install folder of Goobi workflow'
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
-GHDIR=https://raw.githubusercontent.com/intranda/goobi-workflow/master/Goobi/install/
+GHDIR=https://raw.githubusercontent.com/intranda/goobi-workflow/master/install/
 wget  -q --show-progress ${GHDIR}rulesets/ruleset.xml -O ${GDIR}goobi/rulesets/ruleset.xml
 wget  -q --show-progress ${GHDIR}scripts/script_createDirMeta.sh -O ${GDIR}goobi/scripts/script_createDirMeta.sh
 wget  -q --show-progress ${GHDIR}scripts/script_createDirUserHome.sh -O ${GDIR}goobi/scripts/script_createDirUserHome.sh
@@ -43,7 +43,6 @@ wget  -q --show-progress ${GHDIR}scripts/script_deleteSymLink.sh -O ${GDIR}goobi
 wget  -q --show-progress ${GHDIR}xslt/docket.xsl -O ${GDIR}goobi/xslt/docket.xsl
 wget  -q --show-progress ${GHDIR}xslt/docket_multipage.xsl -O ${GDIR}goobi/xslt/docket_multipage.xsl
 wget  -q --show-progress ${GHDIR}xslt/docket_metadata.xsl -O ${GDIR}goobi/xslt/docket_metadata.xsl
-wget  -q --show-progress ${GHDIR}xslt/docket_german.xsl -O ${GDIR}goobi/xslt/docket_german.xsl
 wget  -q --show-progress ${GHDIR}xslt/config.xml -O ${GDIR}goobi/xslt/config.xml
 wget  -q --show-progress ${GHDIR}xslt/logo.png -O ${GDIR}goobi/xslt/logo.png
 wget  -q --show-progress ${GHDIR}xslt/placeholder.png -O ${GDIR}goobi/xslt/placeholder.png
@@ -55,39 +54,46 @@ wget  -q --show-progress ${GHDIR}xslt/font_OpenSansHebrew-Regular.ttf -O ${GDIR}
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 echo '  STEP 8: Download of current plugins from GitHub releases'
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin_intranda_dashboard_extended-GUI.jar -O ${GDIR}goobi/plugins/GUI/plugin_intranda_dashboard_extended-GUI.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin_intranda_dashboard_extended.jar -O ${GDIR}goobi/plugins/dashboard/plugin_intranda_dashboard_extended.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-opac-pica/releases/latest/download/plugin_intranda_opac_pica.jar -O ${GDIR}goobi/plugins/opac/plugin_intranda_opac_pica.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-opac-marc/releases/latest/download/plugin_intranda_opac_marc.jar -O ${GDIR}goobi/plugins/opac/plugin_intranda_opac_marc.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-rest-intranda/releases/latest/download/plugin_intranda_rest_default.jar -O ${GDIR}goobi/plugins/GUI/plugin_intranda_rest_default.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-statistics-intranda/releases/latest/download/plugin_intranda_statistics-GUI.jar -O ${GDIR}goobi/plugins/GUI/plugin_intranda_statistics-GUI.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-statistics-intranda/releases/latest/download/plugin_intranda_statistics.jar -O ${GDIR}goobi/plugins/statistics/plugin_intranda_statistics.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-fileupload/releases/latest/download/plugin_intranda_step_fileUpload-GUI.jar -O ${GDIR}goobi/plugins/GUI/plugin_intranda_step_fileUpload-GUI.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-fileupload/releases/latest/download/plugin_intranda_step_fileUpload.jar -O ${GDIR}goobi/plugins/step/plugin_intranda_step_fileUpload.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/releases/latest/download/plugin_intranda_step_imageQA-GUI.jar -O ${GDIR}goobi/plugins/GUI/plugin_intranda_step_imageQA-GUI.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/releases/latest/download/plugin_intranda_step_imageQA.jar -O ${GDIR}goobi/plugins/step/plugin_intranda_step_imageQA.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageconverter/releases/latest/download/plugin_intranda_step_imageconverter.jar -O ${GDIR}goobi/plugins/step/plugin_intranda_step_imageconverter.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-validation-imagename/releases/latest/download/plugin_intranda_validation_imagename.jar -O ${GDIR}goobi/plugins/validation/plugin_intranda_validation_imagename.jar
-chown -R tomcat: /opt/digiverso/
+# Opac
+wget --show-progress -qNP ${GDIR}goobi/plugins/opac/ "https://github.com/intranda/goobi-plugin-opac-pica/releases/latest/download/plugin-opac-pica-base.jar"
+wget --show-progress -qNP ${GDIR}goobi/plugins/opac/ "https://github.com/intranda/goobi-plugin-opac-marc/releases/latest/download/plugin-opac-marc-base.jar"
+# Step: Fileupload
+wget --show-progress -qNP ${GDIR}goobi/plugins/GUI/  "https://github.com/intranda/goobi-plugin-step-file-upload/releases/latest/download/plugin-step-file-upload-gui.jar"
+wget --show-progress -qNP ${GDIR}goobi/plugins/step/ "https://github.com/intranda/goobi-plugin-step-file-upload/releases/latest/download/plugin-step-file-upload-base.jar"
+# Step: ImageQA
+wget --show-progress -qNP ${GDIR}goobi/plugins/GUI/  "https://github.com/intranda/goobi-plugin-step-imageqa/releases/latest/download/plugin-step-imageqa-gui.jar"
+wget --show-progress -qNP ${GDIR}goobi/plugins/step/ "https://github.com/intranda/goobi-plugin-step-imageqa/releases/latest/download/plugin-step-imageqa-base.jar"
+# Dashboard: Extended
+wget --show-progress -qNP ${GDIR}goobi/plugins/GUI/       "https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-gui.jar"
+wget --show-progress -qNP ${GDIR}goobi/plugins/dashboard/ "https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-base.jar"
+# REST: intranda REST
+wget --show-progress -qNP ${GDIR}goobi/lib/ "https://github.com/intranda/goobi-plugin-rest-intranda/releases/latest/download/plugin-rest-intranda-api.jar"
+# Controlling: intranda default statistics
+wget --show-progress -qNP ${GDIR}goobi/plugins/GUI/        "https://github.com/intranda/goobi-plugin-statistics-intranda/releases/latest/download/plugin-statistics-intranda-gui.jar"
+wget --show-progress -qNP ${GDIR}goobi/plugins/statistics/ "https://github.com/intranda/goobi-plugin-statistics-intranda/releases/latest/download/plugin-statistics-intranda-base.jar"
+wget --show-progress -qNP ${GDIR}goobi/plugins/statistics/ "https://github.com/intranda/goobi-plugin-statistics-intranda/releases/latest/download/statistics_template.pdf"
+wget --show-progress -qNP ${GDIR}goobi/plugins/statistics/ "https://github.com/intranda/goobi-plugin-statistics-intranda/releases/latest/download/statistics_template.xlsx"
+# extra
+wget --show-progress -qNP ${GDIR}goobi/plugins/step/       "https://github.com/intranda/goobi-plugin-step-image-converter/releases/latest/download/plugin-step-image-converter-base.jar"
+wget --show-progress -qNP ${GDIR}goobi/plugins/validation/ "https://github.com/intranda/goobi-plugin-validation-imagename/releases/latest/download/plugin-validation-imagename-base.jar"
+chown -R tomcat: ${GDIR}
 
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 echo '  STEP 9: Checkout Goobi workflow source and start it up'
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 service tomcat9 stop
 cd /opt/digiverso/git/
-if cd goobi-workflow; then
+if test -d goobi-workflow; then
   git config --global --add safe.directory /opt/digiverso/git/goobi-workflow
-  git pull;
-  cd ..;
 else
   git clone https://github.com/intranda/goobi-workflow.git goobi-workflow;
 fi
 cd goobi-workflow
-git checkout $branch
-cd Goobi
+git checkout "$branch"
+git pull
 # mvn package
 mvn -DskipTests=true -Dcheckstyle.skip=true -Dmdep.analyze.skip=true clean package -U
-cp module-war/target/goobi.war /var/lib/tomcat9/webapps/
+cp target/workflow-core.war /var/lib/tomcat9/webapps/goobi.war
 service tomcat9 start
 
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'

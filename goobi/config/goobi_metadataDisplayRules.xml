@@ -52,14 +52,51 @@
 				</item>
 			</select>
 
-			<vocabularyList ref="singleDigCollection">
-				<source>Digital collections</source>
-			</vocabularyList>
+			<select1 ref="singleDigCollection">
+				<item selected="false">
+                                        <label>Biology</label>
+                                        <value>Biology</value>
+                                </item>
+                                <item selected="false">
+                                        <label>Mathematics</label>
+                                        <value>Mathematics</value>
+                                </item>
+                                <item selected="false">
+                                        <label>Physics</label>
+                                        <value>Physics</value>
+                                </item>
+                                <item selected="true">
+                                        <label>General</label>
+                                        <value>General</value>
+                                </item>
+                                <item selected="false">
+                                        <label>Religion</label>
+                                        <value>Religion</value>
+                                </item>
+			</select1>
 
-			<vocabularySearch ref="DocLanguage">
-				<source>Languages</source>
-				<field>Name; Full Name; Description</field>
-			</vocabularySearch>
+			<select1 ref="DocLanguage">
+                                <item selected="true">
+                                        <label>ger</label>
+                                        <value>ger</value>
+                                </item>
+                                <item selected="false">
+                                        <label>eng</label>
+                                        <value>eng</value>
+                                </item>
+                                <item selected="false">
+                                        <label>spa</label>
+                                        <value>spa</value>
+                                </item>
+                                <item selected="false">
+                                        <label>fra</label>
+                                        <value>fra</value>
+                                </item>
+                                <item selected="false">
+                                        <label>lat</label>
+                                        <value>lat</value>
+                                </item>
+			</select1>
 
 		</context>
 	</ruleSet>

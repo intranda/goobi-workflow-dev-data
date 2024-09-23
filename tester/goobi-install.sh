@@ -6,19 +6,24 @@ fi
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 echo '  STEP 1: Install needed packages'
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
-apt update
-apt install -y unzip git openjdk-11-jdk mariadb-server maven tomcat9  < "/dev/null"
+# add jammy for tomcat9
+test -e /etc/apt/preferences.d/jammy-updates.pref || cat > /etc/apt/preferences.d/jammy-updates.pref << "EOF"
+Package: *
+Pin: release a=jammy-updates
+Pin-Priority: 60
+EOF
+add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu/ jammy-updates main universe"
+
+# apt update # add-apt-repository does apt update already
+apt install -y unzip git openjdk-17-jdk-headless mariadb-server maven tomcat9  < "/dev/null"
 
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 echo '  STEP 2: Create aliases'
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 cat << "EOF" | sudo tee -a /root/.bash_aliases
 alias cata='journalctl -n200 -f -u tomcat9'
-alias ct='chown tomcat: *'
-alias ctr='chown -R tomcat: *'
 alias gl='tail -f -n 333 /opt/digiverso/logs/goobi.log'
 EOF
-source ~/.bashrc
 
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 echo '  STEP 3: Create folders and database'
@@ -96,4 +101,8 @@ sed -e "s/PW_SQL_GOOBI/goobi/" << "EOF" | sudo tee /etc/tomcat9/Catalina/localho
 
 </Context>
 EOF
+# Java 17 for Tomcat9
+sed -re 's|^#?(JAVA_HOME=).*|\1/usr/lib/jvm/java-17-openjdk-amd64|' /etc/default/tomcat9 -i
+mkdir /var/lib/tomcat
+chown tomcat: /var/lib/tomcat
 goobi-update.sh true develop

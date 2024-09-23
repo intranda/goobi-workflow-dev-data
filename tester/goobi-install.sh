@@ -59,6 +59,7 @@ NoNewPrivileges=false
 ReadWritePaths=
 EOF
 sudo systemctl daemon-reload
+mkdir -p /etc/tomcat9/Catalina/localhost
 sed -e "s/PW_SQL_GOOBI/goobi/" << "EOF" | sudo tee /etc/tomcat9/Catalina/localhost/goobi.xml
 <?xml version='1.0' encoding='utf-8'?>
 <Context>

@@ -42,13 +42,13 @@ echo '  STEP 4: Preparation of Tomcat'
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 sudo patch /etc/tomcat9/context.xml << "EOF"
 @@ -25,7 +25,5 @@
-    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+     <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
 
-    <!-- Uncomment this to disable session persistence across Tomcat restarts -->
+     <!-- Uncomment this to disable session persistence across Tomcat restarts -->
 -    <!--
-    <Manager pathname="" />
+     <Manager pathname="" />
 -    -->
-</Context>
+ </Context>
 EOF
 sudo SYSTEMD_EDITOR=tee systemctl edit tomcat9 << "EOF"
 [Service]

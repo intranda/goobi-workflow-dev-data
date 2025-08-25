@@ -1,84 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <goobiProjects>
 
-<!-- 
-Sequence for determining the right <project> element:
-
-1.) check if the exact project name was used in the name attribute or a name element
-2.) check if the project name matches a regular expression in name attribute or a name element
-3.) check, if a 'default' project was configured
-4.) use the first <project>
- -->
-
-
-    <project name="default"> <!-- used as default fallback, if no other name matches -->
-        <name>Example project</name> <!-- used only for the project 'Example project' -->
-        <name>Sample.*</name> <!-- used for any project starting with 'Sample' -->
+    <project name="default">
         <createNewProcess>
             <itemlist>
-                <item from="werk" multiselect="true">
+                <item property="true" multiselect="true">
                     Creator of digital edition
-                    <select label="CHANGEME">CHANGEME</select>
-
+                    <select label="Verbundzentrale des GBV (VZG)">Common Library Network</select>
+                   
                 </item>
-                <item from="prozess" multiselect="false">
-                    FontType
-                    <select label="Antiqua"> Antiqua </select>
-                    <select label="Fracture"> Fracture </select>
+                <item property="true" multiselect="false">
+                    Font type
+                    <select label="Antiqua">Antiqua </select>
+                    <select label="Gothic"> Gothic </select>
+                    <select label="Mixed">Mixed </select>
                 </item>
 
-                <!-- Title for Monograph and Periodical -->
-                <item docstruct="topstruct" from="vorlage" isnotdoctype="multivolume" metadata="TitleDocMain" required="true" ughbinding="true"> Title </item>
-                <item docstruct="topstruct" from="vorlage" isnotdoctype="multivolume" metadata="TitleDocMainShort" required="true" ughbinding="true"> Sorting title</item>
+				<!-- Title for Monograph and Periodical -->
+                <item docstruct="topstruct" property="true" isnotdoctype="multivolume" metadata="TitleDocMain" required="true" ughbinding="true"> Title </item>
+                <item docstruct="topstruct" property="true" isnotdoctype="multivolume" metadata="TitleDocMainShort" required="true" ughbinding="true"> Sorting title</item>
 
-                <!-- Title just for the Multivolume -->
-                <item docstruct="topstruct" from="vorlage" isdoctype="multivolume" metadata="TitleDocMain" required="true" ughbinding="true"> Title </item>
-                <item docstruct="topstruct" from="vorlage" isdoctype="multivolume" metadata="TitleDocMainShort" required="true" ughbinding="true"> Sorting title</item>
+				<!-- Title just for the Multivolume -->
+                <item docstruct="topstruct" property="true" isdoctype="multivolume" metadata="TitleDocMain" required="true" ughbinding="true"> Title </item>
+                <item docstruct="topstruct" property="true" isdoctype="multivolume" metadata="TitleDocMainShort" required="true" ughbinding="true"> Sorting title</item>
 
-                <!-- Authors and Creators -->
-                <item docstruct="topstruct" from="vorlage" isdoctype="monograph\|multivolume\|periodical" metadata="ListOfCreators" ughbinding="true">Authors</item>
+				<!-- Authors and Creators -->
+                <item docstruct="topstruct" property="true" isdoctype="monograph\|multivolume\|periodical" metadata="ListOfCreators" ughbinding="true">Authors</item>
 
-                <!-- Identifer -->
-                <item docstruct="topstruct" from="werk" isnotdoctype="periodical" metadata="TSL_ATS" ughbinding="false">ATS</item>
-                <item docstruct="topstruct" from="werk" isdoctype="periodical" metadata="TSL_ATS" ughbinding="false">TSL</item>
-                <item docstruct="topstruct" from="vorlage" isdoctype="multivolume" metadata="CatalogIDSource" required="true" ughbinding="true">Identifier analogue (c)</item>
-                <item docstruct="topstruct" from="werk" isdoctype="multivolume" metadata="CatalogIDDigital" required="true" ughbinding="true">Identifier digital (c)</item>
-                <item docstruct="topstruct" from="vorlage" isdoctype="monograph" metadata="CatalogIDSource" required="true" ughbinding="true">Identifier analogue (a)</item>
-                <item docstruct="topstruct" from="werk" isdoctype="monograph" metadata="CatalogIDDigital" required="true" ughbinding="true"> Identifier digital (a)</item>
-                <item docstruct="topstruct" from="vorlage" isdoctype="periodical" metadata="CatalogIDSource" required="true" ughbinding="true">Identifier analogue (b)</item>
-                <item docstruct="topstruct" from="werk" isdoctype="periodical" metadata="CatalogIDDigital" required="true" ughbinding="true"> Identifier digital (b)</item>
-                <item docstruct="topstruct" from="werk" isdoctype="periodical" metadata="ISSN" required="true" ughbinding="true"> ISSN </item>
-                <item docstruct="firstchild" from="vorlage" isdoctype="periodical" metadata="CatalogIDSource" required="true" ughbinding="true">Identifier analogue (volume)</item>
-                <item docstruct="firstchild" from="werk" isdoctype="periodical" metadata="CatalogIDDigital" required="true" ughbinding="true">Identifier digital (volume)</item>
+				<!-- Identifer -->
+                <item docstruct="topstruct" property="true" isnotdoctype="periodical" metadata="TSL_ATS" ughbinding="true">ATS</item>
+                <item docstruct="topstruct" property="true" isdoctype="periodical" metadata="TSL_ATS" ughbinding="true">TSL</item>
+                <item docstruct="topstruct" property="true" isdoctype="multivolume" metadata="CatalogIDSource" required="true" ughbinding="true">Identifier analogue (c)</item>
+                <item docstruct="topstruct" property="true" isdoctype="multivolume" metadata="CatalogIDDigital" required="true" ughbinding="true">Identifier digital (c)</item>
+                <item docstruct="topstruct" property="true" isnotdoctype="periodical\|multivolume" metadata="CatalogIDSource" required="true" ughbinding="true">Identifier analogue (a)</item>
+                <item docstruct="topstruct" property="true" isnotdoctype="periodical\|multivolume" metadata="CatalogIDDigital" required="true" ughbinding="true"> Identifier digital (a)</item>
+                <item docstruct="topstruct" property="true" isdoctype="periodical" metadata="CatalogIDSource" required="true" ughbinding="true">Identifier analogue (b)</item>
+                <item docstruct="topstruct" property="true" isdoctype="periodical" metadata="CatalogIDDigital" required="true" ughbinding="true"> Identifier digital (b)</item>
+                <item docstruct="topstruct" property="true" isdoctype="periodical" metadata="ISSN" required="false" ughbinding="true"> ISSN </item>
+                <item docstruct="firstchild" property="true" isdoctype="periodical" metadata="CatalogIDSource" required="true" ughbinding="true">Identifier analogue (volume)</item>
+                <item docstruct="firstchild" property="true" isdoctype="periodical" metadata="CatalogIDDigital" required="true" ughbinding="true">Identifier digital (volume)</item>
 
-                <!-- Title, number and authors for Multivolumes and Periodicals -->
-                <item docstruct="firstchild" from="vorlage" isdoctype="multivolume\|periodical" metadata="TitleDocMain" required="true" ughbinding="true"> Title (volume)</item>
-                <item docstruct="firstchild" from="vorlage" isdoctype="multivolume\|periodical" metadata="TitleDocMainShort" required="true" ughbinding="true"> Sorting title (volume)</item>
-                <item docstruct="firstchild" from="vorlage" isdoctype="multivolume" metadata="ListOfCreators" ughbinding="false"> Authors (volume)</item>
-                <item docstruct="firstchild" from="vorlage" isnotdoctype="monograph" metadata="CurrentNo" ughbinding="true"> Volume number </item>
-                <item docstruct="firstchild" from="vorlage" isnotdoctype="monograph" metadata="CurrentNoSorting" ughbinding="true"> Sorting number</item>
-                <item from="vorlage" isdoctype="multivolume\|periodical" required="true"> Label number </item>
-                <item docstruct="firstchild" from="vorlage" isdoctype="multivolume" metadata="CatalogIDSource" required="true" ughbinding="true">Identifier analogue (f) </item>
-                <item docstruct="firstchild" from="werk" isdoctype="multivolume" metadata="CatalogIDDigital" required="true" ughbinding="true">Identifier digital (f) </item>
+				<!-- Title, number and authors for Multivolumes and Periodicals -->
+                <item docstruct="firstchild" property="true" isdoctype="multivolume\|periodical" metadata="TitleDocMain" required="true" ughbinding="true"> Title (volume)</item>
+                <item docstruct="firstchild" property="true" isdoctype="multivolume\|periodical" metadata="TitleDocMainShort" required="true" ughbinding="true"> Sorting title (volume)</item>
+                <item docstruct="firstchild" property="true" isdoctype="multivolume" metadata="ListOfCreators" ughbinding="true"> Authors (volume)</item>
+                <item docstruct="firstchild" property="true" isnotdoctype="monograph" metadata="CurrentNo" ughbinding="true"> Volume number </item>
+                <item docstruct="firstchild" property="true" isnotdoctype="monograph" metadata="CurrentNoSorting" ughbinding="true"> Sorting number</item>
+                <item property="true" isdoctype="multivolume\|periodical" required="true"> Label number </item>
+                <item docstruct="firstchild" property="true" isdoctype="multivolume" metadata="CatalogIDSource" required="true" ughbinding="true">Identifier analogue (f) </item>
+                <item docstruct="firstchild" property="true" isdoctype="multivolume" metadata="CatalogIDDigital" required="true" ughbinding="true">Identifier digital (f) </item>
 
-                <!-- Other metadata for all -->
-                <item docstruct="topstruct" from="vorlage" isdoctype="monograph\|multivolume\|periodical" metadata="PlaceOfPublication" ughbinding="true"> Publishing place </item>
-                <item docstruct="topstruct" from="vorlage" isdoctype="monograph" metadata="PublicationYear" ughbinding="true"> Publishing year </item>
-                <item docstruct="firstchild" from="vorlage" isdoctype="periodical\|multivolume" metadata="PublicationYear" ughbinding="true">Publishing year </item>
-                <item docstruct="firstchild" from="vorlage" isdoctype="multivolume\|periodical" metadata="PublisherName" ughbinding="true"> Publishing house </item>
-                <item docstruct="topstruct" from="vorlage" isdoctype="monograph" metadata="PublisherName" ughbinding="true"> Publishing house </item>
-                <item from="vorlage" isdoctype="periodical\|multivolume" ughbinding="true" docstruct="firstchild" metadata="shelfmarksource"> Shelfmark </item>
-                <item from="vorlage" isdoctype="monograph\|map\|manuscript" ughbinding="true" docstruct="topstruct" metadata="shelfmarksource"> Shelfmark </item>
+				<!-- Other metadata for all -->
+                <item docstruct="topstruct" property="true" isdoctype="monograph\|periodical\|multivolume" metadata="PlaceOfPublication" ughbinding="true"> Publishing place </item>
+                <item docstruct="topstruct" property="true" isdoctype="monograph" metadata="PublicationYear" ughbinding="true"> Publishing year </item>
+                <item docstruct="firstchild" property="true" isdoctype="periodical\|multivolume" metadata="PublicationYear" ughbinding="true">Publishing year </item>
+                <item docstruct="firstchild" property="true" isdoctype="multivolume\|periodical" metadata="PublisherName" ughbinding="true"> Publishing house </item>
+                <item docstruct="topstruct" property="true" isdoctype="monograph" metadata="PublisherName" ughbinding="true"> Publishing house </item>
+                <item docstruct="boundbook" property="true" metadata="shelfmarksource" ughbinding="true"> Shelfmark </item>
 
 
-                <!-- ZVDD Anpassungen -->
-                <item docstruct="topstruct" isnotdoctype="periodical\|multivolume" metadata="_dateDigitization" multiselect="true" required="true" ughbinding="true">
+				<!-- ZVDD Anpassungen -->
+				<item docstruct="topstruct" isnotdoctype="periodical\|multivolume" metadata="_dateDigitization" multiselect="true" required="true" ughbinding="true">
                     Digitisation date
-                    <select label="2022"> 2022 </select>
+                    <select label="2023"> 2023 </select>
                 </item>
                 <item docstruct="firstchild" isdoctype="periodical\|multivolume" metadata="_dateDigitization" multiselect="true" required="true" ughbinding="true">
                     Digitisation date
-                    <select label="2022"> 2022</select>
+                    <select label="2023"> 2023</select>
                 </item>
                 <item docstruct="topstruct" isnotdoctype="periodical\|multivolume" metadata="_electronicEdition" multiselect="true" required="true" ughbinding="true">
                     Electronic ed.
@@ -90,50 +78,46 @@ Sequence for determining the right <project> element:
                 </item>
                 <item metadata="_electronicPublisher" multiselect="true" required="true" ughbinding="true">
                     Creator of digital edition
-                    <select label="CHANGEME"> CHANGEME </select>
+                    <select label="Goobi"> Goobi </select>
                 </item>
                 <item metadata="_placeOfElectronicOrigin" multiselect="true" required="true" ughbinding="true">
                     Place of digital edition
-                    <select label="CHANGEME"> CHANGEME </select>
+                    <select label="Göttingen"> Göttingen </select>
                 </item>
                 <item metadata="_digitalOrigin" multiselect="true" required="true" ughbinding="true">
                     Digital origin
                     <select label="reformatted digital"> reformatted digital </select>
                 </item>
-                <item docstruct="topstruct" isnotdoctype="periodical\|multivolume" from="vorlage" metadata="PhysicalLocation" multiselect="true" required="true" ughbinding="true">
+				<item docstruct="topstruct" isnotdoctype="periodical\|multivolume" property="true" metadata="PhysicalLocation" multiselect="true" required="true" ughbinding="true">
                     Physical location
-                    <select label="CHANGEME"> CHANGEME </select>
+                    <select label="Goobi"> Goobi </select>
                 </item>
-                <item docstruct="firstchild" isdoctype="periodical\|multivolume" from="vorlage" metadata="PhysicalLocation" multiselect="true" required="true" ughbinding="true">
+                <item docstruct="firstchild" isdoctype="periodical\|multivolume" property="true" metadata="PhysicalLocation" multiselect="true" required="true" ughbinding="true">
                     Physical location
-                    <select label="CHANGEME"> CHANGEME </select>
+                    <select label="Goobi"> Goobi </select>
                 </item>
+                
                 <processtitle isdoctype="multivolume">ATS+TSL+'_'+Identifier digital (f)+'_'+Label number</processtitle>
                 <processtitle isdoctype="monograph">ATS+TSL+'_'+Identifier digital (a)</processtitle>
                 <processtitle isdoctype="periodical">TSL+'_'+Identifier digital (b)+'_'+Label number</processtitle>
 
                 <hide />
             </itemlist>
-            <opac use="true">
-                <catalogue>Library of Congress</catalogue>
-            </opac>
+			<opac use="true">
+				<catalogue>Library of Congress</catalogue>
+			</opac>
             <templates use="true" />
             <defaultdoctype>monograph</defaultdoctype>
             <metadatageneration use="true" />
             
-            <fileupload use="true">
-                <!-- The regex strings must be enclosed in slashes. -->
-                <!-- Primefaces does not accept regex without slashes -->
-                <!-- and does not output an error otherwise -->
-                <!-- The messageKey parameter can be used to specify the text key of a customized error message -->
-                <!-- that is shown in the user interface if a file could not be uploaded because it did not match -->
-                <!-- to the regular expression. The messages can then be provided in the messages_xx.properties files for all languages. -->
+            <fileupload use="true">            
                 <folder regex="/^.*$/" messageKey="uploadFileErrorIntern">intern</folder>
-                <folder regex="/^.*\\.(jpg|jpeg|png|tif|jp2)$/" messageKey="uploadFileErrorMaster">master</folder>
+            	<!-- 
+                <folder regex="/^.*\\.(jpg\|jpeg\|png\|tif\|jp2)$/" messageKey="uploadFileErrorMaster">master</folder>
                 <folder regex="/^.*\\.jpg$/" messageKey="uploadFileErrorMedia">media</folder>
                 <folder regex="/^.*\\.pdf$/" messageKey="uploadFileErrorExport">export</folder>
-                
-            </fileupload>
+            	-->
+			</fileupload>
         </createNewProcess>
 
 
@@ -153,11 +137,12 @@ Sequence for determining the right <project> element:
         <dmsImport />
 
         <validate>
-            <metadata createelementfrom="Author\|Editor\|IllustratorArtist\|Photographer\|Translator\|Creator" docstruct="all" metadata="CreatorsAllOrigin">
+            <metadata createelementfrom="Author|Editor|IllustratorArtist|Photographer|Translator|Creator" docstruct="all" metadata="CreatorsAllOrigin">
             	Create CreatorsAllOrigin
             </metadata>
         </validate>
 
-    </project>
+    </project>    
 
 </goobiProjects>
+

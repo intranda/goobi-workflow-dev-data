@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config_plugin>
 	<validation>
-    	<!-- file name must match against one of the patterns -->
-		<!-- 
+		<!-- file name must match against one of the patterns -->
+		<!--
 		<pattern>\w+_\d{4}</pattern>
 		<pattern>\d{8}</pattern>
 		 -->

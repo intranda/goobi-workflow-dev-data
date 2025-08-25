@@ -1,8 +1,8 @@
--- MariaDB dump 10.19  Distrib 10.7.3-MariaDB, for osx10.17 (x86_64)
+-- MariaDB dump 10.19-11.4.4-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: goobi
 -- ------------------------------------------------------
--- Server version	10.7.3-MariaDB
+-- Server version	11.4.4-MariaDB-ubu2404
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -13,7 +13,113 @@
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*M!100616 SET @OLD_NOTE_VERBOSITY=@@NOTE_VERBOSITY, NOTE_VERBOSITY=0 */;
+
+--
+-- Table structure for table `api_token`
+--
+
+DROP TABLE IF EXISTS `api_token`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `api_token` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `token_name` varchar(255) DEFAULT NULL,
+  `token_description` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `api_token`
+--
+
+LOCK TABLES `api_token` WRITE;
+/*!40000 ALTER TABLE `api_token` DISABLE KEYS */;
+/*!40000 ALTER TABLE `api_token` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `api_token_method`
+--
+
+DROP TABLE IF EXISTS `api_token_method`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `api_token_method` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `token_id` int(11) DEFAULT NULL,
+  `method_type` varchar(255) DEFAULT NULL,
+  `method_description` varchar(255) DEFAULT NULL,
+  `method_url` varchar(255) DEFAULT NULL,
+  `selected` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `tokenid` (`token_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `api_token_method`
+--
+
+LOCK TABLES `api_token_method` WRITE;
+/*!40000 ALTER TABLE `api_token_method` DISABLE KEYS */;
+/*!40000 ALTER TABLE `api_token_method` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `background_job`
+--
+
+DROP TABLE IF EXISTS `background_job`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `background_job` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `jobname` varchar(255) DEFAULT NULL,
+  `jobtype` varchar(255) DEFAULT NULL,
+  `jobstatus` int(11) DEFAULT NULL,
+  `retrycount` int(11) DEFAULT NULL,
+  `lastAltered` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `background_job`
+--
+
+LOCK TABLES `background_job` WRITE;
+/*!40000 ALTER TABLE `background_job` DISABLE KEYS */;
+/*!40000 ALTER TABLE `background_job` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `background_job_properties`
+--
+
+DROP TABLE IF EXISTS `background_job_properties`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `background_job_properties` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `job_id` int(11) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `value` text DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `job_id` (`job_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `background_job_properties`
+--
+
+LOCK TABLES `background_job_properties` WRITE;
+/*!40000 ALTER TABLE `background_job_properties` DISABLE KEYS */;
+/*!40000 ALTER TABLE `background_job_properties` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `batches`
@@ -26,7 +132,7 @@ CREATE TABLE `batches` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `startDate` datetime DEFAULT NULL,
   `endDate` datetime DEFAULT NULL,
-  `batchName` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `batchName` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -58,7 +164,7 @@ CREATE TABLE `batchproperties` (
   `batchID` int(11) DEFAULT NULL,
   PRIMARY KEY (`batchpropertyID`),
   KEY `FK4DD023EDF131C529` (`batchID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -83,7 +189,6 @@ CREATE TABLE `benutzer` (
   `Nachname` varchar(255) DEFAULT NULL,
   `login` varchar(255) DEFAULT NULL,
   `passwort` varchar(255) DEFAULT NULL,
-  `IstAktiv` tinyint(1) DEFAULT 0,
   `Standort` varchar(255) DEFAULT NULL,
   `metadatensprache` varchar(255) DEFAULT NULL,
   `css` varchar(255) DEFAULT NULL,
@@ -92,7 +197,6 @@ CREATE TABLE `benutzer` (
   `Tabellengroesse` int(11) DEFAULT NULL,
   `sessiontimeout` int(11) DEFAULT NULL,
   `ldapgruppenID` int(11) DEFAULT NULL,
-  `isVisible` varchar(255) DEFAULT NULL,
   `ldaplogin` varchar(255) DEFAULT NULL,
   `displayDeactivatedProjects` tinyint(1) DEFAULT 0,
   `displayFinishedProcesses` tinyint(1) DEFAULT 0,
@@ -137,10 +241,15 @@ CREATE TABLE `benutzer` (
   `displayLastEditionTask` tinyint(1) DEFAULT 0,
   `dashboard_configuration` text DEFAULT NULL,
   `ui_mode` varchar(190) DEFAULT 'regular',
+  `displayrulesetcolumn` tinyint(1) DEFAULT 0,
+  `userstatus` varchar(190) DEFAULT NULL,
+  `additional_data` text DEFAULT NULL,
+  `additional_search_fields` text DEFAULT NULL,
+  `displayNumberOfImagesColumn` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`BenutzerID`),
   KEY `FK6564F1FD78EC6B0F` (`ldapgruppenID`),
   KEY `id_x_login` (`BenutzerID`,`login`(50))
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -150,13 +259,13 @@ CREATE TABLE `benutzer` (
 LOCK TABLES `benutzer` WRITE;
 /*!40000 ALTER TABLE `benutzer` DISABLE KEYS */;
 INSERT INTO `benutzer` VALUES
-(1,'Don','Akerman','testadmin','',1,'Rome','','/css/default.css',0,0,10,7200,2,NULL,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'Ip20Qnq/Tv4473DtxJe3Ig==','CUUSVkEer/VFb8WjxvH5jG30q55BGQ1RUTE2aalPNgA=',NULL,NULL,1,1,NULL,'intranda_dashboard_extended',NULL,NULL,NULL,NULL,0,0,0,NULL,'regular'),
-(2,'Delbert','Hawking','testscanning','',1,'Paris','','/css/default.css',0,0,10,7200,2,NULL,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'ybu5U6WVNRqDjPNjs54XCw==','u2tbeDKQ4xyeCgOyHNi4Bd7oBIGeLQynUx80oTmIJG4=',NULL,NULL,1,NULL,NULL,'intranda_dashboard_extended',NULL,NULL,NULL,NULL,0,0,0,NULL,'regular'),
-(3,'Moss','Readdie','testqc','',1,'Sidney','','/css/default.css',0,0,10,7200,2,NULL,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'2xYgOsQvn2q1WUpmxmw7dA==','MNw4D1PVxPUX+C+CjIc/OaAXY6mF7mqaOC12tXmbsgQ=',NULL,NULL,1,NULL,NULL,'intranda_dashboard_extended',NULL,NULL,NULL,NULL,0,0,0,NULL,'regular'),
-(4,'Cedric','Fuller','testbookmanager','',1,'Tokio','','/css/default.css',0,0,10,7200,2,NULL,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'Q/yoV/TZrPtKSoG/++fHJw==','0z3w8lffi+uAEeg7vBmQcYu86B/NrQqO6btt87nZPiw=',NULL,NULL,1,NULL,NULL,'intranda_dashboard_extended',NULL,NULL,NULL,NULL,0,0,0,NULL,'regular'),
-(5,'Wilburn','Anson','testmetadata','',1,'New York','','/css/default.css',0,0,10,7200,2,NULL,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'zDC6nHAP9pElEVuUit8w2Q==','lHWk9VVpQi/NuEz3BS07Hpno0BS7+bV+nL89QJDudTs=',NULL,NULL,1,NULL,NULL,'intranda_dashboard_extended',NULL,NULL,NULL,NULL,0,0,0,NULL,'regular'),
-(6,'Hayden','Smedley','testprojectmanagement','',1,'London','','/css/default.css',0,0,10,7200,2,NULL,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'Xiv1CN7kuoAdOGcRvrVymQ==','o2rh4wXTNmM6NgEL9JJYad7jVxlXxHf0DShihBxzo20=',NULL,NULL,1,NULL,NULL,'intranda_dashboard_extended',NULL,NULL,NULL,NULL,0,0,0,NULL,'regular'),
-(7,'Goobi','Administrator','goobi',NULL,1,'Göttingen','','/css/default.css',0,0,10,7200,2,NULL,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',NULL,0,0,0,0,0,0,0,0,0,NULL,NULL,'39gwU5p2ekUMLJ7j71d+RQ==','0QtuNTfYN6gL6FfmC17bD2flGuwIAEP5hySnw0KClgQ=',NULL,NULL,1,NULL,NULL,'intranda_dashboard_extended',NULL,NULL,NULL,NULL,0,0,0,NULL,'regular');
+(1,'Don','Akerman','testadmin','','Rome','','/css/default.css',0,0,10,7200,2,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'Ip20Qnq/Tv4473DtxJe3Ig==','CUUSVkEer/VFb8WjxvH5jG30q55BGQ1RUTE2aalPNgA=',NULL,NULL,1,1,NULL,'intranda_dashboard_extended','prozesse.titel',' asc','prioritaet',' desc',0,0,0,NULL,'regular',0,'active',NULL,NULL,NULL),
+(2,'Delbert','Hawking','testscanning','','Paris','','/css/default.css',0,0,10,7200,2,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'ybu5U6WVNRqDjPNjs54XCw==','u2tbeDKQ4xyeCgOyHNi4Bd7oBIGeLQynUx80oTmIJG4=',NULL,NULL,1,NULL,NULL,'intranda_dashboard_extended','prozesse.titel',' asc','prioritaet',' desc',0,0,0,NULL,'regular',0,'active',NULL,NULL,NULL),
+(3,'Moss','Readdie','testqc','','Sidney','','/css/default.css',0,0,10,7200,2,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'2xYgOsQvn2q1WUpmxmw7dA==','MNw4D1PVxPUX+C+CjIc/OaAXY6mF7mqaOC12tXmbsgQ=',NULL,NULL,1,NULL,NULL,'intranda_dashboard_extended','prozesse.titel',' asc','prioritaet',' desc',0,0,0,NULL,'regular',0,'active',NULL,NULL,NULL),
+(4,'Cedric','Fuller','testbookmanager','','Tokio','','/css/default.css',0,0,10,7200,2,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'Q/yoV/TZrPtKSoG/++fHJw==','0z3w8lffi+uAEeg7vBmQcYu86B/NrQqO6btt87nZPiw=',NULL,NULL,1,NULL,NULL,'intranda_dashboard_extended','prozesse.titel',' asc','prioritaet',' desc',0,0,0,NULL,'regular',0,'active',NULL,NULL,NULL),
+(5,'Wilburn','Anson','testmetadata','','New York','','/css/default.css',0,0,10,7200,2,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'zDC6nHAP9pElEVuUit8w2Q==','lHWk9VVpQi/NuEz3BS07Hpno0BS7+bV+nL89QJDudTs=',NULL,NULL,1,NULL,NULL,'intranda_dashboard_extended','prozesse.titel',' asc','prioritaet',' desc',0,0,0,NULL,'regular',0,'active',NULL,NULL,NULL),
+(6,'Hayden','Smedley','testprojectmanagement','','London','','/css/default.css',0,0,10,7200,2,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'Xiv1CN7kuoAdOGcRvrVymQ==','o2rh4wXTNmM6NgEL9JJYad7jVxlXxHf0DShihBxzo20=',NULL,NULL,1,NULL,NULL,'intranda_dashboard_extended','prozesse.titel',' asc','prioritaet',' desc',0,0,0,NULL,'regular',0,'active',NULL,NULL,NULL),
+(7,'Goobi','Administrator','goobi',NULL,'Göttingen','','/css/default.css',0,0,10,7200,2,'',0,0,0,0,0,0,0,0,0,0,0,0,'','ctrl+shift',0,0,0,0,0,0,0,0,0,0,NULL,NULL,'39gwU5p2ekUMLJ7j71d+RQ==','0QtuNTfYN6gL6FfmC17bD2flGuwIAEP5hySnw0KClgQ=',NULL,NULL,1,0,0,'intranda_dashboard_extended','prozesse.titel',' asc','prioritaet',' desc',0,0,0,NULL,'regular',0,'active',NULL,NULL,0);
 /*!40000 ALTER TABLE `benutzer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -178,7 +287,7 @@ CREATE TABLE `benutzereigenschaften` (
   `BenutzerID` int(11) DEFAULT NULL,
   PRIMARY KEY (`benutzereigenschaftenID`),
   KEY `FK963DAE0F8896477B` (`BenutzerID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -204,7 +313,7 @@ CREATE TABLE `benutzergruppen` (
   `roles` text DEFAULT NULL,
   `institution_id` int(11) NOT NULL,
   PRIMARY KEY (`BenutzergruppenID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -214,7 +323,7 @@ CREATE TABLE `benutzergruppen` (
 LOCK TABLES `benutzergruppen` WRITE;
 /*!40000 ALTER TABLE `benutzergruppen` DISABLE KEYS */;
 INSERT INTO `benutzergruppen` VALUES
-(1,'Administration',1,'Admin_Administrative_Tasks;Admin_All_Mail_Notifications;Admin_Dockets;Admin_Export_Processdata;Admin_Jobtypes;Admin_Ldap;Admin_Menu;Admin_Plugins;Admin_Projects;Admin_Queue;Admin_Rulesets;Admin_Usergroups;Admin_Users;Admin_Users_Allow_Switch;Admin_Users_Change_Passwords;Admin_Vocabulary;Admin_Vocabulary_Management;Statistics_CurrentUsers;Statistics_CurrentUsers_Details;Statistics_General;Statistics_Menu;Statistics_Plugins;Task_List;Task_Menu;Task_Mets_Files;Task_Mets_Metadata;Task_Mets_Pagination;Task_Mets_Structure;Workflow_General_Batches;Workflow_General_Details;Workflow_General_Details_Edit;Workflow_General_Menu;Workflow_General_Plugins;Workflow_General_Search;Workflow_General_Show_All_Projects;Workflow_ProcessTemplates;Workflow_ProcessTemplates_Clone;Workflow_ProcessTemplates_Create;Workflow_ProcessTemplates_Import_Multi;Workflow_ProcessTemplates_Import_Single;Workflow_Processes;Workflow_Processes_Allow_Download;Workflow_Processes_Allow_Export;Workflow_Processes_Allow_GoobiScript;Workflow_Processes_Allow_Linking;Workflow_Processes_Allow_Template_Change;Workflow_Processes_Show_Deactivated_Projects;Workflow_Processes_Show_Finished;Workflow_Processes_Show_Processlog_File_Deletion;',1),
+(1,'Administration',1,'Admin_Administrative_Tasks;Admin_All_Mail_Notifications;Admin_Dockets;Admin_Export_Processdata;Admin_Jobtypes;Admin_Ldap;Admin_Menu;Admin_Plugins;Admin_Projects;Admin_Queue;Admin_Rulesets;Admin_Usergroups;Admin_Users;Admin_Users_Allow_Switch;Admin_Users_Change_Passwords;Admin_Vocabulary;Admin_Vocabulary_Management;Plugin_administration_config_file_editor;Plugin_administration_ruleset_editor;Statistics_CurrentUsers;Statistics_CurrentUsers_Details;Statistics_General;Statistics_Menu;Statistics_Plugins;Task_List;Task_Menu;Task_Mets_Files;Task_Mets_Metadata;Task_Mets_Pagination;Task_Mets_Structure;Workflow_General_Batches;Workflow_General_Details;Workflow_General_Details_Edit;Workflow_General_Menu;Workflow_General_Plugins;Workflow_General_Search;Workflow_General_Show_All_Projects;Workflow_ProcessTemplates;Workflow_ProcessTemplates_Clone;Workflow_ProcessTemplates_Create;Workflow_ProcessTemplates_Import_Multi;Workflow_ProcessTemplates_Import_Single;Workflow_Processes;Workflow_Processes_Allow_Download;Workflow_Processes_Allow_Export;Workflow_Processes_Allow_GoobiScript;Workflow_Processes_Allow_Linking;Workflow_Processes_Allow_Template_Change;Workflow_Processes_Show_Deactivated_Projects;Workflow_Processes_Show_Finished;Workflow_Processes_Show_Processlog_File_Deletion;',1),
 (2,'Scanning officers	',4,'Statistics_CurrentUsers;Task_List;Task_Menu;',1),
 (3,'Quality control officers',4,'Statistics_CurrentUsers;Task_List;Task_Menu;',1),
 (4,'Book managing officers',4,'Statistics_CurrentUsers;Task_List;Task_Menu;',1),
@@ -236,7 +345,7 @@ CREATE TABLE `benutzergruppenmitgliedschaft` (
   PRIMARY KEY (`BenutzerID`,`BenutzerGruppenID`),
   KEY `FK45CBE5781843242F` (`BenutzerGruppenID`),
   KEY `FK45CBE5788896477B` (`BenutzerID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -247,12 +356,12 @@ LOCK TABLES `benutzergruppenmitgliedschaft` WRITE;
 /*!40000 ALTER TABLE `benutzergruppenmitgliedschaft` DISABLE KEYS */;
 INSERT INTO `benutzergruppenmitgliedschaft` VALUES
 (1,1),
+(1,7),
 (2,2),
 (3,3),
 (4,4),
 (5,5),
-(6,6),
-(1,7);
+(6,6);
 /*!40000 ALTER TABLE `benutzergruppenmitgliedschaft` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -265,7 +374,7 @@ DROP TABLE IF EXISTS `databaseversion`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `databaseversion` (
   `version` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -275,7 +384,7 @@ CREATE TABLE `databaseversion` (
 LOCK TABLES `databaseversion` WRITE;
 /*!40000 ALTER TABLE `databaseversion` DISABLE KEYS */;
 INSERT INTO `databaseversion` VALUES
-(46);
+(57);
 /*!40000 ALTER TABLE `databaseversion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -291,7 +400,7 @@ CREATE TABLE `dockets` (
   `name` varchar(255) DEFAULT NULL,
   `file` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`docketID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -306,27 +415,57 @@ INSERT INTO `dockets` VALUES
 UNLOCK TABLES;
 
 --
--- Table structure for table `external_mq_results`
+-- Table structure for table `export_history`
 --
 
-DROP TABLE IF EXISTS `external_mq_results`;
+DROP TABLE IF EXISTS `export_history`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `external_mq_results` (
-  `ProzesseID` int(11) DEFAULT NULL,
-  `SchritteID` int(11) DEFAULT NULL,
-  `time` datetime DEFAULT NULL,
-  `scriptName` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `export_history` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp(),
+  `record_id` int(11) NOT NULL,
+  `record_identifier` varchar(255) NOT NULL,
+  `record_title` text DEFAULT NULL,
+  `repository_id` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL,
+  `message` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `external_mq_results`
+-- Dumping data for table `export_history`
 --
 
-LOCK TABLES `external_mq_results` WRITE;
-/*!40000 ALTER TABLE `external_mq_results` DISABLE KEYS */;
-/*!40000 ALTER TABLE `external_mq_results` ENABLE KEYS */;
+LOCK TABLES `export_history` WRITE;
+/*!40000 ALTER TABLE `export_history` DISABLE KEYS */;
+/*!40000 ALTER TABLE `export_history` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `goobiscript_template`
+--
+
+DROP TABLE IF EXISTS `goobiscript_template`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `goobiscript_template` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `goobiscript` text DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `goobiscript_template`
+--
+
+LOCK TABLES `goobiscript_template` WRITE;
+/*!40000 ALTER TABLE `goobiscript_template` DISABLE KEYS */;
+/*!40000 ALTER TABLE `goobiscript_template` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -344,8 +483,9 @@ CREATE TABLE `history` (
   `date` datetime DEFAULT NULL,
   `processID` int(11) DEFAULT NULL,
   PRIMARY KEY (`historyid`),
-  KEY `FK373FE4946640305C` (`processID`)
-) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=utf8mb4;
+  KEY `FK373FE4946640305C` (`processID`),
+  KEY `type_x_numericvalue` (`type`,`numericvalue`)
+) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -386,16 +526,6 @@ INSERT INTO `history` VALUES
 (30,5,'Struktur- und Metadaten',10,'2019-07-20 08:59:14',5),
 (31,6,'Export in viewer',10,'2019-07-20 08:59:14',5),
 (32,7,'Archivierung',10,'2019-07-20 08:59:14',5),
-(33,2951,NULL,1,'2022-03-05 16:08:36',6),
-(34,1,'Bibliographische Aufnahme',6,'2022-03-05 16:08:34',6),
-(35,1,'Bibliographische Aufnahme',7,'2022-03-05 16:08:25',6),
-(36,1,'Bibliographische Aufnahme',10,'2022-03-05 16:08:25',6),
-(37,2,'Einspielen der Images',10,'2022-03-05 16:08:25',6),
-(38,3,'Qualitätskontrolle',10,'2022-03-05 16:08:25',6),
-(39,4,'Erstellung der Tiff-Header und komprimierter Derivate',10,'2022-03-05 16:08:25',6),
-(40,5,'Struktur- und Metadaten',10,'2022-03-05 16:08:25',6),
-(41,6,'Export in viewer',10,'2022-03-05 16:08:25',6),
-(42,7,'Archivierung',10,'2022-03-05 16:08:25',6),
 (43,225399057,NULL,1,'2022-03-08 11:15:28',3),
 (44,42305040,NULL,14,'2022-03-08 11:15:28',3),
 (45,183055610,NULL,15,'2022-03-08 11:15:28',3),
@@ -470,8 +600,9 @@ CREATE TABLE `institution` (
   `allowAllDockets` tinyint(1) DEFAULT NULL,
   `allowAllAuthentications` tinyint(1) DEFAULT NULL,
   `allowAllPlugins` tinyint(1) DEFAULT NULL,
+  `additional_data` text DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -481,7 +612,7 @@ CREATE TABLE `institution` (
 LOCK TABLES `institution` WRITE;
 /*!40000 ALTER TABLE `institution` DISABLE KEYS */;
 INSERT INTO `institution` VALUES
-(1,'goobi','goobi',1,1,1,1);
+(1,'goobi','goobi',1,1,1,1,NULL);
 /*!40000 ALTER TABLE `institution` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -500,7 +631,7 @@ CREATE TABLE `institution_configuration` (
   `object_name` text DEFAULT NULL,
   `selected` tinyint(1) DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -513,6 +644,33 @@ LOCK TABLES `institution_configuration` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `job`
+--
+
+DROP TABLE IF EXISTS `job`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `job` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `status` varchar(64) NOT NULL DEFAULT 'WAITING',
+  `repository_id` int(11) NOT NULL,
+  `repository_name` varchar(255) NOT NULL,
+  `message` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `job`
+--
+
+LOCK TABLES `job` WRITE;
+/*!40000 ALTER TABLE `job` DISABLE KEYS */;
+/*!40000 ALTER TABLE `job` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `jobTypes`
 --
 
@@ -520,7 +678,7 @@ DROP TABLE IF EXISTS `jobTypes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `jobTypes` (
-  `jobTypes` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `jobTypes` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -533,6 +691,147 @@ LOCK TABLES `jobTypes` WRITE;
 INSERT INTO `jobTypes` VALUES
 ('[]');
 /*!40000 ALTER TABLE `jobTypes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `journal`
+--
+
+DROP TABLE IF EXISTS `journal`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `journal` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `objectID` int(10) NOT NULL,
+  `creationDate` datetime DEFAULT current_timestamp(),
+  `userName` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `content` mediumtext DEFAULT NULL,
+  `filename` mediumtext DEFAULT NULL,
+  `entrytype` varchar(255) DEFAULT 'process',
+  PRIMARY KEY (`id`),
+  KEY `processID` (`objectID`)
+) ENGINE=InnoDB AUTO_INCREMENT=236 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `journal`
+--
+
+LOCK TABLES `journal` WRITE;
+/*!40000 ALTER TABLE `journal` DISABLE KEYS */;
+INSERT INTO `journal` VALUES
+(8,4,'2022-03-08 10:31:47','Administrator, Goobi','debug','Changed step order for step \'Scanning\' to position 3 in process details.',NULL,'process'),
+(9,4,'2022-03-08 10:31:47','Administrator, Goobi','debug','Changed step order for step \'Quality assurance\' to position 4 in process details.',NULL,'process'),
+(10,4,'2022-03-08 10:31:47','Administrator, Goobi','debug','Changed step order for step \'Creation of TIFF header and derivative\' to position 5 in process details.',NULL,'process'),
+(11,4,'2022-03-08 10:31:47','Administrator, Goobi','debug','Changed step order for step \'Metadata indexing\' to position 6 in process details.',NULL,'process'),
+(12,4,'2022-03-08 10:31:47','Administrator, Goobi','debug','Changed step order for step \'Export to viewer\' to position 7 in process details.',NULL,'process'),
+(13,4,'2022-03-08 10:31:47','Administrator, Goobi','debug','Changed step order for step \'Archiving\' to position 8 in process details.',NULL,'process'),
+(14,4,'2022-03-08 10:34:13','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(40,3,'2022-03-08 14:35:19','Administrator, Goobi','debug','Changed status for step \'Scanning\' to 1 in process details.',NULL,'process'),
+(41,3,'2022-03-08 14:35:19','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(42,3,'2022-03-08 14:35:20','Administrator, Goobi','debug','Changed status for step \'Quality control\' to 1 in process details.',NULL,'process'),
+(43,3,'2022-03-08 14:35:20','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(44,3,'2022-03-08 14:35:21','Administrator, Goobi','debug','Changed status for step \'Image processing\' to 1 in process details.',NULL,'process'),
+(45,3,'2022-03-08 14:35:21','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(46,3,'2022-03-08 14:35:22','Administrator, Goobi','debug','Changed status for step \'Metadata enrichment\' to 1 in process details.',NULL,'process'),
+(47,3,'2022-03-08 14:35:22','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(48,3,'2022-03-08 14:35:26','Administrator, Goobi','debug','Changed status for step \'Metadata enrichment\' to 2 in process details.',NULL,'process'),
+(49,3,'2022-03-08 14:35:26','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(50,3,'2022-03-08 14:35:27','Administrator, Goobi','debug','Changed status for step \'Image processing\' to 2 in process details.',NULL,'process'),
+(51,3,'2022-03-08 14:35:27','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(52,3,'2022-03-08 14:35:28','Administrator, Goobi','debug','Changed status for step \'Quality control\' to 2 in process details.',NULL,'process'),
+(53,3,'2022-03-08 14:35:28','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(54,3,'2022-03-08 14:35:28','Administrator, Goobi','debug','Changed status for step \'Scanning\' to 2 in process details.',NULL,'process'),
+(55,3,'2022-03-08 14:35:28','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(56,3,'2022-03-08 14:35:29','Administrator, Goobi','debug','Changed status for step \'Get manuscript from book depot\' to 2 in process details.',NULL,'process'),
+(57,3,'2022-03-08 14:35:29','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(58,3,'2022-03-08 14:35:31','Administrator, Goobi','debug','Changed status for step \'Metadata enrichment\' to 3 in process details.',NULL,'process'),
+(59,3,'2022-03-08 14:35:31','Administrator, Goobi','debug','Step \'Metadata enrichment\' closed.',NULL,'process'),
+(60,3,'2022-03-08 14:35:31','Administrator, Goobi','debug','Step \'Export to viewer\' opened.',NULL,'process'),
+(61,3,'2022-03-08 14:35:31','Administrator, Goobi','debug','Step \'Export to viewer\' started to work automatically.',NULL,'process'),
+(62,3,'2022-03-08 14:35:31','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(63,3,'2022-03-08 14:35:32','Administrator, Goobi','debug','Changed status for step \'Image processing\' to 3 in process details.',NULL,'process'),
+(64,3,'2022-03-08 14:35:32','Administrator, Goobi','debug','Step \'Image processing\' closed.',NULL,'process'),
+(65,3,'2022-03-08 14:35:32','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(66,3,'2022-03-08 14:35:32','Administrator, Goobi','debug','Changed status for step \'Quality control\' to 3 in process details.',NULL,'process'),
+(67,3,'2022-03-08 14:35:32','Administrator, Goobi','debug','Step \'Quality control\' closed.',NULL,'process'),
+(68,3,'2022-03-08 14:35:32','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(69,3,'2022-03-08 14:35:33','Administrator, Goobi','debug','Changed status for step \'Scanning\' to 3 in process details.',NULL,'process'),
+(70,3,'2022-03-08 14:35:33','Administrator, Goobi','debug','Step \'Scanning\' closed.',NULL,'process'),
+(71,3,'2022-03-08 14:35:33','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(72,3,'2022-03-08 14:35:34','Administrator, Goobi','debug','Changed status for step \'Get manuscript from book depot\' to 3 in process details.',NULL,'process'),
+(73,3,'2022-03-08 14:35:34','Administrator, Goobi','debug','Step \'Get manuscript from book depot\' closed.',NULL,'process'),
+(74,3,'2022-03-08 14:35:34','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(75,3,'2022-03-08 14:35:34','- automatic -','debug','The export for process with ID \'3\' was done successfully.',NULL,'process'),
+(76,3,'2022-03-08 14:35:34','- automatic -','debug','Step \'Export to viewer\' closed.',NULL,'process'),
+(77,3,'2022-03-08 14:35:34','- automatic -','debug','Step \'Bring manuscript back to book depot\' opened.',NULL,'process'),
+(78,3,'2022-03-08 14:35:44','Administrator, Goobi','debug','Changed status for step \'Export to viewer\' to 1 in process details.',NULL,'process'),
+(79,3,'2022-03-08 14:35:44','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(80,3,'2022-03-08 14:35:46','Administrator, Goobi','debug','Changed status for step \'Bring manuscript back to book depot\' to 0 in process details.',NULL,'process'),
+(81,3,'2022-03-08 14:35:46','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(82,5,'2022-03-08 14:35:54','Administrator, Goobi','debug','Changed status for step \'Scanning\' to 2 in process details.',NULL,'process'),
+(83,5,'2022-03-08 14:35:54','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(84,5,'2022-03-08 14:35:55','Administrator, Goobi','debug','Changed status for step \'Scanning\' to 3 in process details.',NULL,'process'),
+(85,5,'2022-03-08 14:35:55','Administrator, Goobi','debug','Step \'Scanning\' closed.',NULL,'process'),
+(86,5,'2022-03-08 14:35:55','Administrator, Goobi','debug','Step \'Quality control\' opened.',NULL,'process'),
+(87,5,'2022-03-08 14:35:55','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(88,5,'2022-03-08 14:35:56','Administrator, Goobi','debug','Changed status for step \'Quality control\' to 2 in process details.',NULL,'process'),
+(89,5,'2022-03-08 14:35:56','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(90,5,'2022-03-08 14:35:58','Administrator, Goobi','debug','Changed status for step \'Image processing\' to 1 in process details.',NULL,'process'),
+(91,5,'2022-03-08 14:35:58','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(92,5,'2022-03-08 14:35:59','Administrator, Goobi','debug','Changed status for step \'Metadata enrichment\' to 1 in process details.',NULL,'process'),
+(93,5,'2022-03-08 14:35:59','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(94,5,'2022-03-08 14:36:00','Administrator, Goobi','debug','Changed status for step \'Image processing\' to 2 in process details.',NULL,'process'),
+(95,5,'2022-03-08 14:36:00','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(96,5,'2022-03-08 14:36:01','Administrator, Goobi','debug','Changed status for step \'Quality control\' to 3 in process details.',NULL,'process'),
+(97,5,'2022-03-08 14:36:01','Administrator, Goobi','debug','Step \'Quality control\' closed.',NULL,'process'),
+(98,5,'2022-03-08 14:36:01','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(99,5,'2022-03-08 14:36:02','Administrator, Goobi','debug','Changed status for step \'Image processing\' to 3 in process details.',NULL,'process'),
+(100,5,'2022-03-08 14:36:02','Administrator, Goobi','debug','Step \'Image processing\' closed.',NULL,'process'),
+(101,5,'2022-03-08 14:36:02','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(102,5,'2022-03-08 14:36:07','Administrator, Goobi','debug','Changed status for step \'Export to viewer\' to 1 in process details.',NULL,'process'),
+(103,5,'2022-03-08 14:36:07','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(104,5,'2022-03-08 14:36:08','Administrator, Goobi','debug','Changed status for step \'Metadata enrichment\' to 2 in process details.',NULL,'process'),
+(105,5,'2022-03-08 14:36:08','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(106,5,'2022-03-08 14:36:09','Administrator, Goobi','debug','Changed status for step \'Metadata enrichment\' to 3 in process details.',NULL,'process'),
+(107,5,'2022-03-08 14:36:09','Administrator, Goobi','debug','Step \'Metadata enrichment\' closed.',NULL,'process'),
+(108,5,'2022-03-08 14:36:09','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(109,4,'2022-03-08 14:36:16','Administrator, Goobi','debug','Changed status for step \'Metadata enrichment\' to 1 in process details.',NULL,'process'),
+(110,4,'2022-03-08 14:36:16','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(111,4,'2022-03-08 14:36:17','Administrator, Goobi','debug','Changed status for step \'Image processing\' to 1 in process details.',NULL,'process'),
+(112,4,'2022-03-08 14:36:17','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(113,4,'2022-03-08 14:36:18','Administrator, Goobi','debug','Changed status for step \'Export to viewer\' to 1 in process details.',NULL,'process'),
+(114,4,'2022-03-08 14:36:18','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(115,4,'2022-03-08 14:36:19','Administrator, Goobi','debug','Changed status for step \'Metadata enrichment\' to 2 in process details.',NULL,'process'),
+(116,4,'2022-03-08 14:36:19','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(117,4,'2022-03-08 14:36:19','Administrator, Goobi','debug','Changed status for step \'Image processing\' to 2 in process details.',NULL,'process'),
+(118,4,'2022-03-08 14:36:19','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(119,4,'2022-03-08 14:36:20','Administrator, Goobi','debug','Changed status for step \'Quality control\' to 1 in process details.',NULL,'process'),
+(120,4,'2022-03-08 14:36:20','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(121,4,'2022-03-08 14:36:21','Administrator, Goobi','debug','Changed status for step \'Scanning\' to 2 in process details.',NULL,'process'),
+(122,4,'2022-03-08 14:36:21','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(123,4,'2022-03-08 14:36:22','Administrator, Goobi','debug','Changed status for step \'Metadata enrichment\' to 3 in process details.',NULL,'process'),
+(124,4,'2022-03-08 14:36:22','Administrator, Goobi','debug','Step \'Metadata enrichment\' closed.',NULL,'process'),
+(125,4,'2022-03-08 14:36:22','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(126,4,'2022-03-08 14:36:22','Administrator, Goobi','debug','Changed status for step \'Image processing\' to 3 in process details.',NULL,'process'),
+(127,4,'2022-03-08 14:36:22','Administrator, Goobi','debug','Step \'Image processing\' closed.',NULL,'process'),
+(128,4,'2022-03-08 14:36:22','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(129,4,'2022-03-08 14:36:23','Administrator, Goobi','debug','Changed status for step \'Quality control\' to 2 in process details.',NULL,'process'),
+(130,4,'2022-03-08 14:36:23','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(131,4,'2022-03-08 14:36:24','Administrator, Goobi','debug','Changed status for step \'Scanning\' to 3 in process details.',NULL,'process'),
+(132,4,'2022-03-08 14:36:24','Administrator, Goobi','debug','Step \'Scanning\' closed.',NULL,'process'),
+(133,4,'2022-03-08 14:36:24','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(134,4,'2022-03-08 14:36:25','Administrator, Goobi','debug','Changed status for step \'Quality control\' to 3 in process details.',NULL,'process'),
+(135,4,'2022-03-08 14:36:25','Administrator, Goobi','debug','Step \'Quality control\' closed.',NULL,'process'),
+(136,4,'2022-03-08 14:36:25','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,'process'),
+(164,4,'2022-09-26 16:40:52','Administrator, Goobi','debug','Started export using \'ExportDMS\'.',NULL,'process'),
+(165,5,'2022-09-26 16:40:56','Administrator, Goobi','debug','Started export using \'ExportDMS\'.',NULL,'process'),
+(166,3,'2022-09-26 16:40:58','Administrator, Goobi','debug','Started export using \'ExportDMS\'.',NULL,'process'),
+(233,3,'2022-10-07 08:03:51','Administrator, Goobi','debug','Started export using \'ExportDMS\'.',NULL,'process'),
+(234,5,'2022-10-07 08:03:54','Administrator, Goobi','debug','Started export using \'ExportDMS\'.',NULL,'process'),
+(235,4,'2022-10-07 08:03:56','Administrator, Goobi','debug','Started export using \'ExportDMS\'.',NULL,'process');
+/*!40000 ALTER TABLE `journal` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -580,7 +879,7 @@ CREATE TABLE `ldapgruppen` (
   `ldapHomeDirectoryAttributeName` varchar(255) DEFAULT NULL,
   `useTLS` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`ldapgruppenID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -604,12 +903,12 @@ DROP TABLE IF EXISTS `metadata`;
 CREATE TABLE `metadata` (
   `processid` int(11) DEFAULT NULL,
   `name` varchar(190) DEFAULT NULL,
-  `value` text CHARACTER SET utf8mb3 DEFAULT NULL,
-  `print` text CHARACTER SET utf8mb3 DEFAULT NULL,
+  `value` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `print` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
   KEY `id` (`processid`),
   KEY `metadataname` (`name`),
   FULLTEXT KEY `idx_metadata_value` (`value`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -707,7 +1006,7 @@ DROP TABLE IF EXISTS `metadata_json`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `metadata_json` (
   `processid` int(11) DEFAULT NULL,
-  `value` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `value` mediumtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -737,7 +1036,7 @@ CREATE TABLE `metadatenkonfigurationen` (
   `Datei` varchar(255) DEFAULT NULL,
   `orderMetadataByRuleset` tinyint(1) DEFAULT 0,
   PRIMARY KEY (`MetadatenKonfigurationID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -763,8 +1062,16 @@ CREATE TABLE `mq_results` (
   `time` datetime DEFAULT NULL,
   `status` varchar(25) DEFAULT NULL,
   `message` text DEFAULT NULL,
-  `original_message` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `original_message` text DEFAULT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `processid` int(11) DEFAULT 0,
+  `stepid` int(11) DEFAULT 0,
+  `scriptName` varchar(255) DEFAULT NULL,
+  `objects` int(11) DEFAULT 0,
+  `ticketType` varchar(255) DEFAULT NULL,
+  `ticketName` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -787,11 +1094,11 @@ CREATE TABLE `processlog` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `processID` int(10) unsigned NOT NULL,
   `creationDate` datetime DEFAULT current_timestamp(),
-  `userName` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `content` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `secondContent` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `thirdContent` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `userName` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `content` mediumtext DEFAULT NULL,
+  `secondContent` mediumtext DEFAULT NULL,
+  `thirdContent` mediumtext DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `processID` (`processID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=137 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -811,31 +1118,6 @@ INSERT INTO `processlog` VALUES
 (12,4,'2022-03-08 10:31:47','Administrator, Goobi','debug','Changed step order for step \'Export to viewer\' to position 7 in process details.',NULL,NULL),
 (13,4,'2022-03-08 10:31:47','Administrator, Goobi','debug','Changed step order for step \'Archiving\' to position 8 in process details.',NULL,NULL),
 (14,4,'2022-03-08 10:34:13','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(15,1,'2022-03-08 10:34:55','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(16,1,'2022-03-08 10:34:55','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(17,1,'2022-03-08 10:34:55','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(18,1,'2022-03-08 10:34:55','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(19,1,'2022-03-08 10:34:55','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(20,1,'2022-03-08 10:34:55','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(21,1,'2022-03-08 10:34:55','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(22,7,'2022-03-08 10:35:41','Administrator, Goobi','debug','Changed step order for step \'Scanning\' to position 3 in process details.',NULL,NULL),
-(23,7,'2022-03-08 10:35:41','Administrator, Goobi','debug','Changed step order for step \'Quality control\' to position 5 in process details.',NULL,NULL),
-(24,7,'2022-03-08 10:35:41','Administrator, Goobi','debug','Changed step order for step \'Image processing\' to position 6 in process details.',NULL,NULL),
-(25,7,'2022-03-08 10:35:41','Administrator, Goobi','debug','Changed step order for step \'Metadata enrichment\' to position 7 in process details.',NULL,NULL),
-(26,7,'2022-03-08 10:35:41','Administrator, Goobi','debug','Changed step order for step \'Export to viewer\' to position 8 in process details.',NULL,NULL),
-(27,7,'2022-03-08 10:36:05','Administrator, Goobi','debug','Changed status for step \'Scanning\' to 0 in process details.',NULL,NULL),
-(28,7,'2022-03-08 10:36:05','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(29,7,'2022-03-08 10:36:06','Administrator, Goobi','debug','Changed status for step \'Get manuscript from book depot\' to 0 in process details.',NULL,NULL),
-(30,7,'2022-03-08 10:36:06','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(31,7,'2022-03-08 10:36:07','Administrator, Goobi','debug','Changed status for step \'Get manuscript from book depot\' to 1 in process details.',NULL,NULL),
-(32,7,'2022-03-08 10:36:07','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(33,6,'2022-03-08 10:36:28','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(34,6,'2022-03-08 10:36:28','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(35,6,'2022-03-08 10:36:28','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(36,6,'2022-03-08 10:36:28','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(37,6,'2022-03-08 10:36:28','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(38,6,'2022-03-08 10:36:28','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
-(39,6,'2022-03-08 10:36:28','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
 (40,3,'2022-03-08 14:35:19','Administrator, Goobi','debug','Changed status for step \'Scanning\' to 1 in process details.',NULL,NULL),
 (41,3,'2022-03-08 14:35:19','Administrator, Goobi','debug','Removed links in home directories for all users in process details.',NULL,NULL),
 (42,3,'2022-03-08 14:35:20','Administrator, Goobi','debug','Changed status for step \'Quality control\' to 1 in process details.',NULL,NULL),
@@ -955,7 +1237,7 @@ CREATE TABLE `projectfilegroups` (
   `original_mimetypes` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`ProjectFileGroupID`),
   KEY `FK51AAC229327F143A` (`ProjekteID`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -965,8 +1247,8 @@ CREATE TABLE `projectfilegroups` (
 LOCK TABLES `projectfilegroups` WRITE;
 /*!40000 ALTER TABLE `projectfilegroups` DISABLE KEYS */;
 INSERT INTO `projectfilegroups` VALUES
-(3,'PRESENTATION','file:///{goobiFolder}../viewer/media/$(meta.CatalogIDDigital)/','image/jpg','jpg',1,NULL,'',0),
-(6,'PRESENTATION','file:///{goobiFolder}../viewer/media/$(meta.CatalogIDDigital)/','image/jpg','jpg',2,NULL,'',0),
+(3,'PRESENTATION','file:////opt/digiverso/viewer/media/$(meta.CatalogIDDigital)/','image/jpg','jpg',1,NULL,'',0),
+(6,'PRESENTATION','file:////opt/digiverso/viewer/media/$(meta.CatalogIDDigital)/','image/jpg','jpg',2,NULL,'',0),
 (7,'DEFAULT','http://presentation.example.net/content/$(meta.CatalogIDDigital)/800/0/','image/jpeg','jpg',2,NULL,NULL,0);
 /*!40000 ALTER TABLE `projectfilegroups` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -984,7 +1266,7 @@ CREATE TABLE `projektbenutzer` (
   PRIMARY KEY (`BenutzerID`,`ProjekteID`),
   KEY `FKEC749D0E327F143A` (`ProjekteID`),
   KEY `FKEC749D0E8896477B` (`BenutzerID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -995,18 +1277,18 @@ LOCK TABLES `projektbenutzer` WRITE;
 /*!40000 ALTER TABLE `projektbenutzer` DISABLE KEYS */;
 INSERT INTO `projektbenutzer` VALUES
 (1,1),
-(1,2),
 (2,1),
-(2,2),
 (3,1),
-(3,2),
 (4,1),
-(4,2),
 (5,1),
-(5,2),
 (6,1),
-(6,2),
 (7,1),
+(1,2),
+(2,2),
+(3,2),
+(4,2),
+(5,2),
+(6,2),
 (7,2);
 /*!40000 ALTER TABLE `projektbenutzer` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1051,12 +1333,15 @@ CREATE TABLE `projekte` (
   `metsRightsSponsorLogo` varchar(255) DEFAULT NULL,
   `metsRightsSponsorSiteURL` varchar(255) DEFAULT NULL,
   `metsRightsLicense` varchar(255) DEFAULT NULL,
-  `srurl` varchar(255) DEFAULT NULL,
   `institution_id` int(11) NOT NULL,
   `project_identifier` varchar(255) DEFAULT NULL,
+  `iiifUrl` varchar(255) DEFAULT NULL,
+  `sruUrl` varchar(255) DEFAULT NULL,
+  `dfgViewerUrl` text DEFAULT NULL,
   PRIMARY KEY (`ProjekteID`),
-  KEY `FKC8539A94327F143A` (`ProjekteID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+  KEY `FKC8539A94327F143A` (`ProjekteID`),
+  KEY `institution_id` (`institution_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1066,8 +1351,8 @@ CREATE TABLE `projekte` (
 LOCK TABLES `projekte` WRITE;
 /*!40000 ALTER TABLE `projekte` DISABLE KEYS */;
 INSERT INTO `projekte` VALUES
-(1,'Archive_Project',1,0,'{goobiFolder}../viewer/hotfolder/','{goobiFolder}../viewer/hotfolder/','','',0,'Mets','Mets','Example Library','http://www.example.net/mylogo.png','http://www.example.net','mailto:digitisation@example.net','http://catalog.example.net/A?function=search&request=$(meta.CatalogIDDigital)','http://presentation.example.net/ppnresolver?id=$(meta.CatalogIDDigital)','http://catalog.example.net/A?function=search&request=$(meta.topstruct.CatalogIDDigital)','http://presentation.example.net/ppnresolver?id=$(meta.topstruct.CatalogIDDigital)','http://presentation.example.net/sourcefile?id=$(meta.CatalogIDDigital)','http://presentation.example.net/sourcefile?id=$(meta.topstruct.CatalogIDDigital)','','','2017-05-01 00:00:00','2024-12-31 00:00:00',300000,280,0,'','','info@intranda.com','',NULL,1,''),
-(2,'Manuscript_Project',1,3600000,'{goobiFolder}../viewer/hotfolder/','{goobiFolder}../viewer/hotfolder/','','',0,'Mets','Mets','Example Library','http://www.example.net/mylogo.png','http://www.example.net','mailto:digitisation@example.net','http://catalog.example.net/A?function=search&request=$(meta.CatalogIDDigital)','http://presentation.example.net/ppnresolver?id=$(meta.CatalogIDDigital)','http://catalog.example.net/A?function=search&request=$(meta.topstruct.CatalogIDDigital)','http://presentation.example.net/ppnresolver?id=$(meta.topstruct.CatalogIDDigital)','http://presentation.example.net/sourcefile?id=$(meta.topstruct.CatalogIDDigital)','http://presentation.example.net/sourcefile?id=$(meta.CatalogIDDigital)','','','2017-01-02 00:00:00','2024-12-31 00:00:00',200000,150,0,'','','info@intranda.com','',NULL,1,'');
+(1,'Archive_Project',1,0,'/opt/digiverso/viewer/hotfolder/','/opt/digiverso/viewer/hotfolder/','','',0,'Mets','Mets','Example Library','http://www.example.net/mylogo.png','http://www.example.net','mailto:digitisation@example.net','http://catalog.example.net/A?function=search&request=$(meta.CatalogIDDigital)','http://presentation.example.net/ppnresolver?id=$(meta.CatalogIDDigital)','http://catalog.example.net/A?function=search&request=$(meta.topstruct.CatalogIDDigital)','http://presentation.example.net/ppnresolver?id=$(meta.topstruct.CatalogIDDigital)','http://presentation.example.net/sourcefile?id=$(meta.CatalogIDDigital)','http://presentation.example.net/sourcefile?id=$(meta.topstruct.CatalogIDDigital)','','','2017-05-01 00:00:00','2024-12-31 00:00:00',300000,280,0,'','','info@intranda.com','',1,'',NULL,NULL,NULL),
+(2,'Manuscript_Project',1,3600000,'/opt/digiverso/viewer/hotfolder/','/opt/digiverso/viewer/hotfolder/','','',0,'Mets','Mets','Example Library','http://www.example.net/mylogo.png','http://www.example.net','mailto:digitisation@example.net','http://catalog.example.net/A?function=search&request=$(meta.CatalogIDDigital)','http://presentation.example.net/ppnresolver?id=$(meta.CatalogIDDigital)','http://catalog.example.net/A?function=search&request=$(meta.topstruct.CatalogIDDigital)','http://presentation.example.net/ppnresolver?id=$(meta.topstruct.CatalogIDDigital)','http://presentation.example.net/sourcefile?id=$(meta.topstruct.CatalogIDDigital)','http://presentation.example.net/sourcefile?id=$(meta.CatalogIDDigital)','','','2017-01-02 00:00:00','2024-12-31 00:00:00',200000,150,0,'','','info@intranda.com','',1,'',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `projekte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1098,6 +1383,7 @@ CREATE TABLE `prozesse` (
   `docketID` int(11) DEFAULT NULL,
   `mediaFolderExists` tinyint(1) DEFAULT 0,
   `pauseAutomaticExecution` tinyint(1) DEFAULT 0,
+  `exportValidator` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ProzesseID`),
   KEY `FKC55ACC6DACAFE8C7` (`MetadatenKonfigurationID`),
   KEY `project` (`ProjekteID`),
@@ -1105,7 +1391,7 @@ CREATE TABLE `prozesse` (
   KEY `batchID` (`batchID`),
   KEY `status` (`sortHelperStatus`),
   KEY `Titel` (`titel`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1115,11 +1401,11 @@ CREATE TABLE `prozesse` (
 LOCK TABLES `prozesse` WRITE;
 /*!40000 ALTER TABLE `prozesse` DISABLE KEYS */;
 INSERT INTO `prozesse` VALUES
-(1,'Manuscript_Workflow',NULL,1,0,0,'012000088',0,0,'2022-03-08 10:35:02',2,1,0,0,NULL,NULL,1,0,0),
-(2,'Sample_Workflow',NULL,1,0,0,'014014071',0,0,'2016-10-28 12:08:47',1,1,0,0,' ',NULL,1,0,0),
-(3,'bergsphi_625017145',NULL,0,0,0,'075012012',56,0,'2022-03-08 11:15:13',2,1,0,0,NULL,NULL,1,0,0),
-(4,'thunspec_577843346',NULL,0,0,0,'083017000',23,0,'2022-03-08 11:15:43',1,1,0,0,NULL,NULL,1,0,0),
-(5,'schudiss_618299084',NULL,0,0,0,'083017000',74,0,'2022-03-08 11:16:01',1,1,0,0,NULL,NULL,1,0,0);
+(1,'Manuscript_Workflow',NULL,1,0,0,'012000088',0,0,'2022-03-08 10:35:02',2,1,0,0,NULL,NULL,1,0,0,NULL),
+(2,'Sample_Workflow',NULL,1,0,0,'014014071',0,0,'2016-10-28 12:08:47',1,1,0,0,' ',NULL,1,0,0,NULL),
+(3,'bergsphi_625017145',NULL,0,0,0,'075012012',56,0,'2022-03-08 11:15:13',2,1,0,0,NULL,NULL,1,0,0,NULL),
+(4,'thunspec_577843346',NULL,0,0,0,'083017000',23,0,'2022-03-08 11:15:43',1,1,0,0,NULL,NULL,1,0,0,NULL),
+(5,'schudiss_618299084',NULL,0,0,0,'083017000',74,0,'2022-03-08 11:16:01',1,1,0,0,NULL,NULL,1,0,0,NULL);
 /*!40000 ALTER TABLE `prozesse` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1139,10 +1425,10 @@ CREATE TABLE `prozesseeigenschaften` (
   `Auswahl` varchar(255) DEFAULT NULL,
   `prozesseID` int(11) DEFAULT NULL,
   `creationDate` datetime DEFAULT NULL,
-  `container` int(11) DEFAULT NULL,
+  `container` text DEFAULT NULL,
   PRIMARY KEY (`prozesseeigenschaftenID`),
   KEY `FK3B22499F815A56DA` (`prozesseID`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1152,32 +1438,129 @@ CREATE TABLE `prozesseeigenschaften` (
 LOCK TABLES `prozesseeigenschaften` WRITE;
 /*!40000 ALTER TABLE `prozesseeigenschaften` DISABLE KEYS */;
 INSERT INTO `prozesseeigenschaften` VALUES
-(21,'Digitisation date','2020',0,5,NULL,3,'2022-03-08 11:15:27',0),
-(22,'Electronic ed.','[Electronic ed.]',0,5,NULL,3,'2022-03-08 11:15:27',0),
-(23,'Creator of digital edition','Goobi',0,5,NULL,3,'2022-03-08 11:15:27',0),
-(24,'Place of digital edition','Göttingen',0,5,NULL,3,'2022-03-08 11:15:27',0),
-(25,'Digital origin','reformatted digital',0,5,NULL,3,'2022-03-08 11:15:27',0),
-(26,'digitalCollection','General',0,5,NULL,3,'2022-03-08 11:15:27',0),
-(27,'Template','Manuscript_Workflow',0,5,NULL,3,'2022-03-08 11:15:27',0),
-(28,'TemplateID','1',0,5,NULL,3,'2022-03-08 11:15:27',0),
-(29,'Digitisation date','2020',0,5,NULL,4,'2022-03-08 11:15:56',0),
-(30,'Electronic ed.','[Electronic ed.]',0,5,NULL,4,'2022-03-08 11:15:56',0),
-(31,'Creator of digital edition','Goobi',0,5,NULL,4,'2022-03-08 11:15:56',0),
-(32,'Place of digital edition','Göttingen',0,5,NULL,4,'2022-03-08 11:15:56',0),
-(33,'Digital origin','reformatted digital',0,5,NULL,4,'2022-03-08 11:15:56',0),
-(34,'digitalCollection','Biology',0,5,NULL,4,'2022-03-08 11:15:56',0),
-(35,'Template','Sample_Workflow',0,5,NULL,4,'2022-03-08 11:15:56',0),
-(36,'TemplateID','2',0,5,NULL,4,'2022-03-08 11:15:56',0),
-(37,'Digitisation date','2020',0,5,NULL,5,'2022-03-08 11:16:24',0),
-(38,'Electronic ed.','[Electronic ed.]',0,5,NULL,5,'2022-03-08 11:16:24',0),
-(39,'Creator of digital edition','Goobi',0,5,NULL,5,'2022-03-08 11:16:24',0),
-(40,'Place of digital edition','Göttingen',0,5,NULL,5,'2022-03-08 11:16:24',0),
-(41,'Digital origin','reformatted digital',0,5,NULL,5,'2022-03-08 11:16:24',0),
-(42,'digitalCollection','General',0,5,NULL,5,'2022-03-08 11:16:24',0),
-(43,'digitalCollection','Physics',0,5,NULL,5,'2022-03-08 11:16:24',0),
-(44,'Template','Sample_Workflow',0,5,NULL,5,'2022-03-08 11:16:24',0),
-(45,'TemplateID','2',0,5,NULL,5,'2022-03-08 11:16:24',0);
+(21,'Digitisation date','2020',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(22,'Electronic ed.','[Electronic ed.]',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(23,'Creator of digital edition','Goobi',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(24,'Place of digital edition','Göttingen',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(25,'Digital origin','reformatted digital',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(26,'digitalCollection','General',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(27,'Template','Manuscript_Workflow',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(28,'TemplateID','1',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(29,'Digitisation date','2020',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(30,'Electronic ed.','[Electronic ed.]',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(31,'Creator of digital edition','Goobi',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(32,'Place of digital edition','Göttingen',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(33,'Digital origin','reformatted digital',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(34,'digitalCollection','Biology',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(35,'Template','Sample_Workflow',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(36,'TemplateID','2',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(37,'Digitisation date','2020',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(38,'Electronic ed.','[Electronic ed.]',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(39,'Creator of digital edition','Goobi',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(40,'Place of digital edition','Göttingen',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(41,'Digital origin','reformatted digital',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(42,'digitalCollection','General',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(43,'digitalCollection','Physics',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(44,'Template','Sample_Workflow',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(45,'TemplateID','2',0,5,NULL,5,'2022-03-08 11:16:24','0');
 /*!40000 ALTER TABLE `prozesseeigenschaften` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `record`
+--
+
+DROP TABLE IF EXISTS `record`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `record` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `repository_id` int(11) NOT NULL,
+  `title` text DEFAULT NULL,
+  `creator` text DEFAULT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `repository_datestamp` datetime NOT NULL,
+  `setSpec` text DEFAULT NULL,
+  `identifier` text NOT NULL,
+  `job_id` int(11) NOT NULL,
+  `source` text DEFAULT NULL,
+  `exported` text DEFAULT NULL,
+  `exported_datestamp` datetime DEFAULT NULL,
+  `subquery` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `identifier` (`identifier`(12)),
+  KEY `exported_datestamp` (`exported_datestamp`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `record`
+--
+
+LOCK TABLES `record` WRITE;
+/*!40000 ALTER TABLE `record` DISABLE KEYS */;
+/*!40000 ALTER TABLE `record` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `repository`
+--
+
+DROP TABLE IF EXISTS `repository`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `repository` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `base_url` text NOT NULL,
+  `export_folder` varchar(255) DEFAULT NULL,
+  `script_path` varchar(255) DEFAULT NULL,
+  `last_harvest` timestamp NULL DEFAULT NULL,
+  `freq` int(11) NOT NULL DEFAULT 6,
+  `delay` int(11) NOT NULL DEFAULT 0,
+  `enabled` tinyint(1) NOT NULL DEFAULT 1,
+  `type` text DEFAULT NULL,
+  `goobi_import` tinyint(1) NOT NULL DEFAULT 1,
+  `project_name` text DEFAULT NULL,
+  `template_name` text DEFAULT NULL,
+  `fileformat` text DEFAULT NULL,
+  `testmode` tinyint(1) DEFAULT NULL,
+  `start_date` varchar(255) DEFAULT NULL,
+  `end_date` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `repository`
+--
+
+LOCK TABLES `repository` WRITE;
+/*!40000 ALTER TABLE `repository` DISABLE KEYS */;
+/*!40000 ALTER TABLE `repository` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `repository_parameter`
+--
+
+DROP TABLE IF EXISTS `repository_parameter`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `repository_parameter` (
+  `repository_id` int(11) unsigned NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `value` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `repository_parameter`
+--
+
+LOCK TABLES `repository_parameter` WRITE;
+/*!40000 ALTER TABLE `repository_parameter` DISABLE KEYS */;
+/*!40000 ALTER TABLE `repository_parameter` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -1237,6 +1620,8 @@ CREATE TABLE `schritte` (
   `httpEscapeBodyJson` tinyint(1) DEFAULT NULL,
   `messageQueue` varchar(255) DEFAULT 'NO_QUEUE',
   `messageId` varchar(255) DEFAULT NULL,
+  `typAutomaticThumbnail` tinyint(1) DEFAULT 0,
+  `automaticThumbnailSettingsYaml` varchar(1000) DEFAULT '--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: "" #set path to custom image directory \nCustom_script_command: "" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800',
   PRIMARY KEY (`SchritteID`),
   KEY `FKD7200736815A56DA` (`ProzesseID`),
   KEY `FKD72007365B4F6962` (`BearbeitungsBenutzerID`),
@@ -1245,8 +1630,9 @@ CREATE TABLE `schritte` (
   KEY `Titel` (`titel`),
   KEY `processid_x_title` (`ProzesseID`,`titel`),
   KEY `id_x_title` (`SchritteID`,`titel`),
-  KEY `processid_x_title_x_user` (`SchritteID`,`titel`,`BearbeitungsBenutzerID`)
-) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8mb4;
+  KEY `processid_x_title_x_user` (`SchritteID`,`titel`,`BearbeitungsBenutzerID`),
+  KEY `automatic_tasks` (`titel`,`typAutomatisch`)
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1256,40 +1642,40 @@ CREATE TABLE `schritte` (
 LOCK TABLES `schritte` WRITE;
 /*!40000 ALTER TABLE `schritte` DISABLE KEYS */;
 INSERT INTO `schritte` VALUES
-(22,'Data import',0,1,3,'2022-03-08 10:30:30','2016-10-28 12:08:47','2016-10-28 12:08:47',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,2,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(23,'Scanning',0,2,1,'2022-03-08 10:31:47',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,2,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_fileUpload','intranda_validation_filename',0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(24,'Quality control',0,4,0,'2022-03-08 10:32:18',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,2,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageQA',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(25,'Image processing',0,5,0,'2022-03-08 10:33:43',NULL,NULL,0,0,1,0,0,0,0,0,0,0,0,NULL,0,NULL,7,2,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageConverter',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(26,'Metadata enrichment',0,6,0,'2022-03-08 10:34:00',NULL,NULL,0,1,0,0,0,0,0,0,0,0,0,NULL,1,NULL,7,2,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(27,'Export to viewer',0,7,0,'2016-10-28 12:12:50',NULL,NULL,0,0,1,0,0,0,0,1,0,0,0,NULL,0,NULL,1,2,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(43,'Data import',0,1,3,'2022-03-08 10:35:02','2022-03-08 10:35:02','2022-03-08 10:35:02',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,1,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(44,'Scanning',0,3,0,'2022-03-08 10:36:05',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,1,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_fileUpload','intranda_validation_filename',0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(45,'Quality control',0,5,0,'2022-03-08 10:35:02',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,1,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageQA',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(46,'Image processing',0,6,0,'2022-03-08 10:35:02',NULL,NULL,0,0,1,0,0,0,0,0,0,0,0,NULL,0,NULL,7,1,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageConverter',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(47,'Metadata enrichment',0,7,0,'2022-03-08 10:35:02',NULL,NULL,0,1,0,0,0,0,0,0,0,0,0,NULL,1,NULL,7,1,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(48,'Export to viewer',0,8,0,'2022-03-08 10:35:02',NULL,NULL,0,0,1,0,0,0,0,1,0,0,0,NULL,0,NULL,7,1,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(49,'Get manuscript from book depot',0,2,1,'2022-03-08 10:36:07',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,1,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,'',0,0,'NO_QUEUE',NULL),
-(50,'Bring manuscript back to book depot',0,9,0,'2022-03-08 10:35:59',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,1,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,'',0,0,'NO_QUEUE',NULL),
-(51,'Data import',0,1,3,'2022-03-08 11:15:27','2022-03-08 11:15:13','2022-03-08 11:15:27',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,3,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(52,'Get manuscript from book depot',0,2,3,'2022-03-08 14:35:34',NULL,'2022-03-08 14:35:34',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,'',0,0,'NO_QUEUE',NULL),
-(53,'Scanning',0,3,3,'2022-03-08 14:35:33',NULL,'2022-03-08 14:35:33',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_fileUpload','intranda_validation_filename',0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(54,'Quality control',0,5,3,'2022-03-08 14:35:32',NULL,'2022-03-08 14:35:32',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageQA',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(55,'Image processing',0,6,3,'2022-03-08 14:35:32',NULL,'2022-03-08 14:35:32',0,0,1,0,0,0,0,0,0,0,0,NULL,0,NULL,7,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageConverter',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(56,'Metadata enrichment',0,7,3,'2022-03-08 14:35:31',NULL,'2022-03-08 14:35:31',0,1,0,0,0,0,0,0,0,0,0,NULL,1,NULL,7,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(57,'Export to viewer',0,8,1,'2022-03-08 14:35:44','2022-03-08 14:35:31',NULL,0,0,1,0,0,0,0,1,0,0,0,NULL,0,NULL,NULL,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(58,'Bring manuscript back to book depot',0,9,0,'2022-03-08 14:35:46',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,NULL,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,'',0,0,'NO_QUEUE',NULL),
-(59,'Data import',0,1,3,'2022-03-08 11:15:56','2022-03-08 11:15:43','2022-03-08 11:15:56',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,4,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(60,'Scanning',0,2,3,'2022-03-08 14:36:24',NULL,'2022-03-08 14:36:24',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,4,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_fileUpload','intranda_validation_filename',0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(61,'Quality control',0,4,3,'2022-03-08 14:36:25',NULL,'2022-03-08 14:36:25',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,4,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageQA',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(62,'Image processing',0,5,3,'2022-03-08 14:36:22',NULL,'2022-03-08 14:36:22',0,0,1,0,0,0,0,0,0,0,0,NULL,0,NULL,7,4,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageConverter',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(63,'Metadata enrichment',0,6,3,'2022-03-08 14:36:22',NULL,'2022-03-08 14:36:22',0,1,0,0,0,0,0,0,0,0,0,NULL,1,NULL,7,4,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(64,'Export to viewer',0,7,1,'2022-03-08 14:36:18',NULL,NULL,0,0,1,0,0,0,0,1,0,0,0,NULL,0,NULL,NULL,4,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(65,'Data import',0,1,3,'2022-03-08 11:16:24','2022-03-08 11:16:01','2022-03-08 11:16:24',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,5,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(66,'Scanning',0,2,3,'2022-03-08 14:35:55',NULL,'2022-03-08 14:35:55',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,5,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_fileUpload','intranda_validation_filename',0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(67,'Quality control',0,4,3,'2022-03-08 14:36:01',NULL,'2022-03-08 14:36:01',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,5,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageQA',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(68,'Image processing',0,5,3,'2022-03-08 14:36:02',NULL,'2022-03-08 14:36:02',0,0,1,0,0,0,0,0,0,0,0,NULL,0,NULL,7,5,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageConverter',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(69,'Metadata enrichment',0,6,3,'2022-03-08 14:36:09',NULL,'2022-03-08 14:36:09',0,1,0,0,0,0,0,0,0,0,0,NULL,1,NULL,7,5,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL),
-(70,'Export to viewer',0,7,1,'2022-03-08 14:36:07',NULL,NULL,0,0,1,0,0,0,0,1,0,0,0,NULL,0,NULL,NULL,5,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL);
+(22,'Data import',0,1,3,'2022-03-08 10:30:30','2016-10-28 12:08:47','2016-10-28 12:08:47',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,2,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(23,'Scanning',0,2,1,'2022-03-08 10:31:47',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,2,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_fileUpload','intranda_validation_filename',0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(24,'Quality control',0,4,0,'2022-03-08 10:32:18',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,2,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageQA',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(25,'Image processing',0,5,0,'2022-03-08 10:33:43',NULL,NULL,0,0,1,0,0,0,0,0,0,0,0,NULL,0,NULL,7,2,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageConverter',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(26,'Metadata enrichment',0,6,0,'2022-03-08 10:34:00',NULL,NULL,0,1,0,0,0,0,0,0,0,0,0,NULL,1,NULL,7,2,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(27,'Export to viewer',0,7,0,'2016-10-28 12:12:50',NULL,NULL,0,0,1,0,0,0,0,1,0,0,0,NULL,0,NULL,1,2,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(43,'Data import',0,1,3,'2022-03-08 10:35:02','2022-03-08 10:35:02','2022-03-08 10:35:02',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,1,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(44,'Scanning',0,3,0,'2022-03-08 10:36:05',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,1,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_fileUpload','intranda_validation_filename',0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(45,'Quality control',0,5,0,'2022-03-08 10:35:02',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,1,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageQA',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(46,'Image processing',0,6,0,'2022-03-08 10:35:02',NULL,NULL,0,0,1,0,0,0,0,0,0,0,0,NULL,0,NULL,7,1,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageConverter',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(47,'Metadata enrichment',0,7,0,'2022-03-08 10:35:02',NULL,NULL,0,1,0,0,0,0,0,0,0,0,0,NULL,1,NULL,7,1,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(48,'Export to viewer',0,8,0,'2022-03-08 10:35:02',NULL,NULL,0,0,1,0,0,0,0,1,0,0,0,NULL,0,NULL,7,1,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(49,'Get manuscript from book depot',0,2,1,'2022-03-08 10:36:07',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,1,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,'',0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(50,'Bring manuscript back to book depot',0,9,0,'2022-03-08 10:35:59',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,1,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,'',0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(51,'Data import',0,1,3,'2022-03-08 11:15:27','2022-03-08 11:15:13','2022-03-08 11:15:27',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,3,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(52,'Get manuscript from book depot',0,2,3,'2022-03-08 14:35:34',NULL,'2022-03-08 14:35:34',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,'',0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(53,'Scanning',0,3,3,'2022-03-08 14:35:33',NULL,'2022-03-08 14:35:33',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_fileUpload','intranda_validation_filename',0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(54,'Quality control',0,5,3,'2022-03-08 14:35:32',NULL,'2022-03-08 14:35:32',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageQA',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(55,'Image processing',0,6,3,'2022-03-08 14:35:32',NULL,'2022-03-08 14:35:32',0,0,1,0,0,0,0,0,0,0,0,NULL,0,NULL,7,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageConverter',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(56,'Metadata enrichment',0,7,3,'2022-03-08 14:35:31',NULL,'2022-03-08 14:35:31',0,1,0,0,0,0,0,0,0,0,0,NULL,1,NULL,7,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(57,'Export to viewer',0,8,1,'2022-03-08 14:35:44','2022-03-08 14:35:31',NULL,0,0,1,0,0,0,0,1,0,0,0,NULL,0,NULL,NULL,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(58,'Bring manuscript back to book depot',0,9,0,'2022-03-08 14:35:46',NULL,NULL,0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,NULL,3,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,'',0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(59,'Data import',0,1,3,'2022-03-08 11:15:56','2022-03-08 11:15:43','2022-03-08 11:15:56',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,4,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(60,'Scanning',0,2,3,'2022-03-08 14:36:24',NULL,'2022-03-08 14:36:24',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,4,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_fileUpload','intranda_validation_filename',0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(61,'Quality control',0,4,3,'2022-03-08 14:36:25',NULL,'2022-03-08 14:36:25',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,4,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageQA',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(62,'Image processing',0,5,3,'2022-03-08 14:36:22',NULL,'2022-03-08 14:36:22',0,0,1,0,0,0,0,0,0,0,0,NULL,0,NULL,7,4,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageConverter',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(63,'Metadata enrichment',0,6,3,'2022-03-08 14:36:22',NULL,'2022-03-08 14:36:22',0,1,0,0,0,0,0,0,0,0,0,NULL,1,NULL,7,4,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(64,'Export to viewer',0,7,1,'2022-03-08 14:36:18',NULL,NULL,0,0,1,0,0,0,0,1,0,0,0,NULL,0,NULL,NULL,4,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(65,'Data import',0,1,3,'2022-03-08 11:16:24','2022-03-08 11:16:01','2022-03-08 11:16:24',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,5,4,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(66,'Scanning',0,2,3,'2022-03-08 14:35:55',NULL,'2022-03-08 14:35:55',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,5,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_fileUpload','intranda_validation_filename',0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(67,'Quality control',0,4,3,'2022-03-08 14:36:01',NULL,'2022-03-08 14:36:01',0,0,0,0,0,0,0,0,0,0,0,NULL,0,NULL,7,5,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageQA',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(68,'Image processing',0,5,3,'2022-03-08 14:36:02',NULL,'2022-03-08 14:36:02',0,0,1,0,0,0,0,0,0,0,0,NULL,0,NULL,7,5,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'intranda_step_imageConverter',NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(69,'Metadata enrichment',0,6,3,'2022-03-08 14:36:09',NULL,'2022-03-08 14:36:09',0,1,0,0,0,0,0,0,0,0,0,NULL,1,NULL,7,5,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800'),
+(70,'Export to viewer',0,7,1,'2022-03-08 14:36:07',NULL,NULL,0,0,1,0,0,0,0,1,0,0,0,NULL,0,NULL,NULL,5,3,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,0,0,0,0,NULL,NULL,NULL,0,0,'NO_QUEUE',NULL,0,'--- \nMaster: false  #use master image directory \nMedia: false  #use media image directory \nImg_directory: \"\" #set path to custom image directory \nCustom_script_command: \"\" #command to execute custom thumbnail generation script \nSizes: #define thumbnail sizes \n- 800');
 /*!40000 ALTER TABLE `schritte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1306,7 +1692,7 @@ CREATE TABLE `schritteberechtigtebenutzer` (
   PRIMARY KEY (`schritteID`,`BenutzerID`),
   KEY `FK4BB889CF8896477B` (`BenutzerID`),
   KEY `FK4BB889CFBB6FCB7A` (`schritteID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1331,7 +1717,7 @@ CREATE TABLE `schritteberechtigtegruppen` (
   PRIMARY KEY (`schritteID`,`BenutzerGruppenID`),
   KEY `FKA5A0CC811843242F` (`BenutzerGruppenID`),
   KEY `FKA5A0CC81BB6FCB7A` (`schritteID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1341,40 +1727,40 @@ CREATE TABLE `schritteberechtigtegruppen` (
 LOCK TABLES `schritteberechtigtegruppen` WRITE;
 /*!40000 ALTER TABLE `schritteberechtigtegruppen` DISABLE KEYS */;
 INSERT INTO `schritteberechtigtegruppen` VALUES
-(6,22),
-(2,23),
-(3,24),
 (1,25),
-(5,26),
 (1,27),
-(6,43),
-(2,44),
-(3,45),
 (1,46),
-(5,47),
 (1,48),
+(1,55),
+(1,57),
+(1,62),
+(1,64),
+(1,68),
+(1,70),
+(2,23),
+(2,44),
+(2,53),
+(2,60),
+(2,66),
+(3,24),
+(3,45),
+(3,54),
+(3,61),
+(3,67),
 (4,49),
 (4,50),
-(6,51),
 (4,52),
-(2,53),
-(3,54),
-(1,55),
-(5,56),
-(1,57),
 (4,58),
-(6,59),
-(2,60),
-(3,61),
-(1,62),
+(5,26),
+(5,47),
+(5,56),
 (5,63),
-(1,64),
-(6,65),
-(2,66),
-(3,67),
-(1,68),
 (5,69),
-(1,70);
+(6,22),
+(6,43),
+(6,51),
+(6,59),
+(6,65);
 /*!40000 ALTER TABLE `schritteberechtigtegruppen` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1394,10 +1780,10 @@ CREATE TABLE `schritteeigenschaften` (
   `Auswahl` varchar(255) DEFAULT NULL,
   `schritteID` int(11) DEFAULT NULL,
   `creationDate` datetime DEFAULT NULL,
-  `container` int(11) DEFAULT NULL,
+  `container` text DEFAULT NULL,
   PRIMARY KEY (`schritteeigenschaftenID`),
   KEY `FK884E9D76BB6FCB7A` (`schritteID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1410,6 +1796,34 @@ LOCK TABLES `schritteeigenschaften` WRITE;
 UNLOCK TABLES;
 
 --
+-- Temporary table structure for view `schritteids`
+--
+
+DROP TABLE IF EXISTS `schritteids`;
+/*!50001 DROP VIEW IF EXISTS `schritteids`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `schritteids` AS SELECT
+ 1 AS `schritteID`,
+  1 AS `Titel`,
+  1 AS `Reihenfolge`,
+  1 AS `prozesseID` */;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary table structure for view `schrittfilter`
+--
+
+DROP TABLE IF EXISTS `schrittfilter`;
+/*!50001 DROP VIEW IF EXISTS `schrittfilter`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `schrittfilter` AS SELECT
+ 1 AS `prozesseID`,
+  1 AS `anzahl` */;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Table structure for table `urn_table`
 --
 
@@ -1420,8 +1834,9 @@ CREATE TABLE `urn_table` (
   `urn_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `werk_id` varchar(255) DEFAULT NULL,
   `struktur_typ` varchar(255) DEFAULT NULL,
+  `urn` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`urn_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1450,7 +1865,7 @@ CREATE TABLE `user_email_configuration` (
   `done` tinyint(1) DEFAULT 0,
   `error` tinyint(1) DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1476,7 +1891,7 @@ CREATE TABLE `vocabulary` (
   `lastAltered` datetime NOT NULL DEFAULT '2020-01-01 00:00:01',
   `lastUploaded` datetime NOT NULL DEFAULT '2020-01-01 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1487,7 +1902,8 @@ LOCK TABLES `vocabulary` WRITE;
 /*!40000 ALTER TABLE `vocabulary` DISABLE KEYS */;
 INSERT INTO `vocabulary` VALUES
 (1,'Digital collections','A list of digital collections to select values from in the METS-Editor','2022-03-08 11:19:14','2020-01-01 00:00:00'),
-(2,'Languages','A vocabulary of languages to be used in the METS-Editor','2022-03-08 11:21:01','2020-01-01 00:00:00');
+(2,'Languages','A vocabulary of languages to be used in the METS-Editor','2022-03-08 11:21:01','2020-01-01 00:00:00'),
+(3,'Licences','This is a list of all entries for the licence of use','2022-10-07 08:33:57','2020-01-01 00:00:00');
 /*!40000 ALTER TABLE `vocabulary` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1502,7 +1918,7 @@ CREATE TABLE `vocabulary_record` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `vocabulary_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1520,7 +1936,16 @@ INSERT INTO `vocabulary_record` VALUES
 (11,2),
 (12,2),
 (13,2),
-(14,2);
+(14,2),
+(15,3),
+(16,3),
+(17,3),
+(18,3),
+(19,3),
+(20,3),
+(21,3),
+(22,3),
+(23,3);
 /*!40000 ALTER TABLE `vocabulary_record` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1539,8 +1964,10 @@ CREATE TABLE `vocabulary_record_data` (
   `label` varchar(255) DEFAULT NULL,
   `language` varchar(255) DEFAULT NULL,
   `value` text DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
+  PRIMARY KEY (`id`),
+  KEY `definition_id` (`definition_id`),
+  KEY `record_id` (`record_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1566,7 +1993,16 @@ INSERT INTO `vocabulary_record_data` VALUES
 (14,13,2,4,'Description','','Spanish language, spoken in Spain and lots of other countries'),
 (15,14,2,2,'Name','','fra'),
 (16,14,2,3,'Full name','','French'),
-(17,14,2,4,'Description','','Language spoken mostly in France');
+(17,14,2,4,'Description','','Language spoken mostly in France'),
+(18,15,3,5,'Name','','PDM'),
+(19,16,3,5,'Name','','CC0'),
+(20,17,3,5,'Name','','CC BY'),
+(21,18,3,5,'Name','','CC BY-SA'),
+(22,19,3,5,'Name','','CC BY-ND'),
+(23,20,3,5,'Name','','CC BY-NC'),
+(24,21,3,5,'Name','','CC BY-NC-SA'),
+(25,22,3,5,'Name','','CC BY-NC-ND'),
+(26,23,3,5,'Name','','reserved');
 /*!40000 ALTER TABLE `vocabulary_record_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1590,7 +2026,7 @@ CREATE TABLE `vocabulary_structure` (
   `selection` text DEFAULT NULL,
   `titleField` tinyint(1) DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1603,7 +2039,8 @@ INSERT INTO `vocabulary_structure` VALUES
 (1,1,'Name','','input','',1,1,1,'',1),
 (2,2,'Name','','input','',1,1,1,'',1),
 (3,2,'Full name','','input','',0,0,0,'',0),
-(4,2,'Description','','textarea','',0,0,0,'',0);
+(4,2,'Description','','textarea','',0,0,0,'',0),
+(5,3,'Name','','input','',1,1,1,'',1);
 /*!40000 ALTER TABLE `vocabulary_structure` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1620,7 +2057,7 @@ CREATE TABLE `vorlagen` (
   `ProzesseID` int(11) DEFAULT NULL,
   PRIMARY KEY (`VorlagenID`),
   KEY `FK9A466882815A56DA` (`ProzesseID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1630,9 +2067,9 @@ CREATE TABLE `vorlagen` (
 LOCK TABLES `vorlagen` WRITE;
 /*!40000 ALTER TABLE `vorlagen` DISABLE KEYS */;
 INSERT INTO `vorlagen` VALUES
-(4,NULL,3),
-(5,NULL,4),
-(6,NULL,5);
+(3,NULL,3),
+(4,NULL,4),
+(5,NULL,5);
 /*!40000 ALTER TABLE `vorlagen` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1652,10 +2089,10 @@ CREATE TABLE `vorlageneigenschaften` (
   `Auswahl` varchar(255) DEFAULT NULL,
   `vorlagenID` int(11) DEFAULT NULL,
   `creationDate` datetime DEFAULT NULL,
-  `container` int(11) DEFAULT NULL,
+  `container` text DEFAULT NULL,
   PRIMARY KEY (`vorlageneigenschaftenID`),
   KEY `FKAA25B7AA239F423` (`vorlagenID`)
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1665,33 +2102,33 @@ CREATE TABLE `vorlageneigenschaften` (
 LOCK TABLES `vorlageneigenschaften` WRITE;
 /*!40000 ALTER TABLE `vorlageneigenschaften` DISABLE KEYS */;
 INSERT INTO `vorlageneigenschaften` VALUES
-(27,'Title','Sphingvm Evropaearvm larvae qvotqvot adhvc innotvervnt ad Linnaeorvm Fabriciorvm et Viennensivm imprimis catalogos systematicos recensitae ; cvm tabvlis aeneis qvatvordecim ; oder die evropaeischen Schwaermerravpen nach den systematischen Verzeichnissen eines Linne, Fabricius vnd vorzuiglich der Wienerischen Natvrforscher ; lateinisch vnd tevtsch in vierzehen erlevchteten vnd vnerlevchteten Kvpfern',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(28,'Sorting title','Sphingvm Evropaearvm larvae qvotqvot adhvc innotvervnt ad Linnaeorvm Fabriciorvm et Viennensivm imprimis catalogos systematicos recensitae ; cvm tabvlis aeneis qvatvordecim ; oder die evropaeischen Schwaermerravpen nach den systematischen Verzeichnissen eines Linne, Fabricius vnd vorzuiglich der Wienerischen Natvrforscher ; lateinisch vnd tevtsch in vierzehen erlevchteten vnd vnerlevchteten Kvpfern',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(29,'Authors','',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(30,'Identifier analogue (a)','625017145',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(31,'Publishing place','Hanau',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(32,'Publishing year','1782',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(33,'Publishing house','Selbstverl.',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(34,'Shelfmark','',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(35,'Physical location','Goobi',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(36,'Title','Specimen ichthyologicum De muraena et ophichtho',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(37,'Sorting title','Specimen ichthyologicum De muraena et ophichtho',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(38,'Authors','',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(39,'Identifier analogue (a)','577843346',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(40,'Publishing place','Upsaliæ',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(41,'Publishing year','1789',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(42,'Publishing house','Edman',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(43,'Shelfmark','',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(44,'Physical location','Goobi',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(45,'Title','Dissertatio medica inauguralis de infestis viventibus intra viventia',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(46,'Sorting title','Dissertatio medica inauguralis de infestis viventibus intra viventia',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(47,'Authors','',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(48,'Identifier analogue (a)','618299084',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(49,'Publishing place','Lugduni Batavorum',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(50,'Publishing year','1760',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(51,'Publishing house','Haak',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(52,'Shelfmark','',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(53,'Physical location','Goobi',0,5,NULL,6,'2022-03-08 11:16:24',0);
+(27,'Title','Sphingvm Evropaearvm larvae qvotqvot adhvc innotvervnt ad Linnaeorvm Fabriciorvm et Viennensivm imprimis catalogos systematicos recensitae ; cvm tabvlis aeneis qvatvordecim ; oder die evropaeischen Schwaermerravpen nach den systematischen Verzeichnissen eines Linne, Fabricius vnd vorzuiglich der Wienerischen Natvrforscher ; lateinisch vnd tevtsch in vierzehen erlevchteten vnd vnerlevchteten Kvpfern',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(28,'Sorting title','Sphingvm Evropaearvm larvae qvotqvot adhvc innotvervnt ad Linnaeorvm Fabriciorvm et Viennensivm imprimis catalogos systematicos recensitae ; cvm tabvlis aeneis qvatvordecim ; oder die evropaeischen Schwaermerravpen nach den systematischen Verzeichnissen eines Linne, Fabricius vnd vorzuiglich der Wienerischen Natvrforscher ; lateinisch vnd tevtsch in vierzehen erlevchteten vnd vnerlevchteten Kvpfern',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(29,'Authors','',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(30,'Identifier analogue (a)','625017145',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(31,'Publishing place','Hanau',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(32,'Publishing year','1782',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(33,'Publishing house','Selbstverl.',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(34,'Shelfmark','',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(35,'Physical location','Goobi',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(36,'Title','Specimen ichthyologicum De muraena et ophichtho',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(37,'Sorting title','Specimen ichthyologicum De muraena et ophichtho',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(38,'Authors','',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(39,'Identifier analogue (a)','577843346',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(40,'Publishing place','Upsaliæ',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(41,'Publishing year','1789',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(42,'Publishing house','Edman',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(43,'Shelfmark','',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(44,'Physical location','Goobi',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(45,'Title','Dissertatio medica inauguralis de infestis viventibus intra viventia',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(46,'Sorting title','Dissertatio medica inauguralis de infestis viventibus intra viventia',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(47,'Authors','',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(48,'Identifier analogue (a)','618299084',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(49,'Publishing place','Lugduni Batavorum',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(50,'Publishing year','1760',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(51,'Publishing house','Haak',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(52,'Shelfmark','',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(53,'Physical location','Goobi',0,5,NULL,5,'2022-03-08 11:16:24','0');
 /*!40000 ALTER TABLE `vorlageneigenschaften` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1707,7 +2144,7 @@ CREATE TABLE `werkstuecke` (
   `ProzesseID` int(11) DEFAULT NULL,
   PRIMARY KEY (`WerkstueckeID`),
   KEY `FK98DED745815A56DA` (`ProzesseID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1717,9 +2154,9 @@ CREATE TABLE `werkstuecke` (
 LOCK TABLES `werkstuecke` WRITE;
 /*!40000 ALTER TABLE `werkstuecke` DISABLE KEYS */;
 INSERT INTO `werkstuecke` VALUES
-(4,3),
-(5,4),
-(6,5);
+(3,3),
+(4,4),
+(5,5);
 /*!40000 ALTER TABLE `werkstuecke` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1739,10 +2176,10 @@ CREATE TABLE `werkstueckeeigenschaften` (
   `Auswahl` varchar(255) DEFAULT NULL,
   `werkstueckeID` int(11) DEFAULT NULL,
   `creationDate` datetime DEFAULT NULL,
-  `container` int(11) DEFAULT NULL,
+  `container` text DEFAULT NULL,
   PRIMARY KEY (`werkstueckeeigenschaftenID`),
   KEY `FK7B209DC7C9900466` (`werkstueckeID`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1752,29 +2189,65 @@ CREATE TABLE `werkstueckeeigenschaften` (
 LOCK TABLES `werkstueckeeigenschaften` WRITE;
 /*!40000 ALTER TABLE `werkstueckeeigenschaften` DISABLE KEYS */;
 INSERT INTO `werkstueckeeigenschaften` VALUES
-(21,'Creator of digital edition','Common Library Network',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(22,'Font type','Antiqua',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(23,'ATS','bergsphi',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(24,'Identifier digital (a)','625017145',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(25,'DocType','monograph',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(26,'TifHeaderImagedescription','|<TYPE>Monographie|<TITLE>Sphingvm Evropaearvm larvae qvotqvot adhvc innotvervnt ad Linnaeorvm Fabriciorvm et Viennensivm imprimis catalogos systematicos recensitae ; cvm tabvlis aeneis qvatvo|<AUTHORS> |<YEAR>1782|<PLACE>Hanau|<FOLDER>bergsphi_625017145|',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(27,'TifHeaderDocumentname','bergsphi_625017145',0,5,NULL,4,'2022-03-08 11:15:27',0),
-(28,'Creator of digital edition','Common Library Network',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(29,'Font type','Antiqua',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(30,'ATS','thunspec',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(31,'Identifier digital (a)','577843346',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(32,'DocType','monograph',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(33,'TifHeaderImagedescription','|<TYPE>Monographie|<TITLE>Specimen ichthyologicum De muraena et ophichtho|<AUTHORS> |<YEAR>1789|<PLACE>Upsaliæ|<FOLDER>thunspec_577843346|',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(34,'TifHeaderDocumentname','thunspec_577843346',0,5,NULL,5,'2022-03-08 11:15:56',0),
-(35,'Creator of digital edition','Common Library Network',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(36,'Font type','Antiqua',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(37,'ATS','schudiss',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(38,'Identifier digital (a)','618299084',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(39,'DocType','monograph',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(40,'TifHeaderImagedescription','|<TYPE>Monographie|<TITLE>Dissertatio medica inauguralis de infestis viventibus intra viventia|<AUTHORS> |<YEAR>1760|<PLACE>Lugduni Batavorum|<FOLDER>schudiss_618299084|',0,5,NULL,6,'2022-03-08 11:16:24',0),
-(41,'TifHeaderDocumentname','schudiss_618299084',0,5,NULL,6,'2022-03-08 11:16:24',0);
+(21,'Creator of digital edition','Common Library Network',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(22,'Font type','Antiqua',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(23,'ATS','bergsphi',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(24,'Identifier digital (a)','625017145',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(25,'DocType','monograph',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(26,'TifHeaderImagedescription','|<TYPE>Monographie|<TITLE>Sphingvm Evropaearvm larvae qvotqvot adhvc innotvervnt ad Linnaeorvm Fabriciorvm et Viennensivm imprimis catalogos systematicos recensitae ; cvm tabvlis aeneis qvatvo|<AUTHORS> |<YEAR>1782|<PLACE>Hanau|<FOLDER>bergsphi_625017145|',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(27,'TifHeaderDocumentname','bergsphi_625017145',0,5,NULL,3,'2022-03-08 11:15:27','0'),
+(28,'Creator of digital edition','Common Library Network',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(29,'Font type','Antiqua',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(30,'ATS','thunspec',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(31,'Identifier digital (a)','577843346',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(32,'DocType','monograph',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(33,'TifHeaderImagedescription','|<TYPE>Monographie|<TITLE>Specimen ichthyologicum De muraena et ophichtho|<AUTHORS> |<YEAR>1789|<PLACE>Upsaliæ|<FOLDER>thunspec_577843346|',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(34,'TifHeaderDocumentname','thunspec_577843346',0,5,NULL,4,'2022-03-08 11:15:56','0'),
+(35,'Creator of digital edition','Common Library Network',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(36,'Font type','Antiqua',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(37,'ATS','schudiss',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(38,'Identifier digital (a)','618299084',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(39,'DocType','monograph',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(40,'TifHeaderImagedescription','|<TYPE>Monographie|<TITLE>Dissertatio medica inauguralis de infestis viventibus intra viventia|<AUTHORS> |<YEAR>1760|<PLACE>Lugduni Batavorum|<FOLDER>schudiss_618299084|',0,5,NULL,5,'2022-03-08 11:16:24','0'),
+(41,'TifHeaderDocumentname','schudiss_618299084',0,5,NULL,5,'2022-03-08 11:16:24','0');
 /*!40000 ALTER TABLE `werkstueckeeigenschaften` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Final view structure for view `schritteids`
+--
+
+/*!50001 DROP VIEW IF EXISTS `schritteids`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = latin1 */;
+/*!50001 SET character_set_results     = latin1 */;
+/*!50001 SET collation_connection      = latin1_swedish_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`goobi`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `schritteids` AS select `schritte`.`SchritteID` AS `schritteID`,`schritte`.`titel` AS `Titel`,`schritte`.`Reihenfolge` AS `Reihenfolge`,`schritte`.`ProzesseID` AS `prozesseID` from `schritte` where `schritte`.`Bearbeitungsstatus` = 1 and `schritte`.`ProzesseID` in (select `schrittfilter`.`prozesseID` from `schrittfilter` where `schrittfilter`.`anzahl` > 1) order by `schritte`.`Reihenfolge` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `schrittfilter`
+--
+
+/*!50001 DROP VIEW IF EXISTS `schrittfilter`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = latin1 */;
+/*!50001 SET character_set_results     = latin1 */;
+/*!50001 SET collation_connection      = latin1_swedish_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`goobi`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `schrittfilter` AS select `schritte`.`ProzesseID` AS `prozesseID`,count(`schritte`.`ProzesseID`) AS `anzahl` from `schritte` where `schritte`.`Bearbeitungsstatus` = 1 group by `schritte`.`ProzesseID` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -1783,6 +2256,6 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2022-03-08 14:37:26
+-- Dump completed on 2024-12-18 10:49:19

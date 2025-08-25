@@ -1,32 +1,32 @@
-<!-- 
- * This file is part of a plugin for Goobi - a Workflow tool for the support of mass digitization.
- * 
- * Visit the websites for more information. 
- *          - https://goobi.io
- *          - https://www.intranda.com
- *          - https://github.com/intranda/goobi
- * 
- * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free
- * Software Foundation; either version 2 of the License, or (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
- * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59
- * Temple Place, Suite 330, Boston, MA 02111-1307 USA
- * 
- -->
+<!--
+    * This file is part of a plugin for Goobi - a Workflow tool for the support of mass digitization.
+    *
+    * Visit the websites for more information.
+    * - https://goobi.io
+    * - https://www.intranda.com
+    * - https://github.com/intranda/goobi
+    *
+    * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free
+    * Software Foundation; either version 2 of the License, or (at your option) any later version.
+    *
+    * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+    * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+    *
+    * You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59
+    * Temple Place, Suite 330, Boston, MA 02111-1307 USA
+    *
+-->
 <config_plugin>
     <!--
         order of configuration is:
-          1.) project name and step name matches
-          2.) step name matches and project is *
-          3.) project name matches and step name is *
-          4.) project name and step name are *
--->
+        1.) project name and step name matches
+        2.) step name matches and project is *
+        3.) project name matches and step name is *
+        4.) project name and step name are *
+    -->
     <config>
         <!-- define plugin type in which screen the plugin is displayed, allowed values are 'part', 'full' (default) or 'both' -->
-        <guiType>full</guiType> 
+        <guiType>full</guiType>
         <!-- which projects to use for (can be more then one, otherwise use *) -->
         <project>*</project>
         <step>*</step>
@@ -36,35 +36,56 @@
         <numberOfImagesPerPage>12</numberOfImagesPerPage>
         <thumbnailsize>200</thumbnailsize>
         <!-- number of thumbnails in preview area, default value is 8 -->
-        <numberOfImagesInPartGUI>4</numberOfImagesInPartGUI>
+        <numberOfImagesInPartGUI>8</numberOfImagesInPartGUI>
         <!-- which image sizes to use for the big image -->
         <thumbnailFormat>jpg</thumbnailFormat>
         <mainImageFormat>jpg</mainImageFormat>
-		<!-- use the high speed JavaScript fullscreen view -->
-        <useJSFullscreen>true</useJSFullscreen>
-        
+        <!-- use the high speed JavaScript fullscreen view -->
+        <useJSFullscreen>false</useJSFullscreen>
+        <!-- Once can define one or more imageSize elements which define the size of the delivered images if useTiles is "false". 
+        The given size if the length of the longer edge of the image. Smaller imageSizes are loaded first, larger ones may only be loaded after zooming in sufficiently-->
         <imagesize>800</imagesize>
         <imagesize>1800</imagesize>
         <imagesize>3000</imagesize>
+        <!-- Size of an edge of the loaded tiles if useTiles is "true". Smaller values increase the number of tiles loaded, but decrease loading times per tile to some degree -->
         <tileSize>256</tileSize>
+        <!-- Scaling factors for the tiles suggested by IIIF. This is interpreted by openseadragon. 
+            Basically, the smallest scale factor is the scale of the tiles at max zoom (a factor of '1' means the original image size is used). The largest scale factor is the scale used for the first loaded tiles. Giving any more scale factors generally has no noticable effect. -->
         <scaleFactors>1</scaleFactors>
         <scaleFactors>32</scaleFactors>
+        <!-- Whether to deliver the image in individual tiles which are loaded simultaneously or as a full image (size determined by <imageSize>). Generally using tiles provides smoother loading and zooming and is also usually faster --> 
         <useTiles>true</useTiles>
+        <!-- Whether to use tiles in the fullscreen mode -->
         <useTilesFullscreen>true</useTilesFullscreen>
-
+        <!-- whether to use shortcut prefixed set for the current goobi user when using arrow keys to navigate the fullscreen view --> 
+        <noShortcutPrefix>false</noShortcutPrefix>
+        <!-- if set to true, only the small thumbnail images are shown, not the larger image to the right -->
+        <thumbnailsOnly>false</thumbnailsOnly>
         <!-- allow deletion of images -->
         <allowDeletion>false</allowDeletion>
-        <deletionCommand>/opt/digiverso/goobi/scripts/deleteImage.sh IMAGE_FOLDER IMAGE_FILE</deletionCommand>
+        <deletion command="/opt/digiverso/goobi/scripts/deleteImage.sh|IMAGE_FOLDER|IMAGE_FILE" />
         <!-- allow rotation of images -->
-        <allowRotation>false</allowRotation>
+        <!-- OPTIONAL attribute @persistentRotationAboveBigImage is used to configure the behaviors of the rotation buttons above the big image, DEFAULT false. -->
+        <!-- If set true and allowRotation is also true, then a click on a rotation button above the big image will also result in a rotation of the actual image file. -->
+        <allowRotation persistentRotationAboveBigImage="false">false</allowRotation>
         <rotationCommands>
-            <left command="/usr/local/bin/mogrify|-rotate|-90|IMAGE_FILE" />
-            <right command="/usr/local/bin/mogrify|-rotate|90|IMAGE_FILE" />
+            <left command="/usr/bin/mogrify|-rotate|-90|IMAGE_FILE" />
+            <right command="/usr/bin/mogrify|-rotate|90|IMAGE_FILE" />
         </rotationCommands>
+        <!-- allow flipping of images -->
+        <allowFlipping>false</allowFlipping>
+        <flippingCommands>
+            <horizontal command="/bin/true" />
+            <vertical command="/bin/true" />
+        </flippingCommands>
         <!-- allow renaming of images -->
         <allowRenaming>false</allowRenaming>
+        <!-- allow reordering of images -->
+        <allowReordering>false</allowReordering>
+        <reorderingPrefix>REORDER_</reorderingPrefix>
         <!-- allow selection of images -->
         <allowSelection>false</allowSelection>
+        <allowSelectionPage>false</allowSelectionPage>
         <allowSelectionAll>false</allowSelectionAll>
         <allowDownload>false</allowDownload>
         <allowDownloadAsPdf>false</allowDownloadAsPdf>
@@ -72,32 +93,35 @@
         <allowTaskFinishButtons>true</allowTaskFinishButtons>
         <!-- configure button to display ocr -->
         <displayocr>true</displayocr>
+          <!-- If true, show image comments and allow comments to be made -->      
+        <showImageComments>false</showImageComments>
+        <!-- If true, the current zoom factor and position is carried over when navigation to the next main image -->
+        <persistZoom>true</persistZoom>
     </config>
-
     <config>
         <!-- which projects to use for (can be more then one, otherwise use *) -->
         <project>My special project</project>
         <project>Archive_Project</project>
         <step>MasterQA</step>
         <step>DerivateQA</step>
-        <!-- which images to use , possible values are master|main|jpeg|source|... -->
+        <!-- which images to use -->
         <foldername>master</foldername>
+        <foldername>main</foldername>
         <!-- how to display the thumbnails -->
         <numberOfImagesPerPage>12</numberOfImagesPerPage>
         <thumbnailsize>200</thumbnailsize>
-        <!-- use the high speed JavaScript fullscreen view -->
-        <useJSFullscreen>true</useJSFullscreen>
         <!-- which image sizes to use for the big image -->
         <imagesize>800</imagesize>
         <imagesize>3000</imagesize>
         <!-- allow deletion of images -->
         <allowDeletion>false</allowDeletion>
-        <deletionCommand>/opt/digiverso/goobi/scripts/deleteImage.sh IMAGE_FOLDER IMAGE_FILE</deletionCommand>
+        <deletion command="/opt/digiverso/goobi/scripts/deleteImage.sh|IMAGE_FOLDER|IMAGE_FILE" />
         <!-- allow rotation of images -->
+        <!-- Without setting the attribute @persistentRotationAboveBigImage, its default value false will be used. -->
         <allowRotation>false</allowRotation>
         <rotationCommands>
-            <left command="/usr/local/bin/mogrify|-rotate|-90|IMAGE_FILE" />
-            <right command="/usr/local/bin/mogrify|-rotate|90|IMAGE_FILE" />
+            <left command="/usr/bin/mogrify|-rotate|-90|IMAGE_FILE" />
+            <right command="/usr/bin/mogrify|-rotate|90|IMAGE_FILE" />
         </rotationCommands>
         <!-- allow renaming of images -->
         <allowRenaming>false</allowRenaming>
@@ -109,30 +133,27 @@
         <allowTaskFinishButtons>false</allowTaskFinishButtons>
         <displayocr>true</displayocr>
     </config>
-
     <config>
         <project>*</project>
         <step>ImageQA</step>
-        <!-- which images to use , possible values are master|main|jpeg|source|... -->
         <foldername>master</foldername>
-        <!-- use the high speed JavaScript fullscreen view -->
-        <useJSFullscreen>true</useJSFullscreen>
         <!-- how to display the thumbnails -->
         <numberOfImagesPerPage>12</numberOfImagesPerPage>
         <thumbnailsize>200</thumbnailsize>
         <!-- which image sizes to use for the big image -->
         <imagesize>800</imagesize>
         <imagesize>3000</imagesize>
-
         <!-- allow renaming of images -->
         <allowRenaming>false</allowRenaming>
         <renamingPattern>
             <field defaultValue="${process:Archive}"></field>
             <field defaultValue="${process:Object}"></field>
-            <field defaultValue="1" number="true" format="0000"></field>
+            <field
+                defaultValue="1"
+                number="true"
+                format="0000"
+            ></field>
         </renamingPattern>
         <displayocr>true</displayocr>
-
     </config>
-
 </config_plugin>

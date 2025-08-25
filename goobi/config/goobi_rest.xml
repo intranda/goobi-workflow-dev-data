@@ -1,6 +1,147 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <config>
 
+    <!-- CURRENT USERS -->
+    <endpoint path="/currentusers">
+        <method name="get">
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>
+        </method>
+    </endpoint>
+
+    <!-- PROCESS JOURNAL -->
+    <endpoint path="/process/.*/journal">     
+        <method name="get">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>   
+        </method>   
+        <method name="put">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>
+        </method>    
+        <method name="post">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>   
+        </method>    
+        <method name="delete">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="haha"/>
+            <allow netmask="127.0.0.0/8" token="haha"/>   
+        </method> 
+    </endpoint>
+
+    <!-- PROCESS METADATA -->
+    <endpoint path="/process/.*/metadata">
+        <method name="get">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>   
+        </method>       
+        <method name="put">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>
+        </method>    
+        <method name="post">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>   
+        </method>    
+        <method name="delete">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="haha"/>
+            <allow netmask="127.0.0.0/8" token="haha"/>   
+        </method>  
+    </endpoint> 
+
+    <!-- PROCESS PROPERTIES -->
+    <endpoint path="/process/.*/property">       
+        <method name="put">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>
+        </method>    
+        <method name="post">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>   
+        </method>    
+        <method name="delete">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="haha"/>
+            <allow netmask="127.0.0.0/8" token="haha"/>   
+        </method>  
+    </endpoint> 
+
+    <!-- PROCESS STEPS -->
+    <endpoint path="/process/.*/step">       
+        <method name="put">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>
+        </method>    
+        <method name="post">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>   
+        </method>    
+        <method name="delete">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="haha"/>
+            <allow netmask="127.0.0.0/8" token="haha"/>   
+        </method>  
+    </endpoint> 
+
+    <!-- PROCESS -->
+    <endpoint path="/process">       
+        <method name="put">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>
+        </method>    
+        <method name="post">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="gaga"/>   
+        </method>    
+        <method name="delete">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="haha"/>
+            <allow netmask="127.0.0.0/8" token="haha"/>   
+        </method>  
+    </endpoint> 
+
+    <!-- GENERAL SETTINGS FOR ALL PATHS STARTING WITH /process/ -->
+    <endpoint path="/process/.*">        
+        <method name="get">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>   
+        </method>  
+        <method name="post">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>   
+        </method>
+        <method name="put">    
+            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+            <allow netmask="127.0.0.0/8" token="test"/>   
+        </method>          
+    </endpoint>
+
+    <!-- ALLOW MESSAGES ENDPOINT -->
+    <endpoint path="/messages/.*">
+        <method name="get">
+            <allow />
+        </method>
+    </endpoint>
+    
+    <!-- GENERAL SETTINGS FOR ALL OTHER PATHS
+    <endpoint path=".*">
+      <method name="post">
+        <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+        <allow netmask="127.0.0.0/8" token="test"/>
+      </method>
+      <method name="get">
+        <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+        <allow netmask="127.0.0.0/8" token="test"/>
+      </method>
+      <method name="put">
+        <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
+        <allow netmask="127.0.0.0/8" token="test"/>
+      </method>
+      <method name="delete">
+        <allow netmask="0:0:0:0:0:0:0:1/128" token="haha"/>
+        <allow netmask="127.0.0.0/8" token="haha"/>
+      </method>
+    </endpoint>
+    -->
+
+    <!-- OTHER SAMPLES
 	<endpoint path="/processes">    
         <cors>    
             <method>GET</method>    
@@ -14,37 +155,7 @@
             <allow />    
         </method>    
     </endpoint>  
-    <endpoint path="/seterrorstep.*">
-        <method name="post">
-            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
-            <allow netmask="127.0.0.0/8" token="test"/>
-        </method>
-    </endpoint>
-    <endpoint path="/addtoprocesslog.*">
-        <method name="post">
-            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
-            <allow netmask="127.0.0.0/8" token="test"/>
-        </method>
-    </endpoint>
-    <endpoint path="/closestep.*">
-        <method name="post">
-            <allow netmask="0:0:0:0:0:0:0:1/128" token="test"/>
-            <allow netmask="127.0.0.0/8" token="test"/>
-        </method>
-    </endpoint>
-    <endpoint path="/process/check.*">
-        <method name="get">
-            <allow netmask="127.0.0.0/8" token="test"/>
-        </method>
-    </endpoint>
-    <endpoint path="/processes/search">
-        <method name="get">
-            <allow netmask="127.0.0.0/8" token="test"/>
-        </method>
-        <method name="post">
-            <allow netmask="127.0.0.0/8" token="test"/>
-        </method>
-    </endpoint>
+
     <endpoint path="/vocabulary.*">
 		<method name="get">
 			<allow />
@@ -53,4 +164,6 @@
 			<allow />
 		</method>
 	</endpoint>
+    -->
+    
 </config>

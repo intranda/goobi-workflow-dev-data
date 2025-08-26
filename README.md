@@ -7,7 +7,28 @@ And the database dump contains sample workflows using these images.
 Please notice that this database dump will overwrite the data of the existing goobi database to reset the data. 
 It expects a running MariaDB or MySQL database on localhost with the name `goobi`, the login `goobi` and the password `goobi`.
 
-## How to use this data
+
+## Preparation
+If the goobi database does not exist yet, do the following:
+
+```bash
+mysql -e "
+DROP DATABASE IF EXISTS goobi;
+DROP USER IF EXISTS 'goobi'@'localhost';
+CREATE DATABASE goobi;
+CREATE USER 'goobi'@'localhost' IDENTIFIED BY 'goobi';
+GRANT ALL PRIVILEGES ON goobi.* TO 'goobi'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;"
+```
+
+Addionally make sure the main folder `/opt/digiverso/` exists and has the correct rights. If the folder is missing do this:
+
+```bash
+sudo mkdir /opt/digiverso
+sudo chown $USER: /opt/digiverso
+```
+
+## Use this demo data content
 To use this dump simply run the following commands:
 
 ```bash
@@ -29,7 +50,7 @@ rm -f $TEMP_FILE_PATH
 mysql -u goobi -pgoobi goobi -e "SOURCE ${GDIR}goobi/db/start.sql"
 
 echo 'STEP 4: Download of ruleset, scripts and docket files from install folder of Goobi workflow'
-GHDIR=https://raw.githubusercontent.com/intranda/goobi-workflow/master/Goobi/install/
+GHDIR=https://raw.githubusercontent.com/intranda/goobi-workflow/master/install/
 wget  -q --show-progress ${GHDIR}rulesets/ruleset.xml -O ${GDIR}goobi/rulesets/ruleset.xml
 wget  -q --show-progress ${GHDIR}scripts/script_createDirMeta.sh -O ${GDIR}goobi/scripts/script_createDirMeta.sh
 wget  -q --show-progress ${GHDIR}scripts/script_createDirUserHome.sh -O ${GDIR}goobi/scripts/script_createDirUserHome.sh
@@ -47,19 +68,21 @@ wget  -q --show-progress ${GHDIR}xslt/font_OpenSansHebrew-Bold.ttf -O ${GDIR}goo
 wget  -q --show-progress ${GHDIR}xslt/font_OpenSansHebrew-Regular.ttf -O ${GDIR}goobi/xslt/font_OpenSansHebrew-Regular.ttf
 
 echo 'STEP 5: Download of current plugins from GitHub releases'
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin_intranda_dashboard_extended-GUI.jar -O ${GDIR}goobi/plugins/GUI/plugin_intranda_dashboard_extended-GUI.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin_intranda_dashboard_extended.jar -O ${GDIR}goobi/plugins/dashboard/plugin_intranda_dashboard_extended.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-opac-pica/releases/latest/download/plugin_intranda_opac_pica.jar -O ${GDIR}goobi/plugins/opac/plugin_intranda_opac_pica.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-opac-marc/releases/latest/download/plugin_intranda_opac_marc.jar -O ${GDIR}goobi/plugins/opac/plugin_intranda_opac_marc.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-rest-intranda/releases/latest/download/plugin_intranda_rest_default.jar -O ${GDIR}goobi/plugins/GUI/plugin_intranda_rest_default.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-statistics-intranda/releases/latest/download/plugin_intranda_statistics-GUI.jar -O ${GDIR}goobi/plugins/GUI/plugin_intranda_statistics-GUI.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-statistics-intranda/releases/latest/download/plugin_intranda_statistics.jar -O ${GDIR}goobi/plugins/statistics/plugin_intranda_statistics.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-fileupload/releases/latest/download/plugin_intranda_step_fileUpload-GUI.jar -O ${GDIR}goobi/plugins/GUI/plugin_intranda_step_fileUpload-GUI.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-fileupload/releases/latest/download/plugin_intranda_step_fileUpload.jar -O ${GDIR}goobi/plugins/step/plugin_intranda_step_fileUpload.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/releases/latest/download/plugin_intranda_step_imageQA-GUI.jar -O ${GDIR}goobi/plugins/GUI/plugin_intranda_step_imageQA-GUI.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/releases/latest/download/plugin_intranda_step_imageQA.jar -O ${GDIR}goobi/plugins/step/plugin_intranda_step_imageQA.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageconverter/releases/latest/download/plugin_intranda_step_imageconverter.jar -O ${GDIR}goobi/plugins/step/plugin_intranda_step_imageconverter.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-validation-imagename/releases/latest/download/plugin_intranda_validation_imagename.jar -O ${GDIR}goobi/plugins/validation/plugin_intranda_validation_imagename.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-api.jar -O ${GDIR}goobi/plugins/GUI/plugin-dashboard-extended-api.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-gui.jar -O ${GDIR}goobi/plugins/GUI/plugin-dashboard-extended-gui.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-lib.jar -O ${GDIR}goobi/plugins/GUI/plugin-dashboard-extended-lib.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-base.jar -O ${GDIR}goobi/plugins/dashboard/plugin-dashboard-extended-base.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-opac-pica/releases/latest/download/plugin-opac-pica-base.jar -O ${GDIR}goobi/plugins/opac/plugin-opac-pica-base.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-opac-marc/releases/latest/download/plugin-opac-marc-base.jar -O ${GDIR}goobi/plugins/opac/plugin-opac-marc-base.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-rest-intranda/releases/latest/download/plugin-rest-intranda-api.jar -O ${GDIR}goobi/plugins/GUI/plugin-rest-intranda-api.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-statistics-intranda/releases/latest/download/plugin-statistics-intranda-gui.jar -O ${GDIR}goobi/plugins/GUI/plugin-statistics-intranda-gui.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-statistics-intranda/releases/latest/download/plugin-statistics-intranda-base.jar -O ${GDIR}goobi/plugins/statistics/plugin-statistics-intranda-base.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-fileupload/releases/latest/download/plugin-step-file-upload-gui.jar -O ${GDIR}goobi/plugins/GUI/plugin-step-file-upload-gui.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-fileupload/releases/latest/download/plugin-step-file-upload-base.jar -O ${GDIR}goobi/plugins/step/plugin-step-file-upload-base.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/releases/latest/download/plugin-step-imageqa-gui.jar -O ${GDIR}goobi/plugins/GUI/plugin-step-imageqa-gui.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/releases/latest/download/plugin-step-imageqa-base.jar -O ${GDIR}goobi/plugins/step/plugin-step-imageqa-base.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-image-converter/releases/latest/download/plugin-step-image-converter-base.jar -O ${GDIR}goobi/plugins/step/plugin-step-image-converter-base.jar
+wget  -q --show-progress https://github.com/intranda/goobi-plugin-validation-imagename/releases/latest/download/plugin-validation-imagename-base.jar -O ${GDIR}goobi/plugins/validation/plugin-validation-imagename-base.jar
 echo 'STEP 6: Development data downloaded and installed. Reset finished.'
 ```
 

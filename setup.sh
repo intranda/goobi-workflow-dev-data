@@ -2,20 +2,32 @@
 GOOBIDIR=/opt/digiverso/
 GITDIR=~/git
 
-echo; echo 'STEP 1: Create folder $GOOBIDIR if it does not exist'
+echo; echo "STEP 1: Create folder $GOOBIDIR if it does not exist"
 if [[ ! -e $GOOBIDIR ]]; then
     sudo mkdir $GOOBIDIR
     sudo chown $USER: $GOOBIDIR
 fi
 
-echo; echo 'STEP 2: Download demo content if not available already'
+echo; echo "STEP 2: Download demo content if not available already"
 rm -rf ${GOOBIDIR}goobi
 [ ! -f ${GOOBIDIR}goobi.zip ] && wget -q --show-progress https://github.com/intranda/goobi-workflow-dev-data/releases/latest/download/goobi.zip -O ${GOOBIDIR}goobi.zip
 
-echo; echo 'STEP 3: Unzip demo content and insert data into the database'
+echo; echo "STEP 3: Unzip demo content"
 unzip -q ${GOOBIDIR}goobi.zip -d ${GOOBIDIR}goobi
 
-echo; echo 'STEP 4: Drop all tables from the database and insert the dump'
+echo; echo "STEP 4: Create database if not exists already"
+if ! mysql -u goobi -pgoobi -e "USE goobi;" 2>/dev/null; then
+    echo "Datenbank existiert nicht, erstelle sie..."
+    mysql -e "
+    DROP DATABASE IF EXISTS goobi;
+    DROP USER IF EXISTS 'goobi'@'localhost';
+    CREATE DATABASE goobi;
+    CREATE USER 'goobi'@'localhost' IDENTIFIED BY 'goobi';
+    GRANT ALL PRIVILEGES ON goobi.* TO 'goobi'@'localhost' WITH GRANT OPTION;
+    FLUSH PRIVILEGES;"
+fi
+
+echo; echo "STEP 5: Drop all tables from the database and insert the dump"
 TEMP_FILE_PATH='./drop_all_tables.sql'
 echo "SET FOREIGN_KEY_CHECKS = 0;" > $TEMP_FILE_PATH
 ( mysqldump --add-drop-table --no-data -u goobi -pgoobi goobi | grep 'DROP TABLE' ) >> $TEMP_FILE_PATH
@@ -24,7 +36,7 @@ mysql -u goobi -pgoobi goobi < $TEMP_FILE_PATH
 rm -f $TEMP_FILE_PATH
 mysql -u goobi -pgoobi goobi -e "SOURCE ${GOOBIDIR}goobi/setup/dump.sql"
 
-echo; echo 'STEP 5: Download of ruleset, scripts and docket files from install folder of Goobi workflow'
+echo; echo "STEP 6: Download of ruleset, scripts and docket files from install folder of Goobi workflow"
 GHDIR=https://raw.githubusercontent.com/intranda/goobi-workflow/master/install/
 wget  -q --show-progress ${GHDIR}rulesets/ruleset.xml -O ${GOOBIDIR}goobi/rulesets/ruleset.xml
 wget  -q --show-progress ${GHDIR}scripts/script_createDirMeta.sh -O ${GOOBIDIR}goobi/scripts/script_createDirMeta.sh
@@ -42,7 +54,7 @@ wget  -q --show-progress ${GHDIR}xslt/font_OpenSans-Semibold.ttf -O ${GOOBIDIR}g
 wget  -q --show-progress ${GHDIR}xslt/font_OpenSansHebrew-Bold.ttf -O ${GOOBIDIR}goobi/xslt/font_OpenSansHebrew-Bold.ttf
 wget  -q --show-progress ${GHDIR}xslt/font_OpenSansHebrew-Regular.ttf -O ${GOOBIDIR}goobi/xslt/font_OpenSansHebrew-Regular.ttf
 
-echo; echo 'STEP 6: Download of current plugins from GitHub releases'
+echo; echo "STEP 7: Download of current plugins from GitHub releases"
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-api.jar -O ${GOOBIDIR}goobi/plugins/GUI/plugin-dashboard-extended-api.jar
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-gui.jar -O ${GOOBIDIR}goobi/plugins/GUI/plugin-dashboard-extended-gui.jar
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-lib.jar -O ${GOOBIDIR}goobi/plugins/GUI/plugin-dashboard-extended-lib.jar
@@ -59,9 +71,9 @@ wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/r
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-image-converter/releases/latest/download/plugin-step-image-converter-base.jar -O ${GOOBIDIR}goobi/plugins/step/plugin-step-image-converter-base.jar
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-validation-imagename/releases/latest/download/plugin-validation-imagename-base.jar -O ${GOOBIDIR}goobi/plugins/validation/plugin-validation-imagename-base.jar
 
-echo; echo 'STEP 7: Clone git repository.'
+echo; echo "STEP 8: Clone git repository."
 if [[ -e $GITDIR/goobi-workflow-core ]]; then
-    echo "Git repository does exist already: $GITDIR/goobi-workflow-core."
+    echo "Git repository $GITDIR/goobi-workflow-core does exist already."
 else
     echo "Are you an intranda team member with access to the intranda gitea server? (y/n)"
     read teammember
@@ -72,20 +84,21 @@ else
 
     cd $GITDIR
     if [[ "$teammember" == "y" ]]; then
-        echo 'Use Gitea as repository to clone source code'
-        git clone git@gitea.intranda.com:goobi-workflow/goobi-workflow-core.git
+        echo "Use Gitea as repository to clone source code"
+        git clone --depth 10 git@gitea.intranda.com:goobi-workflow/goobi-workflow-core.git
     else
-        echo 'Use GitHub as repository to clone source code'
-        git clone git@github.com:intranda/goobi-workflow.git goobi-workflow-core
+        echo "Use GitHub as repository to clone source code"
+        git clone --depth 10 git@github.com:intranda/goobi-workflow.git goobi-workflow-core
     fi
 
-    echo; echo 'STEP 8: Add tomcat context.'
+    echo; echo "STEP 9: Add tomcat context."
     cd goobi-workflow-core
+    git switch develop   
     mkdir -p src/main/webapp/META-INF
     cp "${GOOBIDIR}goobi/setup/context.xml" "src/main/webapp/META-INF/context.xml"
 
-    echo; echo 'STEP 9: Compile application.'
+    echo; echo "STEP 10: Compile application."
     rm src/main/webapp/package-lock.json 
     mvn package
 fi 
-echo; echo 'STEP 10: Development data and workflow-core repository could be setup successfully.'
+echo; echo "STEP 11: Development data and workflow-core repository could be setup successfully."

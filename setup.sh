@@ -10,7 +10,7 @@ fi
 
 echo; echo 'STEP 2: Download demo content if not available already'
 rm -rf ${GOOBIDIR}goobi
-[ ! -f ${GOOBIDIR}goobi.zip ] && wget https://github.com/intranda/goobi-workflow-dev-data/releases/latest/download/goobi.zip -O ${GOOBIDIR}goobi.zip
+[ ! -f ${GOOBIDIR}goobi.zip ] && wget -q --show-progress https://github.com/intranda/goobi-workflow-dev-data/releases/latest/download/goobi.zip -O ${GOOBIDIR}goobi.zip
 
 echo; echo 'STEP 3: Unzip demo content and insert data into the database'
 unzip -q ${GOOBIDIR}goobi.zip -d ${GOOBIDIR}goobi

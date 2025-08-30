@@ -23,68 +23,8 @@ FLUSH PRIVILEGES;"
 
 Addionally make sure the main folder `/opt/digiverso/` exists and has the correct rights. If the folder is missing do this:
 
-```bash
-sudo mkdir /opt/digiverso
-sudo chown $USER: /opt/digiverso
-```
-
-## Use this demo data content
-To use this dump simply run the following commands:
-
-```bash
-echo 'STEP 1: Download demo content if not available already'
-GDIR=/opt/digiverso/
-rm -rf ${GDIR}goobi
-[ ! -f ${GDIR}goobi.zip ] && wget https://github.com/intranda/goobi-workflow-dev-data/releases/latest/download/goobi.zip -O ${GDIR}goobi.zip
-
-echo 'STEP 2: Unzip demo content and insert data into the database'
-unzip -q ${GDIR}goobi.zip -d ${GDIR}goobi
-
-echo 'STEP 3: Drop all tables from the database and insert the dump'
-TEMP_FILE_PATH='./drop_all_tables.sql'
-echo "SET FOREIGN_KEY_CHECKS = 0;" > $TEMP_FILE_PATH
-( mysqldump --add-drop-table --no-data -u goobi -pgoobi goobi | grep 'DROP TABLE' ) >> $TEMP_FILE_PATH
-echo "SET FOREIGN_KEY_CHECKS = 1;" >> $TEMP_FILE_PATH
-mysql -u goobi -pgoobi goobi < $TEMP_FILE_PATH
-rm -f $TEMP_FILE_PATH
-mysql -u goobi -pgoobi goobi -e "SOURCE ${GDIR}goobi/db/start.sql"
-
-echo 'STEP 4: Download of ruleset, scripts and docket files from install folder of Goobi workflow'
-GHDIR=https://raw.githubusercontent.com/intranda/goobi-workflow/master/install/
-wget  -q --show-progress ${GHDIR}rulesets/ruleset.xml -O ${GDIR}goobi/rulesets/ruleset.xml
-wget  -q --show-progress ${GHDIR}scripts/script_createDirMeta.sh -O ${GDIR}goobi/scripts/script_createDirMeta.sh
-wget  -q --show-progress ${GHDIR}scripts/script_createDirUserHome.sh -O ${GDIR}goobi/scripts/script_createDirUserHome.sh
-wget  -q --show-progress ${GHDIR}scripts/script_createSymLink.sh -O ${GDIR}goobi/scripts/script_createSymLink.sh
-wget  -q --show-progress ${GHDIR}scripts/script_deleteSymLink.sh -O ${GDIR}goobi/scripts/script_deleteSymLink.sh
-wget  -q --show-progress ${GHDIR}xslt/docket.xsl -O ${GDIR}goobi/xslt/docket.xsl
-wget  -q --show-progress ${GHDIR}xslt/docket_multipage.xsl -O ${GDIR}goobi/xslt/docket_multipage.xsl
-wget  -q --show-progress ${GHDIR}xslt/docket_metadata.xsl -O ${GDIR}goobi/xslt/docket_metadata.xsl
-wget  -q --show-progress ${GHDIR}xslt/config.xml -O ${GDIR}goobi/xslt/config.xml
-wget  -q --show-progress ${GHDIR}xslt/logo.png -O ${GDIR}goobi/xslt/logo.png
-wget  -q --show-progress ${GHDIR}xslt/placeholder.png -O ${GDIR}goobi/xslt/placeholder.png
-wget  -q --show-progress ${GHDIR}xslt/font_OpenSans-Regular.ttf -O ${GDIR}goobi/xslt/font_OpenSans-Regular.ttf
-wget  -q --show-progress ${GHDIR}xslt/font_OpenSans-Semibold.ttf -O ${GDIR}goobi/xslt/font_OpenSans-Semibold.ttf
-wget  -q --show-progress ${GHDIR}xslt/font_OpenSansHebrew-Bold.ttf -O ${GDIR}goobi/xslt/font_OpenSansHebrew-Bold.ttf
-wget  -q --show-progress ${GHDIR}xslt/font_OpenSansHebrew-Regular.ttf -O ${GDIR}goobi/xslt/font_OpenSansHebrew-Regular.ttf
-
-echo 'STEP 5: Download of current plugins from GitHub releases'
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-api.jar -O ${GDIR}goobi/plugins/GUI/plugin-dashboard-extended-api.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-gui.jar -O ${GDIR}goobi/plugins/GUI/plugin-dashboard-extended-gui.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-lib.jar -O ${GDIR}goobi/plugins/GUI/plugin-dashboard-extended-lib.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-dashboard-extended/releases/latest/download/plugin-dashboard-extended-base.jar -O ${GDIR}goobi/plugins/dashboard/plugin-dashboard-extended-base.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-opac-pica/releases/latest/download/plugin-opac-pica-base.jar -O ${GDIR}goobi/plugins/opac/plugin-opac-pica-base.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-opac-marc/releases/latest/download/plugin-opac-marc-base.jar -O ${GDIR}goobi/plugins/opac/plugin-opac-marc-base.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-rest-intranda/releases/latest/download/plugin-rest-intranda-api.jar -O ${GDIR}goobi/plugins/GUI/plugin-rest-intranda-api.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-statistics-intranda/releases/latest/download/plugin-statistics-intranda-gui.jar -O ${GDIR}goobi/plugins/GUI/plugin-statistics-intranda-gui.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-statistics-intranda/releases/latest/download/plugin-statistics-intranda-base.jar -O ${GDIR}goobi/plugins/statistics/plugin-statistics-intranda-base.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-fileupload/releases/latest/download/plugin-step-file-upload-gui.jar -O ${GDIR}goobi/plugins/GUI/plugin-step-file-upload-gui.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-fileupload/releases/latest/download/plugin-step-file-upload-base.jar -O ${GDIR}goobi/plugins/step/plugin-step-file-upload-base.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/releases/latest/download/plugin-step-imageqa-gui.jar -O ${GDIR}goobi/plugins/GUI/plugin-step-imageqa-gui.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-imageqa/releases/latest/download/plugin-step-imageqa-base.jar -O ${GDIR}goobi/plugins/step/plugin-step-imageqa-base.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-image-converter/releases/latest/download/plugin-step-image-converter-base.jar -O ${GDIR}goobi/plugins/step/plugin-step-image-converter-base.jar
-wget  -q --show-progress https://github.com/intranda/goobi-plugin-validation-imagename/releases/latest/download/plugin-validation-imagename-base.jar -O ${GDIR}goobi/plugins/validation/plugin-validation-imagename-base.jar
-echo 'STEP 6: Development data downloaded and installed. Reset finished.'
-```
+## Execution
+Simply call the `setup.sh` script to let Goobi workflow be cloned and enriched with demo data for development.
 
 ## More information
 More information about how this is used can be found in the Goobi workflow documentation in the chapter for the developers here:

@@ -10,10 +10,10 @@ fi
 
 echo; echo "STEP 2: Download demo content if not available already"
 rm -rf ${GOOBIDIR}goobi
-[ ! -f ${GOOBIDIR}goobi.zip ] && wget -q --show-progress https://github.com/intranda/goobi-workflow-dev-data/releases/latest/download/goobi.zip -O ${GOOBIDIR}goobi.zip
+[ ! -f ${GOOBIDIR}workflow.zip ] && wget -q --show-progress https://github.com/intranda/goobi-dev-data/releases/latest/download/workflow.zip -O ${GOOBIDIR}workflow.zip
 
 echo; echo "STEP 3: Unzip demo content"
-unzip -q ${GOOBIDIR}goobi.zip -d ${GOOBIDIR}goobi
+unzip -q ${GOOBIDIR}workflow.zip -d ${GOOBIDIR}goobi
 
 echo; echo "STEP 4: Create database if not exists already"
 if ! mysql -u goobi -pgoobi -e "USE goobi;" 2>/dev/null; then
@@ -72,8 +72,8 @@ wget  -q --show-progress https://github.com/intranda/goobi-plugin-step-image-con
 wget  -q --show-progress https://github.com/intranda/goobi-plugin-validation-imagename/releases/latest/download/plugin-validation-imagename-base.jar -O ${GOOBIDIR}goobi/plugins/validation/plugin-validation-imagename-base.jar
 
 echo; echo "STEP 8: Clone git repository."
-if [[ -e $GITDIR/goobi-workflow-core ]]; then
-    echo "Git repository $GITDIR/goobi-workflow-core does exist already."
+if [[ -e $GITDIR/goobi-workflow/goobi-workflow-core ]]; then
+    echo "Git repository $GITDIR/goobi-workflow/goobi-workflow-core does exist already."
 else
     echo "Are you an intranda team member with access to the intranda gitea server? (y/n)"
     read teammember
@@ -83,6 +83,8 @@ else
     fi
 
     cd $GITDIR
+    mkdir -p $GITDIR/goobi-workflow
+    cd goobi-workflow
     if [[ "$teammember" == "y" ]]; then
         echo "Use Gitea as repository to clone source code"
         git clone --depth 10 git@gitea.intranda.com:goobi-workflow/goobi-workflow-core.git

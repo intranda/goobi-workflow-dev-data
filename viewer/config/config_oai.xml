@@ -1,0 +1,8 @@
+<config>
+    <identifyTags>
+        <baseURL useInRequestElement="true">http://localhost/viewer/oai</baseURL>
+        <adminEmail>support@intranda.com</adminEmail>
+    </identifyTags>
+    <urnResolverUrl>http://localhost/viewer/resolver?urn=</urnResolverUrl>
+    <piResolverUrl>http://localhost/viewer/piresolver?id=</piResolverUrl>
+</config>

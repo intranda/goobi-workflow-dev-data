@@ -1,4 +1,4 @@
-# Demo content for Goobi workflow development purposes
+# Installer and demo content for Goobi workflow and Goobi viewer developers
 
 This repository holds simplified installers for developers of Goobi workflow and Goobi viewer. It contains three books with images and a METS files each for Goobi workflow. 
 

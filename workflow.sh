@@ -34,7 +34,7 @@ echo "SET FOREIGN_KEY_CHECKS = 0;" > $TEMP_FILE_PATH
 echo "SET FOREIGN_KEY_CHECKS = 1;" >> $TEMP_FILE_PATH
 mysql -u goobi -pgoobi goobi < $TEMP_FILE_PATH
 rm -f $TEMP_FILE_PATH
-mysql -u goobi -pgoobi goobi -e "SOURCE ${GOOBIDIR}goobi/setup/dump.sql"
+mysql -u goobi -pgoobi goobi -e "SOURCE ${GOOBIDIR}goobi/install/dump.sql"
 
 echo; echo "STEP 6: Download of ruleset, scripts and docket files from install folder of Goobi workflow"
 GHDIR=https://raw.githubusercontent.com/intranda/goobi-workflow/master/install/
@@ -97,7 +97,7 @@ else
     cd goobi-workflow-core
     git switch develop   
     mkdir -p src/main/webapp/META-INF
-    cp "${GOOBIDIR}goobi/setup/context.xml" "src/main/webapp/META-INF/context.xml"
+    cp "${GOOBIDIR}goobi/install/context.xml" "src/main/webapp/META-INF/context.xml"
 
     echo; echo "STEP 10: Compile application."
     rm src/main/webapp/package-lock.json 

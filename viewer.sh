@@ -14,6 +14,7 @@ rm -rf ${GOOBIDIR}viewer
 
 echo; echo "STEP 3: Unzip zip content"
 unzip -q ${GOOBIDIR}viewer.zip -d ${GOOBIDIR}viewer
+rm ${GOOBIDIR}viewer.zip
 
 echo; echo "STEP 4: Create database if not exists already"
 if ! mysql -u viewer -pviewer -e "USE viewer;" 2>/dev/null; then

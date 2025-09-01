@@ -2,16 +2,18 @@
 <config>
     <urls>
         <metadata>
-            <sourcefile>http://localhost/viewer/sourcefile?id=</sourcefile>
-            <marc>http://localhost/viewer/oai?verb=GetRecord&amp;metadataPrefix=marcxml&amp;identifier=</marc>
-            <dc>http://localhost/viewer/oai?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=</dc>
-            <ese>http://localhost/viewer/oai?verb=GetRecord&amp;metadataPrefix=europeana&amp;identifier=</ese>
+            <sourcefile>http://localhost:8080/viewer/sourcefile?id=</sourcefile>
+            <marc>http://localhost:8080/viewer/oai?verb=GetRecord&amp;metadataPrefix=marcxml&amp;identifier=</marc>
+            <dc>http://localhost:8080/viewer/oai?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=</dc>
+            <ese>http://localhost:8080/viewer/oai?verb=GetRecord&amp;metadataPrefix=europeana&amp;identifier=</ese>
         </metadata>
 
-        <contentServerWrapper>http://localhost/viewer/content/</contentServerWrapper>
-        <download>http://localhost/viewer/download/</download>
-        <rest>http://localhost/viewer/api/v1/</rest>
-        <connectorVersion>http://viewer:8080/oai/tools?action=getVersion</connectorVersion>
+        <downloadhttp://localhost:8080/viewer/download/</download>
+        <rest>http://localhost:8080/viewer/api/v1/</rest>
+        <solr>https://viewer.goobi.io/solr/current</solr>
+        <!--
+        <solr>http://localhost:8983/solr/collection1</solr>
+        -->
     </urls>
 
     <viewer>

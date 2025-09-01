@@ -1,8 +1,9 @@
--- MariaDB dump 10.19-11.4.5-MariaDB, for debian-linux-gnu (x86_64)
+/*M!999999\- enable the sandbox mode */ 
+-- MariaDB dump 10.19-12.0.2-MariaDB, for osx10.20 (arm64)
 --
 -- Host: localhost    Database: viewer
 -- ------------------------------------------------------
--- Server version	11.4.5-MariaDB-ubu2404
+-- Server version	12.0.2-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -37,8 +38,10 @@ CREATE TABLE `PersistentCMSComponent_ATTRIBUTES` (
 
 LOCK TABLES `PersistentCMSComponent_ATTRIBUTES` WRITE;
 /*!40000 ALTER TABLE `PersistentCMSComponent_ATTRIBUTES` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `PersistentCMSComponent_ATTRIBUTES` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `annotations_comments`
@@ -71,8 +74,10 @@ CREATE TABLE `annotations_comments` (
 
 LOCK TABLES `annotations_comments` WRITE;
 /*!40000 ALTER TABLE `annotations_comments` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `annotations_comments` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `annotations_crowdsourcing`
@@ -105,8 +110,10 @@ CREATE TABLE `annotations_crowdsourcing` (
 
 LOCK TABLES `annotations_crowdsourcing` WRITE;
 /*!40000 ALTER TABLE `annotations_crowdsourcing` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `annotations_crowdsourcing` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `bookshelf_group_shares`
@@ -131,8 +138,10 @@ CREATE TABLE `bookshelf_group_shares` (
 
 LOCK TABLES `bookshelf_group_shares` WRITE;
 /*!40000 ALTER TABLE `bookshelf_group_shares` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `bookshelf_group_shares` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `bookshelf_items`
@@ -164,8 +173,10 @@ CREATE TABLE `bookshelf_items` (
 
 LOCK TABLES `bookshelf_items` WRITE;
 /*!40000 ALTER TABLE `bookshelf_items` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `bookshelf_items` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `bookshelves`
@@ -194,8 +205,10 @@ CREATE TABLE `bookshelves` (
 
 LOCK TABLES `bookshelves` WRITE;
 /*!40000 ALTER TABLE `bookshelves` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `bookshelves` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `client_applications`
@@ -224,10 +237,12 @@ CREATE TABLE `client_applications` (
 
 LOCK TABLES `client_applications` WRITE;
 /*!40000 ALTER TABLE `client_applications` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `client_applications` VALUES
 (1,'NON_APPLICABLE','74b2b989-753f-4eea-a3f9-8fa7243f3966',NULL,'2025-03-04 13:01:07.921595','2025-03-04 13:01:07.921575',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `client_applications` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_categories`
@@ -250,8 +265,10 @@ CREATE TABLE `cms_categories` (
 
 LOCK TABLES `cms_categories` WRITE;
 /*!40000 ALTER TABLE `cms_categories` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_categories` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_collections`
@@ -280,8 +297,10 @@ CREATE TABLE `cms_collections` (
 
 LOCK TABLES `cms_collections` WRITE;
 /*!40000 ALTER TABLE `cms_collections` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_collections` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_components`
@@ -311,12 +330,13 @@ CREATE TABLE `cms_components` (
 
 LOCK TABLES `cms_components` WRITE;
 /*!40000 ALTER TABLE `cms_components` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `cms_components` VALUES
-(1,2,'PUBLISHED','image',1,NULL),
-(2,3,'PUBLISHED','htmltext',1,NULL),
+(2,2,'PUBLISHED','htmltext',1,NULL),
 (3,1,'PUBLISHED','htmltext',1,NULL);
 /*!40000 ALTER TABLE `cms_components` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_content`
@@ -381,12 +401,13 @@ CREATE TABLE `cms_content` (
 
 LOCK TABLES `cms_content` WRITE;
 /*!40000 ALTER TABLE `cms_content` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `cms_content` VALUES
-(1,'media','image',0,1,NULL,0,NULL,NULL,NULL,NULL,NULL,0,0,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,0,NULL,NULL,0,NULL,NULL,NULL,NULL,0,NULL,NULL,NULL,NULL),
 (2,'mediumtext','text',0,3,NULL,0,NULL,NULL,NULL,NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,'{\"de\":[\"<p>The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. It is used as central basis for an online digital library and offers various functionalities as browsing through digital collections, complex full-text searches, displaying images based on the IIIF standard, deliver audio and video material and a lot more.</p>\"]}',NULL,0,NULL,0,NULL,NULL,0,NULL,NULL,NULL,NULL,0,NULL,NULL,NULL,NULL),
-(3,'mediumtext','text',0,2,NULL,0,NULL,NULL,NULL,NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,'{\"de\":[\"<figure class=\\\"tpl-simple__media\\\">\\n<figcaption></figcaption>\\n</figure>\\n<div class=\\\"tpl-simple__text\\\">\\n<h3>Metadata handling</h3>\\n<p>A consistent use of standardised metadata format (e.g. METS or LIDO) allows to present data from various sources. Additionally the viewer can be fully integrated into Goobi, the popular open-source workflow management software for digitisation projects, thus creating a seamless transition from the book to the web presentation.</p>\\n<h3><a id=\\\"user-content-content-and-access\\\" class=\\\"anchor\\\" href=\\\"https://github.com/intranda/goobi-viewer-core#content-and-access\\\"></a>Content and access</h3>\\n<p>The Goobi viewer handles the entire visualisation of the digitised material. Based on standardised metadata formats, it not only displays the material but also offers website visitors a range of useful tools that help them to navigate and even to contribute their own content – for example a page turning/location function and quick links from the digital index. Content inside of the Goobi viewer is available for download as small parts (e.g. individual chapters) or as a complete work in the form of archivable PDF/A files. Beside this there is a licensing system embedded to control the access to special content by granting an authorisation for example to certain IP addresses or to individual users.</p>\\n<h3><a id=\\\"user-content-layout\\\" class=\\\"anchor\\\" href=\\\"https://github.com/intranda/goobi-viewer-core#layout\\\"></a>Layout</h3>\\n<p>The layout of the Goobi viewer is based on a sophisticated templating engine with highly configurable skins to offer a wide range of visual display options and to allow an integration fully into a given corporate design.</p>\\n</div>\"]}',NULL,0,NULL,0,NULL,NULL,0,NULL,NULL,NULL,NULL,0,NULL,NULL,NULL,NULL);
+(3,'mediumtext','text',0,2,NULL,0,NULL,NULL,NULL,NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,'{\"de\":[\"<figure class=\\\"tpl-simple__media\\\">\\r\\n<figcaption></figcaption>\\r\\n</figure>\\r\\n<div class=\\\"tpl-simple__text\\\">\\r\\n<h3>Metadata handling</h3>\\r\\n<p>A consistent use of standardised metadata format (e.g. METS or LIDO) allows to present data from various sources. Additionally the viewer can be fully integrated into Goobi, the popular open-source workflow management software for digitisation projects, thus creating a seamless transition from the book to the web presentation.</p>\\r\\n<h3><a id=\\\"user-content-content-and-access\\\" class=\\\"anchor\\\" href=\\\"https://github.com/intranda/goobi-viewer-core#content-and-access\\\"></a>Content and access</h3>\\r\\n<p>The Goobi viewer handles the entire visualisation of the digitised material. Based on standardised metadata formats, it not only displays the material but also offers website visitors a range of useful tools that help them to navigate and even to contribute their own content – for example a page turning/location function and quick links from the digital index. Content inside of the Goobi viewer is available for download as small parts (e.g. individual chapters) or as a complete work in the form of archivable PDF/A files. Beside this there is a licensing system embedded to control the access to special content by granting an authorisation for example to certain IP addresses or to individual users.</p>\\r\\n<h3><a id=\\\"user-content-layout\\\" class=\\\"anchor\\\" href=\\\"https://github.com/intranda/goobi-viewer-core#layout\\\"></a>Layout</h3>\\r\\n<p>The layout of the Goobi viewer is based on a sophisticated templating engine with highly configurable skins to offer a wide range of visual display options and to allow an integration fully into a given corporate design.</p>\\r\\n</div>\"]}',NULL,0,NULL,0,NULL,NULL,0,NULL,NULL,NULL,NULL,0,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `cms_content` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_content_imagelist_categories`
@@ -411,8 +432,10 @@ CREATE TABLE `cms_content_imagelist_categories` (
 
 LOCK TABLES `cms_content_imagelist_categories` WRITE;
 /*!40000 ALTER TABLE `cms_content_imagelist_categories` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_content_imagelist_categories` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_content_pagelist_categories`
@@ -437,8 +460,10 @@ CREATE TABLE `cms_content_pagelist_categories` (
 
 LOCK TABLES `cms_content_pagelist_categories` WRITE;
 /*!40000 ALTER TABLE `cms_content_pagelist_categories` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_content_pagelist_categories` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_geomap`
@@ -463,8 +488,10 @@ CREATE TABLE `cms_geomap` (
 
 LOCK TABLES `cms_geomap` WRITE;
 /*!40000 ALTER TABLE `cms_geomap` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_geomap` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_geomap_features`
@@ -487,8 +514,10 @@ CREATE TABLE `cms_geomap_features` (
 
 LOCK TABLES `cms_geomap_features` WRITE;
 /*!40000 ALTER TABLE `cms_geomap_features` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_geomap_features` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_geomap_featureset`
@@ -502,10 +531,13 @@ CREATE TABLE `cms_geomap_featureset` (
   `feature_source` varchar(31) DEFAULT NULL,
   `marker` varchar(255) DEFAULT NULL,
   `name` mediumtext DEFAULT NULL,
-  `aggregate_results` tinyint(1) DEFAULT 0,
   `marker_title_field` varchar(255) DEFAULT NULL,
   `solr_query` text DEFAULT NULL,
   `owner_geomap` bigint(20) DEFAULT NULL,
+  `item_filter_field` varchar(255) DEFAULT NULL,
+  `metadata_list_item` varchar(255) DEFAULT NULL,
+  `metadata_list_marker` varchar(255) DEFAULT NULL,
+  `search_scope` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`featureset_id`),
   KEY `FK_cms_geomap_featureset_owner_geomap` (`owner_geomap`),
   CONSTRAINT `FK_cms_geomap_featureset_owner_geomap` FOREIGN KEY (`owner_geomap`) REFERENCES `cms_geomap` (`geomap_id`)
@@ -518,8 +550,10 @@ CREATE TABLE `cms_geomap_featureset` (
 
 LOCK TABLES `cms_geomap_featureset` WRITE;
 /*!40000 ALTER TABLE `cms_geomap_featureset` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_geomap_featureset` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_geomap_translation`
@@ -546,8 +580,10 @@ CREATE TABLE `cms_geomap_translation` (
 
 LOCK TABLES `cms_geomap_translation` WRITE;
 /*!40000 ALTER TABLE `cms_geomap_translation` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_geomap_translation` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_highlights`
@@ -579,8 +615,10 @@ CREATE TABLE `cms_highlights` (
 
 LOCK TABLES `cms_highlights` WRITE;
 /*!40000 ALTER TABLE `cms_highlights` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_highlights` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_media_item_cms_categories`
@@ -605,8 +643,10 @@ CREATE TABLE `cms_media_item_cms_categories` (
 
 LOCK TABLES `cms_media_item_cms_categories` WRITE;
 /*!40000 ALTER TABLE `cms_media_item_cms_categories` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_media_item_cms_categories` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_media_item_metadata`
@@ -631,17 +671,10 @@ CREATE TABLE `cms_media_item_metadata` (
 
 LOCK TABLES `cms_media_item_metadata` WRITE;
 /*!40000 ALTER TABLE `cms_media_item_metadata` DISABLE KEYS */;
-INSERT INTO `cms_media_item_metadata` VALUES
-(NULL,'de',NULL,1),
-('','en','',1),
-(NULL,'nn',NULL,1),
-(NULL,'es',NULL,1),
-(NULL,'he',NULL,1),
-(NULL,'fr',NULL,1),
-(NULL,'ar',NULL,1),
-(NULL,'nb',NULL,1);
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_media_item_metadata` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_media_items`
@@ -667,10 +700,10 @@ CREATE TABLE `cms_media_items` (
 
 LOCK TABLES `cms_media_items` WRITE;
 /*!40000 ALTER TABLE `cms_media_items` DISABLE KEYS */;
-INSERT INTO `cms_media_items` VALUES
-(1,'',0,'goobi_viewer.png','',1);
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_media_items` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_navigation_items`
@@ -704,6 +737,7 @@ CREATE TABLE `cms_navigation_items` (
 
 LOCK TABLES `cms_navigation_items` WRITE;
 /*!40000 ALTER TABLE `cms_navigation_items` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `cms_navigation_items` VALUES
 (1,0,'reference',0,'home',0,0,'index',NULL,NULL),
 (2,0,'reference',0,'search',0,1,'search',NULL,NULL),
@@ -711,6 +745,7 @@ INSERT INTO `cms_navigation_items` VALUES
 (4,0,'reference',0,'timematrix',0,3,'timematrix',NULL,NULL);
 /*!40000 ALTER TABLE `cms_navigation_items` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_page_cms_categories`
@@ -735,8 +770,10 @@ CREATE TABLE `cms_page_cms_categories` (
 
 LOCK TABLES `cms_page_cms_categories` WRITE;
 /*!40000 ALTER TABLE `cms_page_cms_categories` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_page_cms_categories` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_page_sidebar_elements`
@@ -772,11 +809,13 @@ CREATE TABLE `cms_page_sidebar_elements` (
 
 LOCK TABLES `cms_page_sidebar_elements` WRITE;
 /*!40000 ALTER TABLE `cms_page_sidebar_elements` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `cms_page_sidebar_elements` VALUES
 (1,'CUSTOM','WIDGET_RSSFEED',1,1,NULL,NULL,1),
 (2,'DEFAULT','WIDGET_BROWSING',0,1,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `cms_page_sidebar_elements` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_page_templates`
@@ -807,8 +846,10 @@ CREATE TABLE `cms_page_templates` (
 
 LOCK TABLES `cms_page_templates` WRITE;
 /*!40000 ALTER TABLE `cms_page_templates` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_page_templates` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_pages`
@@ -844,10 +885,12 @@ CREATE TABLE `cms_pages` (
 
 LOCK TABLES `cms_pages` WRITE;
 /*!40000 ALTER TABLE `cms_pages` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `cms_pages` VALUES
-(1,'2025-03-04 13:04:19.095609','2025-03-04 13:54:01.924953','',NULL,'','','PUBLISHED','',0,'',NULL,'{\"de\":[\"Goobi: Digital library framework\"]}',0,0,'');
+(1,'2025-03-04 13:04:19.095609','2025-09-01 11:19:34.033671','',NULL,'','','PUBLISHED','',0,'',NULL,'{\"de\":[\"Goobi: Digital library framework\"]}',0,0,'');
 /*!40000 ALTER TABLE `cms_pages` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_properties`
@@ -873,8 +916,10 @@ CREATE TABLE `cms_properties` (
 
 LOCK TABLES `cms_properties` WRITE;
 /*!40000 ALTER TABLE `cms_properties` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_properties` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_record_notes`
@@ -903,8 +948,10 @@ CREATE TABLE `cms_record_notes` (
 
 LOCK TABLES `cms_record_notes` WRITE;
 /*!40000 ALTER TABLE `cms_record_notes` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_record_notes` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_sliders`
@@ -934,8 +981,10 @@ CREATE TABLE `cms_sliders` (
 
 LOCK TABLES `cms_sliders` WRITE;
 /*!40000 ALTER TABLE `cms_sliders` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_sliders` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_static_pages`
@@ -958,10 +1007,12 @@ CREATE TABLE `cms_static_pages` (
 
 LOCK TABLES `cms_static_pages` WRITE;
 /*!40000 ALTER TABLE `cms_static_pages` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `cms_static_pages` VALUES
 (1,1,'index');
 /*!40000 ALTER TABLE `cms_static_pages` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cms_template_cms_categories`
@@ -986,8 +1037,10 @@ CREATE TABLE `cms_template_cms_categories` (
 
 LOCK TABLES `cms_template_cms_categories` WRITE;
 /*!40000 ALTER TABLE `cms_template_cms_categories` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cms_template_cms_categories` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `comment_groups`
@@ -1019,10 +1072,12 @@ CREATE TABLE `comment_groups` (
 
 LOCK TABLES `comment_groups` WRITE;
 /*!40000 ALTER TABLE `comment_groups` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `comment_groups` VALUES
 (1,1,'admin__comment_groups_all_comments_desc',1,0,0,1,NULL,'admin__comment_groups_all_comments_title',NULL);
 /*!40000 ALTER TABLE `comment_groups` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cookie_banner`
@@ -1047,8 +1102,10 @@ CREATE TABLE `cookie_banner` (
 
 LOCK TABLES `cookie_banner` WRITE;
 /*!40000 ALTER TABLE `cookie_banner` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cookie_banner` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cs_campaign_log`
@@ -1076,8 +1133,10 @@ CREATE TABLE `cs_campaign_log` (
 
 LOCK TABLES `cs_campaign_log` WRITE;
 /*!40000 ALTER TABLE `cs_campaign_log` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cs_campaign_log` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cs_campaign_record_page_statistic_annotators`
@@ -1102,8 +1161,10 @@ CREATE TABLE `cs_campaign_record_page_statistic_annotators` (
 
 LOCK TABLES `cs_campaign_record_page_statistic_annotators` WRITE;
 /*!40000 ALTER TABLE `cs_campaign_record_page_statistic_annotators` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cs_campaign_record_page_statistic_annotators` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cs_campaign_record_page_statistic_reviewers`
@@ -1128,8 +1189,10 @@ CREATE TABLE `cs_campaign_record_page_statistic_reviewers` (
 
 LOCK TABLES `cs_campaign_record_page_statistic_reviewers` WRITE;
 /*!40000 ALTER TABLE `cs_campaign_record_page_statistic_reviewers` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cs_campaign_record_page_statistic_reviewers` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cs_campaign_record_page_statistics`
@@ -1159,8 +1222,10 @@ CREATE TABLE `cs_campaign_record_page_statistics` (
 
 LOCK TABLES `cs_campaign_record_page_statistics` WRITE;
 /*!40000 ALTER TABLE `cs_campaign_record_page_statistics` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cs_campaign_record_page_statistics` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cs_campaign_record_statistic_annotators`
@@ -1185,8 +1250,10 @@ CREATE TABLE `cs_campaign_record_statistic_annotators` (
 
 LOCK TABLES `cs_campaign_record_statistic_annotators` WRITE;
 /*!40000 ALTER TABLE `cs_campaign_record_statistic_annotators` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cs_campaign_record_statistic_annotators` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cs_campaign_record_statistic_reviewers`
@@ -1211,8 +1278,10 @@ CREATE TABLE `cs_campaign_record_statistic_reviewers` (
 
 LOCK TABLES `cs_campaign_record_statistic_reviewers` WRITE;
 /*!40000 ALTER TABLE `cs_campaign_record_statistic_reviewers` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cs_campaign_record_statistic_reviewers` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cs_campaign_record_statistics`
@@ -1241,8 +1310,10 @@ CREATE TABLE `cs_campaign_record_statistics` (
 
 LOCK TABLES `cs_campaign_record_statistics` WRITE;
 /*!40000 ALTER TABLE `cs_campaign_record_statistics` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cs_campaign_record_statistics` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cs_campaign_translations`
@@ -1268,8 +1339,10 @@ CREATE TABLE `cs_campaign_translations` (
 
 LOCK TABLES `cs_campaign_translations` WRITE;
 /*!40000 ALTER TABLE `cs_campaign_translations` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cs_campaign_translations` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cs_campaigns`
@@ -1313,8 +1386,10 @@ CREATE TABLE `cs_campaigns` (
 
 LOCK TABLES `cs_campaigns` WRITE;
 /*!40000 ALTER TABLE `cs_campaigns` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cs_campaigns` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `cs_questions`
@@ -1343,8 +1418,10 @@ CREATE TABLE `cs_questions` (
 
 LOCK TABLES `cs_questions` WRITE;
 /*!40000 ALTER TABLE `cs_questions` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `cs_questions` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `custom_sidebar_widgets`
@@ -1377,10 +1454,12 @@ CREATE TABLE `custom_sidebar_widgets` (
 
 LOCK TABLES `custom_sidebar_widgets` WRITE;
 /*!40000 ALTER TABLE `custom_sidebar_widgets` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `custom_sidebar_widgets` VALUES
 (1,'RssFeedSidebarWidget',0,'','','{\"de\":[\"Neuzugänge\"],\"en\":[\"New records\"]}',NULL,NULL,'',5,NULL,1,'DATECREATED');
 /*!40000 ALTER TABLE `custom_sidebar_widgets` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `disclaimer`
@@ -1406,8 +1485,10 @@ CREATE TABLE `disclaimer` (
 
 LOCK TABLES `disclaimer` WRITE;
 /*!40000 ALTER TABLE `disclaimer` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `disclaimer` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `download_job_observers`
@@ -1430,8 +1511,10 @@ CREATE TABLE `download_job_observers` (
 
 LOCK TABLES `download_job_observers` WRITE;
 /*!40000 ALTER TABLE `download_job_observers` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `download_job_observers` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `download_jobs`
@@ -1462,8 +1545,10 @@ CREATE TABLE `download_jobs` (
 
 LOCK TABLES `download_jobs` WRITE;
 /*!40000 ALTER TABLE `download_jobs` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `download_jobs` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `download_tickets`
@@ -1491,8 +1576,10 @@ CREATE TABLE `download_tickets` (
 
 LOCK TABLES `download_tickets` WRITE;
 /*!40000 ALTER TABLE `download_tickets` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `download_tickets` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `ip_ranges`
@@ -1516,8 +1603,10 @@ CREATE TABLE `ip_ranges` (
 
 LOCK TABLES `ip_ranges` WRITE;
 /*!40000 ALTER TABLE `ip_ranges` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `ip_ranges` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `license_cms_categories`
@@ -1542,8 +1631,10 @@ CREATE TABLE `license_cms_categories` (
 
 LOCK TABLES `license_cms_categories` WRITE;
 /*!40000 ALTER TABLE `license_cms_categories` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `license_cms_categories` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `license_cms_subthemes`
@@ -1566,8 +1657,10 @@ CREATE TABLE `license_cms_subthemes` (
 
 LOCK TABLES `license_cms_subthemes` WRITE;
 /*!40000 ALTER TABLE `license_cms_subthemes` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `license_cms_subthemes` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `license_cms_templates`
@@ -1592,8 +1685,10 @@ CREATE TABLE `license_cms_templates` (
 
 LOCK TABLES `license_cms_templates` WRITE;
 /*!40000 ALTER TABLE `license_cms_templates` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `license_cms_templates` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `license_crowdsourcing_campaigns`
@@ -1618,8 +1713,10 @@ CREATE TABLE `license_crowdsourcing_campaigns` (
 
 LOCK TABLES `license_crowdsourcing_campaigns` WRITE;
 /*!40000 ALTER TABLE `license_crowdsourcing_campaigns` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `license_crowdsourcing_campaigns` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `license_privileges`
@@ -1642,8 +1739,10 @@ CREATE TABLE `license_privileges` (
 
 LOCK TABLES `license_privileges` WRITE;
 /*!40000 ALTER TABLE `license_privileges` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `license_privileges` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `license_type_privileges`
@@ -1666,6 +1765,7 @@ CREATE TABLE `license_type_privileges` (
 
 LOCK TABLES `license_type_privileges` WRITE;
 /*!40000 ALTER TABLE `license_type_privileges` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `license_type_privileges` VALUES
 (1,'SET_REPRESENTATIVE_IMAGE'),
 (2,'DELETE_OCR_PAGE'),
@@ -1673,6 +1773,7 @@ INSERT INTO `license_type_privileges` VALUES
 (4,'PRIV_LEGAL_DISCLAIMER');
 /*!40000 ALTER TABLE `license_type_privileges` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `license_types`
@@ -1702,6 +1803,7 @@ CREATE TABLE `license_types` (
 
 LOCK TABLES `license_types` WRITE;
 /*!40000 ALTER TABLE `license_types` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `license_types` VALUES
 (1,1,1,'licenseType_setRepresentativeImage_desc',0,'licenseType_setRepresentativeImage',0,1,0,NULL),
 (2,1,1,'licenseType_deleteOcrPage_desc',0,'licenseType_deleteOcrPage',0,1,0,NULL),
@@ -1709,6 +1811,7 @@ INSERT INTO `license_types` VALUES
 (4,1,1,'licenseType_disclaimer_desc',0,'licenseType_disclaimer',0,1,0,NULL);
 /*!40000 ALTER TABLE `license_types` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `license_types_overriding`
@@ -1733,8 +1836,10 @@ CREATE TABLE `license_types_overriding` (
 
 LOCK TABLES `license_types_overriding` WRITE;
 /*!40000 ALTER TABLE `license_types_overriding` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `license_types_overriding` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `licenses`
@@ -1776,8 +1881,67 @@ CREATE TABLE `licenses` (
 
 LOCK TABLES `licenses` WRITE;
 /*!40000 ALTER TABLE `licenses` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `licenses` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
+
+--
+-- Table structure for table `maintenance_mode`
+--
+
+DROP TABLE IF EXISTS `maintenance_mode`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `maintenance_mode` (
+  `maintenance_mode_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `ENABLED` tinyint(1) DEFAULT 0,
+  PRIMARY KEY (`maintenance_mode_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `maintenance_mode`
+--
+
+LOCK TABLES `maintenance_mode` WRITE;
+/*!40000 ALTER TABLE `maintenance_mode` DISABLE KEYS */;
+set autocommit=0;
+INSERT INTO `maintenance_mode` VALUES
+(1,0);
+/*!40000 ALTER TABLE `maintenance_mode` ENABLE KEYS */;
+UNLOCK TABLES;
+commit;
+
+--
+-- Table structure for table `maintenance_mode_translations`
+--
+
+DROP TABLE IF EXISTS `maintenance_mode_translations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `maintenance_mode_translations` (
+  `translation_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `language` varchar(255) DEFAULT NULL,
+  `tag` longtext DEFAULT NULL,
+  `translation_value` longtext DEFAULT NULL,
+  `owner_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`translation_id`),
+  KEY `FK_maintenance_mode_translations_owner_id` (`owner_id`),
+  CONSTRAINT `FK_maintenance_mode_translations_owner_id` FOREIGN KEY (`owner_id`) REFERENCES `maintenance_mode` (`maintenance_mode_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `maintenance_mode_translations`
+--
+
+LOCK TABLES `maintenance_mode_translations` WRITE;
+/*!40000 ALTER TABLE `maintenance_mode_translations` DISABLE KEYS */;
+set autocommit=0;
+/*!40000 ALTER TABLE `maintenance_mode_translations` ENABLE KEYS */;
+UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `mq_message_properties`
@@ -1801,10 +1965,12 @@ CREATE TABLE `mq_message_properties` (
 
 LOCK TABLES `mq_message_properties` WRITE;
 /*!40000 ALTER TABLE `mq_message_properties` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `mq_message_properties` VALUES
 (1,'625017145','identifiers');
 /*!40000 ALTER TABLE `mq_message_properties` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `mq_messages`
@@ -1833,10 +1999,12 @@ CREATE TABLE `mq_messages` (
 
 LOCK TABLES `mq_messages` WRITE;
 /*!40000 ALTER TABLE `mq_messages` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `mq_messages` VALUES
 (1,0,'2025-03-04 13:23:02.119012',10,'ID:059a4cfa7884-42535-1741090938241-16:1:1:1:1','FINISH','viewer',1,'REFRESH_ARCHIVE_TREE');
 /*!40000 ALTER TABLE `mq_messages` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `openid_accounts`
@@ -1859,8 +2027,10 @@ CREATE TABLE `openid_accounts` (
 
 LOCK TABLES `openid_accounts` WRITE;
 /*!40000 ALTER TABLE `openid_accounts` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `openid_accounts` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `recurring_task_trigger`
@@ -1876,7 +2046,7 @@ CREATE TABLE `recurring_task_trigger` (
   `status` varchar(255) DEFAULT NULL,
   `task_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1885,14 +2055,17 @@ CREATE TABLE `recurring_task_trigger` (
 
 LOCK TABLES `recurring_task_trigger` WRITE;
 /*!40000 ALTER TABLE `recurring_task_trigger` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `recurring_task_trigger` VALUES
 (1,NULL,'0 45 0 * * ?','RUNNING','INDEX_USAGE_STATISTICS'),
 (2,NULL,'0 42 8,12,17 * * ?','RUNNING','NOTIFY_SEARCH_UPDATE'),
 (3,NULL,'0 40 0 * * ?','RUNNING','PURGE_EXPIRED_DOWNLOAD_TICKETS'),
 (4,NULL,'0 50 0 * * ?','RUNNING','UPDATE_SITEMAP'),
-(5,NULL,'0 42 0 * * ?','RUNNING','UPDATE_UPLOAD_JOBS');
+(5,NULL,'0 42 0 * * ?','RUNNING','UPDATE_UPLOAD_JOBS'),
+(6,NULL,'0 0 * * * ?','RUNNING','PURGE_EXPIRED_BEARER_TOKENS');
 /*!40000 ALTER TABLE `recurring_task_trigger` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `role_privileges`
@@ -1915,8 +2088,10 @@ CREATE TABLE `role_privileges` (
 
 LOCK TABLES `role_privileges` WRITE;
 /*!40000 ALTER TABLE `role_privileges` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `role_privileges` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `searches`
@@ -1954,8 +2129,10 @@ CREATE TABLE `searches` (
 
 LOCK TABLES `searches` WRITE;
 /*!40000 ALTER TABLE `searches` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `searches` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `session_statistics`
@@ -1979,8 +2156,10 @@ CREATE TABLE `session_statistics` (
 
 LOCK TABLES `session_statistics` WRITE;
 /*!40000 ALTER TABLE `session_statistics` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `session_statistics` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `session_statistics_record_requests`
@@ -2004,8 +2183,10 @@ CREATE TABLE `session_statistics_record_requests` (
 
 LOCK TABLES `session_statistics_record_requests` WRITE;
 /*!40000 ALTER TABLE `session_statistics_record_requests` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `session_statistics_record_requests` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `terms_of_use`
@@ -2027,8 +2208,10 @@ CREATE TABLE `terms_of_use` (
 
 LOCK TABLES `terms_of_use` WRITE;
 /*!40000 ALTER TABLE `terms_of_use` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `terms_of_use` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `terms_of_use_translations`
@@ -2055,8 +2238,10 @@ CREATE TABLE `terms_of_use_translations` (
 
 LOCK TABLES `terms_of_use_translations` WRITE;
 /*!40000 ALTER TABLE `terms_of_use_translations` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `terms_of_use_translations` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `theme_configuration`
@@ -2086,8 +2271,10 @@ CREATE TABLE `theme_configuration` (
 
 LOCK TABLES `theme_configuration` WRITE;
 /*!40000 ALTER TABLE `theme_configuration` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `theme_configuration` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `transkribus_job_observers`
@@ -2110,8 +2297,10 @@ CREATE TABLE `transkribus_job_observers` (
 
 LOCK TABLES `transkribus_job_observers` WRITE;
 /*!40000 ALTER TABLE `transkribus_job_observers` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `transkribus_job_observers` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `transkribus_jobs`
@@ -2143,8 +2332,10 @@ CREATE TABLE `transkribus_jobs` (
 
 LOCK TABLES `transkribus_jobs` WRITE;
 /*!40000 ALTER TABLE `transkribus_jobs` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `transkribus_jobs` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `translations`
@@ -2171,8 +2362,10 @@ CREATE TABLE `translations` (
 
 LOCK TABLES `translations` WRITE;
 /*!40000 ALTER TABLE `translations` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `translations` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `upload_jobs`
@@ -2202,8 +2395,10 @@ CREATE TABLE `upload_jobs` (
 
 LOCK TABLES `upload_jobs` WRITE;
 /*!40000 ALTER TABLE `upload_jobs` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `upload_jobs` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `usage_statistics`
@@ -2226,8 +2421,10 @@ CREATE TABLE `usage_statistics` (
 
 LOCK TABLES `usage_statistics` WRITE;
 /*!40000 ALTER TABLE `usage_statistics` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `usage_statistics` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `usage_statistics_daily_session`
@@ -2252,8 +2449,10 @@ CREATE TABLE `usage_statistics_daily_session` (
 
 LOCK TABLES `usage_statistics_daily_session` WRITE;
 /*!40000 ALTER TABLE `usage_statistics_daily_session` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `usage_statistics_daily_session` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `user_groups`
@@ -2280,8 +2479,10 @@ CREATE TABLE `user_groups` (
 
 LOCK TABLES `user_groups` WRITE;
 /*!40000 ALTER TABLE `user_groups` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `user_groups` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `user_properties`
@@ -2305,8 +2506,10 @@ CREATE TABLE `user_properties` (
 
 LOCK TABLES `user_properties` WRITE;
 /*!40000 ALTER TABLE `user_properties` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `user_properties` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `user_role`
@@ -2336,8 +2539,10 @@ CREATE TABLE `user_role` (
 
 LOCK TABLES `user_role` WRITE;
 /*!40000 ALTER TABLE `user_role` DISABLE KEYS */;
+set autocommit=0;
 /*!40000 ALTER TABLE `user_role` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `user_roles`
@@ -2360,10 +2565,12 @@ CREATE TABLE `user_roles` (
 
 LOCK TABLES `user_roles` WRITE;
 /*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `user_roles` VALUES
 (1,NULL,'member');
 /*!40000 ALTER TABLE `user_roles` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 
 --
 -- Table structure for table `viewer_users`
@@ -2400,11 +2607,13 @@ CREATE TABLE `viewer_users` (
 
 LOCK TABLES `viewer_users` WRITE;
 /*!40000 ALTER TABLE `viewer_users` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `viewer_users` VALUES
 (1,NULL,0,0,'DEFAULT',NULL,'anonymous@goobi.io',NULL,NULL,NULL,NULL,'Anonymous',NULL,0,0,1),
-(2,NULL,1,1,'DEFAULT',NULL,'goobi@intranda.com',NULL,'2025-03-04 15:21:52.467465',NULL,NULL,'Goobi Administrator','$2a$10$38CTNjvJie6zVMRa6KM8EOuCAZ9weyvP2LBOVBgxPA1Hr4dYs04xy',0,1,0);
+(2,NULL,1,1,'DEFAULT',NULL,'goobi@intranda.com',NULL,'2025-09-01 11:18:29.756514',NULL,NULL,'Goobi Administrator','$2a$10$38CTNjvJie6zVMRa6KM8EOuCAZ9weyvP2LBOVBgxPA1Hr4dYs04xy',0,1,0);
 /*!40000 ALTER TABLE `viewer_users` ENABLE KEYS */;
 UNLOCK TABLES;
+commit;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -2415,4 +2624,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2025-03-04 15:23:53
+-- Dump completed on 2025-09-01 11:21:44

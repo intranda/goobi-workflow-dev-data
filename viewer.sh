@@ -61,8 +61,9 @@ if [[ -e $GITFOLDER/goobi-viewer/goobi-viewer-theme-reference ]]; then
 else
     git clone --depth 10 git@gitea.intranda.com:goobi-viewer/goobi-viewer-theme-reference.git
     cd goobi-viewer-theme-reference/goobi-viewer-theme-reference
+    mkdir -p WebContent/META-INF
+    cp "${DATAFOLDER}viewer/install/context.xml" "WebContent/META-INF/context.xml"
     mvn package
-    cp "${DATAFOLDER}viewer/install/context.xml" "target/viewer/META-INF/context.xml"
 fi 
 
 echo; echo "STEP 7: Development data and viewer repositories could be setup successfully."

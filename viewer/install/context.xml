@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context docBase="viewer" path="/viewer" reloadable="true">
+<Context docBase="theme-reference" path="/viewer" reloadable="true">
     
         <Resource
                 name="viewer"

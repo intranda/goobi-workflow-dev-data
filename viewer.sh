@@ -70,6 +70,7 @@ else
     cd goobi-viewer-theme-reference/goobi-viewer-theme-reference
     mkdir -p WebContent/META-INF
     cp "${DATAFOLDER}viewer/install/context.xml" "WebContent/META-INF/context.xml"
+    mvn eclipse:eclipse
     mvn package
 fi 
 

@@ -39,28 +39,25 @@ rm -f $TEMP_FILE_PATH
 echo; echo "STEP 6: Clone git repositories"
 mkdir -p $GITDIR/goobi-viewer
 cd $GITDIR/goobi-viewer
-if [[ -e $GITDIR/goobi-viewer-core ]]; then
+if [[ -e $GITDIR/goobi-viewer/goobi-viewer-core ]]; then
     echo "Git repository $GITDIR/goobi-viewer-core does exist already."
 else
-    cd $GITDIR/goobi-viewer
     git clone --depth 10 git@gitea.intranda.com:goobi-viewer/goobi-viewer-core.git
-    cd goobi-viewer-core/goobi-viewer-core
-    mvn package
+    #cd goobi-viewer-core/goobi-viewer-core
+    #mvn package
 fi 
 
-if [[ -e $GITDIR/goobi-viewer-core-config ]]; then
+if [[ -e $GITDIR/goobi-viewer/goobi-viewer-core-config ]]; then
     echo "Git repository $GITDIR/goobi-viewer-core-config does exist already."
 else
-    cd $GITDIR/goobi-viewer
     git clone --depth 10 git@gitea.intranda.com:goobi-viewer/goobi-viewer-core-config.git
-    cd goobi-viewer-core-config/goobi-viewer-core-config
-    mvn package
+    #cd goobi-viewer-core-config/goobi-viewer-core-config
+    #mvn package
 fi 
 
-if [[ -e $GITDIR/goobi-viewer-theme-reference ]]; then
+if [[ -e $GITDIR/goobi-viewer/goobi-viewer-theme-reference ]]; then
     echo "Git repository $GITDIR/goobi-viewer-theme-reference does exist already."
 else
-    cd $GITDIR/goobi-viewer
     git clone --depth 10 git@gitea.intranda.com:goobi-viewer/goobi-viewer-theme-reference.git
     cd goobi-viewer-theme-reference/goobi-viewer-theme-reference
     mvn package

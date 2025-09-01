@@ -8,7 +8,7 @@
             <ese>http://localhost:8080/viewer/oai?verb=GetRecord&amp;metadataPrefix=europeana&amp;identifier=</ese>
         </metadata>
 
-        <downloadhttp://localhost:8080/viewer/download/</download>
+        <download>http://localhost:8080/viewer/download/</download>
         <rest>http://localhost:8080/viewer/api/v1/</rest>
         <solr>https://viewer.goobi.io/solr/current</solr>
         <!--

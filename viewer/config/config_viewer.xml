@@ -9,7 +9,8 @@
         </metadata>
 
         <download>http://localhost:8080/viewer/download/</download>
-        <rest>https://viewer.goobi.io/api/v1/</rest>
+        <iiif>https://viewer.goobi.io/api/v1/</iiif>
+        <rest>http://localhost:8080/viewer/api/v1/</rest>
         <solr>https://viewer.goobi.io/solr/current</solr>
     </urls>
 

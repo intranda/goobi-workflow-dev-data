@@ -38,7 +38,7 @@ rm -f $TEMP_FILE_PATH
 
 echo; echo "STEP 6: Clone git repositories"
 mkdir -p $GITDIR/goobi-viewer
-cd goobi-viewer
+cd $GITDIR/goobi-viewer
 if [[ -e $GITDIR/goobi-viewer-core ]]; then
     echo "Git repository $GITDIR/goobi-viewer-core does exist already."
 else

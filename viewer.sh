@@ -38,28 +38,38 @@ rm -f $TEMP_FILE_PATH
 mysql -u viewer -pviewer viewer -e "SOURCE ${DATAFOLDER}viewer/install/dump.sql"
 
 echo; echo "STEP 6: Clone git repositories"
+GITURL=git@github.com:intranda
+echo "Are you an intranda team member with access to the intranda gitea server? (y/n)"
+read teammember
+if [[ "$teammember" != "y" && "$teammember" != "n" ]]; then
+    echo "Wrong answer. Please try again."
+    exit 1
+fi
+if [[ "$teammember" == "y" ]]; then
+    GITURL=git@gitea.intranda.com:goobi-viewer
+fi
+
 mkdir -p $GITFOLDER/goobi-viewer
 cd $GITFOLDER/goobi-viewer
 if [[ -e $GITFOLDER/goobi-viewer/goobi-viewer-core ]]; then
     echo "Git repository $GITFOLDER/goobi-viewer-core does exist already."
 else
-    git clone --depth 10 git@gitea.intranda.com:goobi-viewer/goobi-viewer-core.git
-    #cd goobi-viewer-core/goobi-viewer-core
-    #mvn package
+    git clone --depth 10 $GITURL/goobi-viewer-core.git
+    git switch develop
 fi 
 
 if [[ -e $GITFOLDER/goobi-viewer/goobi-viewer-core-config ]]; then
     echo "Git repository $GITFOLDER/goobi-viewer-core-config does exist already."
 else
-    git clone --depth 10 git@gitea.intranda.com:goobi-viewer/goobi-viewer-core-config.git
-    #cd goobi-viewer-core-config/goobi-viewer-core-config
-    #mvn package
+    git clone --depth 10 $GITURL/goobi-viewer-core-config.git
+    git switch develop
 fi 
 
 if [[ -e $GITFOLDER/goobi-viewer/goobi-viewer-theme-reference ]]; then
     echo "Git repository $GITFOLDER/goobi-viewer-theme-reference does exist already."
 else
-    git clone --depth 10 git@gitea.intranda.com:goobi-viewer/goobi-viewer-theme-reference.git
+    git clone --depth 10 $GITURL/goobi-viewer-theme-reference.git
+    git switch develop
     cd goobi-viewer-theme-reference/goobi-viewer-theme-reference
     mkdir -p WebContent/META-INF
     cp "${DATAFOLDER}viewer/install/context.xml" "WebContent/META-INF/context.xml"

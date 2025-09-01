@@ -54,22 +54,19 @@ cd $GITFOLDER/goobi-viewer
 if [[ -e $GITFOLDER/goobi-viewer/goobi-viewer-core ]]; then
     echo "Git repository $GITFOLDER/goobi-viewer-core does exist already."
 else
-    git clone --depth 10 $GITURL/goobi-viewer-core.git
-    git switch develop
+    git clone -b develop --depth 10 $GITURL/goobi-viewer-core.git
 fi 
 
 if [[ -e $GITFOLDER/goobi-viewer/goobi-viewer-core-config ]]; then
     echo "Git repository $GITFOLDER/goobi-viewer-core-config does exist already."
 else
-    git clone --depth 10 $GITURL/goobi-viewer-core-config.git
-    git switch develop
+    git clone -b develop --depth 10 $GITURL/goobi-viewer-core-config.git
 fi 
 
 if [[ -e $GITFOLDER/goobi-viewer/goobi-viewer-theme-reference ]]; then
     echo "Git repository $GITFOLDER/goobi-viewer-theme-reference does exist already."
 else
-    git clone --depth 10 $GITURL/goobi-viewer-theme-reference.git
-    git switch develop
+    git clone -b develop --depth 10 $GITURL/goobi-viewer-theme-reference.git
     cd goobi-viewer-theme-reference/goobi-viewer-theme-reference
     mkdir -p WebContent/META-INF
     cp "${DATAFOLDER}viewer/install/context.xml" "WebContent/META-INF/context.xml"

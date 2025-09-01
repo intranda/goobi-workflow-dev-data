@@ -87,15 +87,14 @@ else
     cd goobi-workflow
     if [[ "$teammember" == "y" ]]; then
         echo "Use Gitea as repository to clone source code"
-        git clone --depth 10 git@gitea.intranda.com:goobi-workflow/goobi-workflow-core.git
+        git clone -b develop --depth 10 git@gitea.intranda.com:goobi-workflow/goobi-workflow-core.git
     else
         echo "Use GitHub as repository to clone source code"
-        git clone --depth 10 git@github.com:intranda/goobi-workflow.git goobi-workflow-core
+        git clone -b develop --depth 10 git@github.com:intranda/goobi-workflow.git goobi-workflow-core
     fi
 
     echo; echo "STEP 9: Add tomcat context."
     cd goobi-workflow-core
-    git switch develop   
     mkdir -p src/main/webapp/META-INF
     cp "${DATAFOLDER}goobi/install/context.xml" "src/main/webapp/META-INF/context.xml"
 

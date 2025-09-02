@@ -31,7 +31,7 @@ fi
 echo; echo "STEP 5: Drop all tables from the database"
 TEMP_FILE_PATH='./drop_all_tables.sql'
 echo "SET FOREIGN_KEY_CHECKS = 0;" > $TEMP_FILE_PATH
-( mysqldump --add-drop-table --no-data -u goobi -pgoobi goobi | grep 'DROP TABLE' ) >> $TEMP_FILE_PATH
+( mysqldump --add-drop-table --no-data -u viewer -pviewer viewer | grep 'DROP TABLE' ) >> $TEMP_FILE_PATH
 echo "SET FOREIGN_KEY_CHECKS = 1;" >> $TEMP_FILE_PATH
 mysql -u viewer -pviewer viewer < $TEMP_FILE_PATH
 rm -f $TEMP_FILE_PATH

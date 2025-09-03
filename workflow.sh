@@ -86,20 +86,40 @@ else
     mkdir -p $GITFOLDER/goobi-workflow
     cd goobi-workflow
     if [[ "$teammember" == "y" ]]; then
-        echo "Use Gitea as repository to clone source code"
-        git clone -b develop --depth 10 git@gitea.intranda.com:goobi-workflow/goobi-workflow-core.git
+
+        echo "Do you want to download all plugin repositories as complete setup? (y/n)"
+        read complete
+        if [[ "$complete" != "y" && "$complete" != "n" ]]; then
+            echo "Wrong answer. Please try again."
+            exit 1;
+        fi
+        if [[ "$complete" == "y" ]]; then
+            echo "Use Gitea with all Goobi workflow repositories to clone source code"
+            cd ..
+            git clone git@gitea.intranda.com:goobi-workflow/goobi-workflow.git
+            cd goobi-workflow
+            git submodule init
+            git submodule update
+            git fetch --recurse-submodules -j 10
+            git submodule foreach git switch develop
+            git submodule foreach git pull
+        else
+            echo "Use Gitea to clone the workflow-core repository"
+            git clone -b develop --depth 10 git@gitea.intranda.com:goobi-workflow/goobi-workflow-core.git workflow-core
+        fi
     else
-        echo "Use GitHub as repository to clone source code"
-        git clone -b develop --depth 10 git@github.com:intranda/goobi-workflow.git goobi-workflow-core
+        echo "Use GitHub to clone the workflow-core repository"
+        git clone -b develop --depth 10 git@github.com:intranda/goobi-workflow.git workflow-core
     fi
 
     echo; echo "STEP 9: Add tomcat context."
-    cd goobi-workflow-core
+    cd workflow-core
     mkdir -p src/main/webapp/META-INF
     cp "${DATAFOLDER}goobi/install/context.xml" "src/main/webapp/META-INF/context.xml"
 
     echo; echo "STEP 10: Compile application."
     rm src/main/webapp/package-lock.json 
+    rm -rf src/main/webapp/node_modules
     mvn package
 fi 
 echo; echo "STEP 11: Development data and workflow-core repository could be setup successfully."
